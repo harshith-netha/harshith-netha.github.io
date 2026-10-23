@@ -1,0 +1,7 @@
+machine,line,plant,ideal_cycle_s
+M1,Line 1,Plant 1,24
+M2,Line 1,Plant 1,24
+M3,Line 1,Plant 1,24
+M4,Line 2,Plant 1,30
+M5,Line 2,Plant 1,30
+M6,Line 2,Plant 1,30

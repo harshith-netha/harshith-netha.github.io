@@ -1,0 +1,297 @@
+{
+  "defect": {
+    "baseline_reject_pct": 3.63387,
+    "after_reject_pct": 2.22465,
+    "relative_reduction_pct": 38.78,
+    "baseline_parts": 691632,
+    "after_parts": 345357,
+    "after_by_category": {
+      "Dimensional": 8,
+      "Short shot": 2266,
+      "Sink marks": 1892,
+      "Flash": 1037,
+      "Warpage": 1107,
+      "Other": 1373
+    },
+    "pareto": {
+      "Dimensional": [
+        8157,
+        32.45534
+      ],
+      "Short shot": [
+        5587,
+        22.22974
+      ],
+      "Sink marks": [
+        3938,
+        15.66864
+      ],
+      "Other": [
+        2848,
+        11.33172
+      ],
+      "Warpage": [
+        2545,
+        10.12613
+      ],
+      "Flash": [
+        2058,
+        8.18844
+      ]
+    },
+    "by_machine": {
+      "IMM-1": 2.40743,
+      "IMM-2": 2.37801,
+      "IMM-3": 7.30672,
+      "IMM-4": 2.44409
+    },
+    "by_shift": {
+      "A": 3.77867,
+      "B": 3.24875,
+      "C": 3.87449
+    },
+    "imm3_share_of_rejects_pct": 50.26061,
+    "msa": {
+      "pct_contribution_grr": 1.30543,
+      "pct_study_var_grr": 11.42555,
+      "pct_study_var_repeat": 10.33054,
+      "pct_study_var_reprod": 4.88089,
+      "pct_study_var_part": 99.34514,
+      "pct_tolerance_grr": 15.36727,
+      "ndc": 12
+    },
+    "spc": {
+      "xbarbar": 2.45528,
+      "ucl": 2.48161,
+      "lcl": 2.42895,
+      "rbar": 0.04563,
+      "r_ucl": 0.09647,
+      "points_out": 17,
+      "r_out": 0
+    },
+    "capability": {
+      "Baseline_all": {
+        "mean": 2.4896,
+        "sigma_within": 0.01993,
+        "sigma_overall": 0.03461,
+        "cp": 1.67244,
+        "cpk": 1.49857,
+        "ppk": 0.86286
+      },
+      "Baseline_imm3": {
+        "mean": 2.47135,
+        "sigma_within": 0.02001,
+        "sigma_overall": 0.04325,
+        "cp": 1.66564,
+        "cpk": 1.18846,
+        "ppk": 0.54998
+      },
+      "After_all": {
+        "mean": 2.49964,
+        "sigma_within": 0.02035,
+        "sigma_overall": 0.02532,
+        "cp": 1.63815,
+        "cpk": 1.63232,
+        "ppk": 1.31164
+      },
+      "After_imm3": {
+        "mean": 2.50103,
+        "sigma_within": 0.02103,
+        "sigma_overall": 0.02701,
+        "cp": 1.58501,
+        "cpk": 1.56863,
+        "ppk": 1.22138
+      }
+    },
+    "regression": {
+      "r2": 0.9065,
+      "adj_r2": 0.90585,
+      "n": 576,
+      "terms": {
+        "Intercept": {
+          "coef": 0.93793,
+          "p": 0.0
+        },
+        "hold_pressure_bar": {
+          "coef": 0.00299,
+          "p": 0.0
+        },
+        "mold_temp_c": {
+          "coef": -0.00764,
+          "p": 0.0
+        },
+        "melt_temp_c": {
+          "coef": 0.00048,
+          "p": 0.00015
+        },
+        "cooling_time_s": {
+          "coef": -0.0001,
+          "p": 0.93952
+        }
+      }
+    },
+    "settings": {
+      "imm3_hold_mean_base": 592.20625,
+      "imm3_hold_sd_base": 11.95889,
+      "other_hold_sd_base": 5.96968,
+      "mold_c_shift_base": 46.23891,
+      "mold_ab_shift_base": 45.15018,
+      "hold_sd_after": 4.08892,
+      "mold_sd_after": 0.89717,
+      "short_shot_moisture_corr": 0.28668
+    },
+    "impact": {
+      "annual_parts": 4320000,
+      "parts_avoided": 60878.06166,
+      "cost_per_part": 0.6,
+      "savings": 36526.837
+    }
+  },
+  "oee": {
+    "plant": {
+      "oee": 0.75958,
+      "availability": 0.89125,
+      "performance": 0.87374,
+      "quality": 0.97543,
+      "scrap_rate": 0.01754,
+      "good": 1076839,
+      "target": 1065636
+    },
+    "by_line": {
+      "Line 1": {
+        "oee": 0.74175,
+        "availability": 0.86919,
+        "performance": 0.87391,
+        "quality": 0.97651,
+        "scrap_rate": 0.01654,
+        "good": 585796,
+        "target": 591786
+      },
+      "Line 2": {
+        "oee": 0.77721,
+        "availability": 0.91331,
+        "performance": 0.87357,
+        "quality": 0.97414,
+        "scrap_rate": 0.01873,
+        "good": 491043,
+        "target": 473850
+      }
+    },
+    "by_machine": {
+      "M1": {
+        "oee": 0.74906,
+        "availability": 0.8785,
+        "performance": 0.87324,
+        "quality": 0.97644,
+        "scrap_rate": 0.01647,
+        "good": 197191,
+        "target": 197262
+      },
+      "M2": {
+        "oee": 0.73986,
+        "availability": 0.86804,
+        "performance": 0.87263,
+        "quality": 0.97674,
+        "scrap_rate": 0.01644,
+        "good": 194769,
+        "target": 197262
+      },
+      "M3": {
+        "oee": 0.73632,
+        "availability": 0.86102,
+        "performance": 0.87589,
+        "quality": 0.97635,
+        "scrap_rate": 0.01672,
+        "good": 193836,
+        "target": 197262
+      },
+      "M4": {
+        "oee": 0.78709,
+        "availability": 0.92276,
+        "performance": 0.87356,
+        "quality": 0.97644,
+        "scrap_rate": 0.01653,
+        "good": 165762,
+        "target": 157950
+      },
+      "M5": {
+        "oee": 0.76228,
+        "availability": 0.90025,
+        "performance": 0.87331,
+        "quality": 0.96959,
+        "scrap_rate": 0.02312,
+        "good": 160537,
+        "target": 157950
+      },
+      "M6": {
+        "oee": 0.78226,
+        "availability": 0.91691,
+        "performance": 0.87385,
+        "quality": 0.9763,
+        "scrap_rate": 0.01664,
+        "good": 164744,
+        "target": 157950
+      }
+    },
+    "by_shift": {
+      "A": {
+        "oee": 0.78077,
+        "availability": 0.89632,
+        "performance": 0.89089,
+        "quality": 0.97777,
+        "scrap_rate": 0.01517,
+        "good": 369172,
+        "target": 355212
+      },
+      "B": {
+        "oee": 0.78032,
+        "availability": 0.8975,
+        "performance": 0.88883,
+        "quality": 0.97818,
+        "scrap_rate": 0.01476,
+        "good": 368740,
+        "target": 355212
+      },
+      "C": {
+        "oee": 0.71766,
+        "availability": 0.87992,
+        "performance": 0.84088,
+        "quality": 0.96993,
+        "scrap_rate": 0.02311,
+        "good": 338927,
+        "target": 355212
+      }
+    },
+    "downtime_by_reason": {
+      "Changeover": 36767,
+      "Mold / tool repair": 11590,
+      "Machine breakdown": 8426,
+      "Material shortage": 5317,
+      "Quality hold": 3331,
+      "Operator unavailable": 3279
+    },
+    "downtime_line_reason": {
+      "Line 1": {
+        "Changeover": 27581,
+        "Machine breakdown": 4144,
+        "Material shortage": 2308,
+        "Mold / tool repair": 3840,
+        "Operator unavailable": 1645,
+        "Quality hold": 1806
+      },
+      "Line 2": {
+        "Changeover": 9186,
+        "Machine breakdown": 4282,
+        "Material shortage": 3009,
+        "Mold / tool repair": 7750,
+        "Operator unavailable": 1634,
+        "Quality hold": 1525
+      }
+    },
+    "m5_tool_minutes": 4969,
+    "rows": {
+      "production": 1404,
+      "downtime": 1771
+    }
+  }
+}

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf8f4">
+  <title>Defect Reduction &amp; SPC Case Study — Harshith Netha Gundeti</title>
+  <meta name="description" content="A DMAIC case study on an injection-molded part: Gage R&R, Pareto, X-bar/R charts, capability, regression, root cause, control plan and 8D, on a published simulated dataset.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Harshith Gundeti, home">
+        <span class="brand-mark" aria-hidden="true">HG<span>.</span></span>
+        <span class="brand-wordmark" aria-hidden="true">Harshith Gundeti<span>Industrial Engineer</span></span>
+      </a>
+      <nav class="case-nav" aria-label="Main">
+        <a href="../index.html#projects">All case studies</a>
+        <a href="../resume.pdf" download="Harshith_Gundeti_Resume.pdf">Resume</a>
+        <a class="nav-contact" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects"><span aria-hidden="true">←</span> All case studies</a>
+        <p class="eyebrow"><span class="small-line" aria-hidden="true"></span>Case study 01 · Quality engineering · DMAIC</p>
+        <h1 id="case-title">Cutting rejects on an injection-molded part by 39%<span class="copper">.</span></h1>
+        <p class="case-lead">Taking a molding defect problem from measurement to improvement and control: validate the gauge, find where the rejects come from, prove what drives the critical dimension, change the process, and make the gain stick.</p>
+        <p class="sim-note"><span><strong>Simulated dataset, real method.</strong> The data is a published, reproducible simulation of a four-machine molding cell. It is not from an employer. Every number on this page is computed by the <a href="../analysis/build_case_studies.py">analysis script</a>, and you can download the raw data below.</span></p>
+        <div class="stat-row">
+          <p class="stat"><span class="stat-value">3.63% <small>→</small> 2.22%</span><span class="stat-label">Reject rate</span><span class="stat-sub">−38.8%, weeks 1–8 vs. 11–14</span></p>
+          <p class="stat"><span class="stat-value">0.86 <small>→</small> 1.31</span><span class="stat-label">Ppk, flange thickness</span><span class="stat-sub">Long-term capability, all machines</span></p>
+          <p class="stat"><span class="stat-value">≈60,900</span><span class="stat-label">Rejects avoided per year</span><span class="stat-sub">At 4.32 M parts per year</span></p>
+          <p class="stat"><span class="stat-value">≈$36.5k</span><span class="stat-label">Estimated annual saving</span><span class="stat-sub">At an assumed $0.60 per rejected part</span></p>
+        </div>
+        <dl class="case-facts">
+          <div><dt>Product</dt><dd>Polypropylene enclosure lid, 4 molding machines, 3 shifts</dd></div>
+          <div><dt>Data</dt><dd>14 weeks · 864 production lots · 1.04 M parts</dd></div>
+          <div><dt>Methods</dt><dd>Gage R&amp;R, Pareto, X̄-R chart, Cpk/Ppk, regression, 5 Whys, PFMEA, 8D</dd></div>
+          <div><dt>Tools</dt><dd>Python (pandas, statsmodels, matplotlib); methods match Minitab</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <nav class="case-toc" aria-label="Case study sections">
+      <div class="container">
+        <ol>
+          <li><a href="#problem">Business problem</a></li>
+          <li><a href="#baseline">Baseline</a></li>
+          <li><a href="#data">Data used</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#analysis">Analysis</a></li>
+          <li><a href="#recommendation">Recommendation</a></li>
+          <li><a href="#result">Result &amp; impact</a></li>
+          <li><a href="#control">Control plan</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#files">Files</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="case-section" id="problem" aria-labelledby="problem-title">
+        <header><span class="case-num">01</span><h2 id="problem-title">Business problem</h2></header>
+        <div class="case-body">
+          <p>A molder makes a polypropylene enclosure lid on four injection-molding machines (IMM-1 to IMM-4) across three shifts. The lid’s <strong>flange thickness, 2.50 ± 0.10 mm</strong>, is critical to quality: it sets the snap-fit force and the seal. Rejects were running well above the plant goal, and end-of-line inspection was catching the defects without preventing them.</p>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <caption>Project charter</caption>
+              <tbody>
+                <tr><th scope="row">Problem statement</th><td>In weeks 1–8, 25,133 of 691,632 lids (3.63%) were rejected. That costs about $94,000 a year at $0.60 per rejected part.</td></tr>
+                <tr><th scope="row">Goal</th><td>Reject rate below 2.5% within one quarter, without adding inspection.</td></tr>
+                <tr><th scope="row">CTQ</th><td>Flange thickness 2.50 ± 0.10 mm (LSL 2.40, USL 2.60)</td></tr>
+                <tr><th scope="row">In scope</th><td>Molding process on IMM-1 to IMM-4, resin drying, in-process checks</td></tr>
+                <tr><th scope="row">Out of scope</th><td>Mold redesign, resin supplier change</td></tr>
+                <tr><th scope="row">Team (scenario)</th><td>Process engineer, quality engineer, maintenance technician, shift leads</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="baseline" aria-labelledby="baseline-title">
+        <header><span class="case-num">02</span><h2 id="baseline-title">Baseline</h2></header>
+        <div class="case-body">
+          <p>Eight weeks of production before any change, measured the same way as the improvement period.</p>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">Measure</th><th scope="col" class="num">Baseline</th><th scope="col">Reading</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Reject rate</th><td class="num">3.63%</td><td>Above the 2.5% goal</td></tr>
+                <tr><th scope="row">Ppk, flange thickness</th><td class="num bad">0.86</td><td>Below the common 1.33 requirement</td></tr>
+                <tr><th scope="row">Cpk (within-subgroup)</th><td class="num">1.50</td><td>Capable within a shift. The gap to Ppk points to drift between lots.</td></tr>
+                <tr><th scope="row">Worst machine</th><td class="num">IMM-3 · 7.31%</td><td>The other three machines run at 2.4%</td></tr>
+                <tr><th scope="row">Top three defect types</th><td class="num">70%</td><td>Dimensional, short shot, sink marks</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="data" aria-labelledby="data-title">
+        <header><span class="case-num">03</span><h2 id="data-title">Data used</h2></header>
+        <div class="case-body">
+          <p>Three tables, each one record per natural unit of the process. A <strong>lot</strong> is one machine running one shift on one day.</p>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">File</th><th scope="col" class="num">Rows</th><th scope="col">Fields</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">molding_lots.csv</th><td class="num">864</td><td>Date, week, phase, machine, shift, process settings (hold pressure, mold temperature, melt temperature, cooling time, resin moisture), parts produced, rejects by defect type</td></tr>
+                <tr><th scope="row">thickness_subgroups.csv</th><td class="num">864</td><td>One subgroup of five flange-thickness readings per lot (mm)</td></tr>
+                <tr><th scope="row">gage_rr.csv</th><td class="num">90</td><td>10 parts × 3 appraisers × 3 trials on the thickness micrometer</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted">Before analysis I checked that every lot has a matching subgroup, defect counts never exceed parts produced, and settings fall within the machines’ physical ranges.</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="method" aria-labelledby="method-title">
+        <header><span class="case-num">04</span><h2 id="method-title">Method</h2></header>
+        <div class="case-body">
+          <dl class="d-list">
+            <div><dt>D</dt><dd><strong>Define</strong>Charter, CTQ, scope and a cost of poor quality, so the goal is measurable.</dd></div>
+            <div><dt>M</dt><dd><strong>Measure</strong>Gage R&amp;R first, so the data can be trusted. Then baseline reject rate and capability.</dd></div>
+            <div><dt>A</dt><dd><strong>Analyze</strong>Pareto, stratification by machine and shift, X̄-R chart, Cpk vs. Ppk, multiple regression, and 5 Whys.</dd></div>
+            <div><dt>I</dt><dd><strong>Improve</strong>Fix the root cause, tighten the operating windows that matter, and confirm with four weeks of production data.</dd></div>
+            <div><dt>C</dt><dd><strong>Control</strong>Control plan, reaction plan, updated PFMEA, and 8D close-out.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="case-section" id="analysis" aria-labelledby="analysis-title">
+        <header><span class="case-num">05</span><h2 id="analysis-title">Analysis</h2></header>
+        <div class="case-body">
+          <h3>5.1 Can we trust the measurement?</h3>
+          <p>Before reading anything into thickness data, I checked the micrometer with a crossed Gage R&amp;R study using the ANOVA method.</p>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">Source</th><th scope="col" class="num">% Study variation</th><th scope="col">Note</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Total Gage R&amp;R</th><td class="num">11.4%</td><td>Acceptable (AIAG: under 10% good, 10–30% conditional)</td></tr>
+                <tr><th scope="row">Repeatability</th><td class="num">10.3%</td><td>Most of the gauge error is the instrument and fixture</td></tr>
+                <tr><th scope="row">Reproducibility</th><td class="num">4.9%</td><td>Appraisers agree with each other</td></tr>
+                <tr><th scope="row">Part-to-part</th><td class="num">99.3%</td><td>The gauge sees real part differences</td></tr>
+                <tr><th scope="row">% Tolerance (GRR)</th><td class="num">15.4%</td><td>6σ<sub>GRR</sub> against the 0.20 mm tolerance</td></tr>
+                <tr><th scope="row">Distinct categories</th><td class="num good">12</td><td>Five or more is required</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Decision:</strong> the measurement system is fit for SPC and capability work. Repeatability, not the operators, is the larger share, so a better part fixture is a cheap later improvement.</p>
+
+          <h3>5.2 Which defects matter most?</h3>
+          <figure class="chart">
+            <img src="charts/cs1-pareto.svg" width="720" height="360" loading="lazy" alt="Pareto chart of baseline rejects. Dimensional 8,157 (32%), short shot 5,587 (22%), sink marks 3,938 (16%), other 2,848 (11%), warpage 2,545 (10%), flash 2,058 (8%). The first three make up 70% of rejects.">
+            <figcaption><strong>Baseline rejects by defect type, weeks 1–8.</strong> Dimensional, short-shot and sink-mark defects make up 70% of 25,133 rejects.</figcaption>
+          </figure>
+          <p>The top three defects share a mechanism: each is consistent with too little packing pressure during the hold phase. That gave the investigation a hypothesis to test, not just a ranking.</p>
+
+          <h3>5.3 Where in the process?</h3>
+          <figure class="chart">
+            <img src="charts/cs1-by-machine.svg" width="720" height="300" loading="lazy" alt="Bar chart of baseline reject rate by machine: IMM-1 2.4%, IMM-2 2.4%, IMM-3 7.3%, IMM-4 2.4%. IMM-3 is highlighted.">
+            <figcaption><strong>Reject rate by machine, weeks 1–8.</strong> IMM-3 produces one quarter of the parts but 50% of the rejects.</figcaption>
+          </figure>
+          <p>By shift, the differences are small: A 3.78%, B 3.25%, C 3.87%. One clue was worth keeping, though: on C shift the mold temperature averaged <strong>46.2 °C</strong>, against 45.2 °C on A and B.</p>
+
+          <h3>5.4 Is the process stable?</h3>
+          <figure class="chart">
+            <img src="charts/cs1-xbar-r.svg" width="720" height="480" loading="lazy" alt="X-bar and R chart for IMM-3, 30 subgroups of five. X-bar chart: center line 2.455 mm, UCL 2.482, LCL 2.429, with 17 of 30 subgroup means outside the limits. R chart: center 0.046 mm, UCL 0.096, all points inside.">
+            <figcaption><strong>X̄-R chart, IMM-3, first 30 baseline subgroups (n = 5).</strong> The range chart is in control. The means chart is not: 17 of 30 points fall beyond the limits.</figcaption>
+          </figure>
+          <p>This pattern is diagnostic. Variation <em>within</em> a subgroup is stable, so the machine is not inherently imprecise. The <em>average</em> moves from shift to shift, which is a special cause acting between lots. The mean also sits at 2.455 mm, 45 µm below nominal.</p>
+
+          <h3>5.5 How capable is the process?</h3>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">Scope, baseline</th><th scope="col" class="num">Mean (mm)</th><th scope="col" class="num">Cp</th><th scope="col" class="num">Cpk</th><th scope="col" class="num">Ppk</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">All machines</th><td class="num">2.490</td><td class="num">1.67</td><td class="num">1.50</td><td class="num bad">0.86</td></tr>
+                <tr><th scope="row">IMM-3 only</th><td class="num">2.471</td><td class="num">1.67</td><td class="num">1.19</td><td class="num bad">0.55</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Cpk uses short-term, within-subgroup variation (R̄/d₂). Ppk uses everything. The large gap between them says the same thing as the control chart: <strong>the fix is setpoint stability, not new equipment.</strong></p>
+
+          <h3>5.6 What drives flange thickness?</h3>
+          <p>A multiple regression of lot-average thickness on the logged process settings, using all 576 baseline lots:</p>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">Term</th><th scope="col" class="num">Effect on thickness</th><th scope="col" class="num">p-value</th><th scope="col">Reading</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Hold pressure</th><td class="num">+0.0030 mm per bar</td><td class="num">&lt; 0.001</td><td class="good">Significant and large. 10 bar ≈ 0.03 mm, 30% of half the tolerance.</td></tr>
+                <tr><th scope="row">Mold temperature</th><td class="num">−0.0076 mm per °C</td><td class="num">&lt; 0.001</td><td class="good">Significant. Explains the C-shift offset.</td></tr>
+                <tr><th scope="row">Melt temperature</th><td class="num">+0.0005 mm per °C</td><td class="num">&lt; 0.001</td><td>Significant but small: ±3 °C moves thickness by only ±0.0015 mm</td></tr>
+                <tr><th scope="row">Cooling time</th><td class="num">−0.0001 mm per s</td><td class="num">0.94</td><td>No detectable effect in the range run</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted">R² = 0.91, n = 576. This is observational data, so it shows association. Each change was confirmed with production data in the improve phase before it became the standard.</p>
+
+          <h3>5.7 Root cause</h3>
+          <ol class="steps">
+            <li><strong>Why is IMM-3’s flange thin?</strong> Its lots average 592 bar of hold pressure against a 600 bar setpoint.</li>
+            <li><strong>Why is the pressure low and unstable?</strong> Its standard deviation is 12.0 bar, against 6.0 bar on the other machines, and the screw cushion drifts. Both point to a worn non-return (check) ring that lets melt slip back during hold.</li>
+            <li><strong>Why wasn’t it caught?</strong> Hold pressure and cushion were not on the control plan. Only the finished part was inspected.</li>
+            <li><strong>Why not?</strong> The PFMEA assumed end-of-line inspection would detect thin flanges. It detected them, but only after they were made.</li>
+          </ol>
+          <p class="callout"><strong>Root cause:</strong> a worn check ring on IMM-3, plus no in-process monitoring of hold pressure. <strong>Contributing causes:</strong> C-shift mold temperature about 1 °C high, because the chiller was not verified at shift start, and resin moisture up to 0.07%, which correlates with short shots (r = 0.29).</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="recommendation" aria-labelledby="recommendation-title">
+        <header><span class="case-num">06</span><h2 id="recommendation-title">Engineering recommendation</h2></header>
+        <div class="case-body">
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">Action</th><th scope="col">Addresses</th><th scope="col">Owner</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Replace the IMM-3 check ring. Add a cushion alarm on all machines.</th><td>Root cause</td><td>Maintenance</td></tr>
+                <tr><th scope="row">Hold-pressure window 600 ± 8 bar with machine alarm</th><td>Biggest driver of thickness</td><td>Process engineering</td></tr>
+                <tr><th scope="row">Mold temperature 45 ± 1.5 °C, verified at every shift start</th><td>C-shift offset</td><td>Shift leads</td></tr>
+                <tr><th scope="row">Resin moisture ≤ 0.035% before release from the dryer</th><td>Short shots</td><td>Material handling</td></tr>
+                <tr><th scope="row">X̄-R chart on flange thickness for each machine</th><td>Early detection</td><td>Quality</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Deliberately not recommended:</strong> changing cooling time, which had no effect and would cost cycle time, and 100% inspection, which costs labor and fixes nothing.</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="result" aria-labelledby="result-title">
+        <header><span class="case-num">07</span><h2 id="result-title">Result &amp; impact</h2></header>
+        <div class="case-body">
+          <p>The changes went in during weeks 9–10. Weeks 11–14 were then measured exactly like the baseline.</p>
+          <figure class="chart">
+            <img src="charts/cs1-weekly.svg" width="720" height="300" loading="lazy" alt="Weekly reject rate. Weeks 1 to 8 average 3.63%. Changes implemented in weeks 9 and 10. Weeks 11 to 14 average 2.22%.">
+            <figcaption><strong>Weekly reject rate.</strong> Baseline mean 3.63%, after mean 2.22%.</figcaption>
+          </figure>
+          <figure class="chart">
+            <img src="charts/cs1-capability.svg" width="720" height="300" loading="lazy" alt="Two histograms of flange thickness with spec limits at 2.40 and 2.60 mm. Baseline is wide, skewed low, with a tail near the lower limit, Ppk 0.86. After is narrow and centered on 2.50 mm, Ppk 1.31.">
+            <figcaption><strong>Flange-thickness distribution, all machines.</strong> Centered and narrower after the change.</figcaption>
+          </figure>
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <thead><tr><th scope="col">Measure</th><th scope="col" class="num">Before</th><th scope="col" class="num">After</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Reject rate</th><td class="num">3.63%</td><td class="num good">2.22%</td></tr>
+                <tr><th scope="row">Ppk, all machines</th><td class="num">0.86</td><td class="num good">1.31</td></tr>
+                <tr><th scope="row">Ppk, IMM-3</th><td class="num">0.55</td><td class="num good">1.22</td></tr>
+                <tr><th scope="row">Mean thickness</th><td class="num">2.490 mm</td><td class="num good">2.500 mm</td></tr>
+                <tr><th scope="row">Hold-pressure SD across lots</th><td class="num">6.0 bar (IMM-3: 12.0)</td><td class="num good">4.1 bar</td></tr>
+                <tr><th scope="row">Dimensional rejects per week</th><td class="num">≈1,020</td><td class="num good">2</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Estimated impact:</strong> at 4.32 million lids a year, a 1.41-point drop in reject rate avoids about <strong>60,900 rejected parts and $36,500 a year</strong>. This assumes $0.60 per rejected part for material and machine time, and excludes labor and customer-side costs.</p>
+          <p class="callout quality"><strong>What is left, and what’s next:</strong> Dimensional rejects are nearly gone. Short shots, sink marks and flash now lead the Pareto, and they are spread evenly across machines, which makes them common-cause. The next step is a designed experiment on the pack-and-hold profile, not more firefighting.</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="control" aria-labelledby="control-title">
+        <header><span class="case-num">08</span><h2 id="control-title">Control &amp; sustainability</h2></header>
+        <div class="case-body">
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <caption>Control plan (excerpt)</caption>
+              <thead><tr><th scope="col">Characteristic</th><th scope="col">Spec</th><th scope="col">Method</th><th scope="col">Sample / frequency</th><th scope="col">Reaction plan</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Flange thickness (CTQ)</th><td>2.50 ± 0.10 mm</td><td>Micrometer in fixture (GRR 11%), X̄-R chart</td><td>5 parts per shift per machine</td><td>Out of control: stop, check hold pressure and cushion, contain back to the last good subgroup</td></tr>
+                <tr><th scope="row">Hold pressure</th><td>600 ± 8 bar</td><td>Machine controller alarm</td><td>Every shot</td><td>Alarm: call maintenance, segregate the parts</td></tr>
+                <tr><th scope="row">Screw cushion</th><td>Setup sheet ± 1 mm</td><td>Controller trend</td><td>Every shot; weekly trend review</td><td>Upward trend: inspect check ring</td></tr>
+                <tr><th scope="row">Mold temperature</th><td>45 ± 1.5 °C</td><td>Probe check, start-up checklist</td><td>Shift start</td><td>Adjust and verify before first-article release</td></tr>
+                <tr><th scope="row">Resin moisture</th><td>≤ 0.035%</td><td>Moisture analyzer</td><td>Each dryer load</td><td>Re-dry; hold the material</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap" tabindex="0">
+            <table class="data-table">
+              <caption>PFMEA update (excerpt)</caption>
+              <thead><tr><th scope="col">Failure mode / cause</th><th scope="col" class="num">S</th><th scope="col" class="num">O</th><th scope="col" class="num">D</th><th scope="col" class="num">RPN</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Thin flange (seal leak) / check-ring wear lowers hold pressure. Before: end-of-line check only.</th><td class="num">7</td><td class="num">6</td><td class="num">7</td><td class="num bad">294</td></tr>
+                <tr><th scope="row">Same, after: pressure alarm, cushion trend, SPC, ring on PM schedule</th><td class="num">7</td><td class="num">2</td><td class="num">3</td><td class="num good">42</td></tr>
+                <tr><th scope="row">Short shot / wet resin. Before: visual check of dryer only.</th><td class="num">6</td><td class="num">5</td><td class="num">5</td><td class="num bad">150</td></tr>
+                <tr><th scope="row">Same, after: moisture test on each load</th><td class="num">6</td><td class="num">2</td><td class="num">3</td><td class="num good">36</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>8D summary</h3>
+          <dl class="d-list">
+            <div><dt>D1</dt><dd><strong>Team</strong>Process, quality, maintenance and shift leads</dd></div>
+            <div><dt>D2</dt><dd><strong>Problem</strong>3.63% rejects. IMM-3 thin flanges are the largest single contributor.</dd></div>
+            <div><dt>D3</dt><dd><strong>Containment</strong>Measure flange thickness on 100% of IMM-3 output until the repair is verified</dd></div>
+            <div><dt>D4</dt><dd><strong>Root cause</strong>Worn check ring and unmonitored hold pressure (section 5.7)</dd></div>
+            <div><dt>D5</dt><dd><strong>Corrective actions</strong>Ring replacement, pressure and temperature windows, moisture limit</dd></div>
+            <div><dt>D6</dt><dd><strong>Verify</strong>Four weeks: rejects 2.22%, Ppk 1.31, containment lifted</dd></div>
+            <div><dt>D7</dt><dd><strong>Prevent recurrence</strong>Control plan, PFMEA, check rings on all machines added to PM, SOP and start-up checklist updated</dd></div>
+            <div><dt>D8</dt><dd><strong>Close</strong>Results shared at the tier meeting; next project opened on short shots and sink marks</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="case-section" id="tools" aria-labelledby="tools-title">
+        <header><span class="case-num">09</span><h2 id="tools-title">Tools used</h2></header>
+        <div class="case-body">
+          <ul class="tags" aria-label="Tools and methods">
+            <li>Python · pandas</li><li>statsmodels (OLS)</li><li>matplotlib</li><li>Gage R&amp;R (ANOVA method)</li><li>X̄-R control charts</li><li>Cp / Cpk / Ppk</li><li>Pareto analysis</li><li>Multiple regression</li><li>5 Whys</li><li>PFMEA</li><li>Control plan</li><li>8D</li>
+          </ul>
+          <p class="muted">Each calculation can be reproduced in Minitab: Stat › Quality Tools › Gage R&amp;R (Crossed), Control Charts › X̄-R, Capability Analysis (Normal), and Regression.</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="files" aria-labelledby="files-title">
+        <header><span class="case-num">10</span><h2 id="files-title">Files</h2></header>
+        <div class="case-body">
+          <div class="file-list">
+            <a href="../data/defect-reduction/molding_lots.csv" download><strong>molding_lots.csv</strong><span>864 lots: settings, output, rejects by type</span><b aria-hidden="true">↓</b></a>
+            <a href="../data/defect-reduction/thickness_subgroups.csv" download><strong>thickness_subgroups.csv</strong><span>864 subgroups of five thickness readings</span><b aria-hidden="true">↓</b></a>
+            <a href="../data/defect-reduction/gage_rr.csv" download><strong>gage_rr.csv</strong><span>Gage R&amp;R study, 90 readings</span><b aria-hidden="true">↓</b></a>
+            <a href="../analysis/build_case_studies.py"><strong>build_case_studies.py</strong><span>Simulation, statistics and charts. Every number on this page comes from it.</span><b aria-hidden="true">→</b></a>
+            <a href="../data/results.json"><strong>results.json</strong><span>All computed results</span><b aria-hidden="true">→</b></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="container case-next" aria-label="Next case study">
+      <a href="oee-dashboard.html"><span>Next case study · 02</span><strong>An OEE dashboard a supervisor can act on →</strong></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="footer-brand">Harshith Gundeti<span>.</span></a>
+      <p>© 2026 Harshith Netha Gundeti</p>
+      <a href="#main" class="footer-top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
