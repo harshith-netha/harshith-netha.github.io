@@ -1,0 +1,1772 @@
+event_id,date,shift,machine,reason,type,minutes
+1,2026-06-01,A,M1,Changeover,Planned,62
+2,2026-06-01,A,M1,Changeover,Planned,93
+3,2026-06-01,A,M1,Changeover,Planned,75
+4,2026-06-01,A,M1,Machine breakdown,Unplanned,74
+5,2026-06-01,A,M2,Mold / tool repair,Unplanned,46
+6,2026-06-01,A,M4,Changeover,Planned,79
+7,2026-06-01,A,M5,Changeover,Planned,62
+8,2026-06-01,A,M5,Mold / tool repair,Unplanned,51
+9,2026-06-01,B,M2,Quality hold,Unplanned,18
+10,2026-06-01,B,M3,Changeover,Planned,74
+11,2026-06-01,B,M3,Changeover,Planned,38
+12,2026-06-01,B,M4,Changeover,Planned,22
+13,2026-06-01,B,M4,Machine breakdown,Unplanned,59
+14,2026-06-01,B,M5,Changeover,Planned,20
+15,2026-06-01,B,M6,Changeover,Planned,25
+16,2026-06-01,C,M2,Changeover,Planned,41
+17,2026-06-01,C,M3,Changeover,Planned,40
+18,2026-06-01,C,M3,Changeover,Planned,60
+19,2026-06-01,C,M3,Changeover,Planned,93
+20,2026-06-01,C,M3,Operator unavailable,Unplanned,18
+21,2026-06-01,C,M3,Operator unavailable,Unplanned,13
+22,2026-06-01,C,M3,Operator unavailable,Unplanned,19
+23,2026-06-01,C,M4,Changeover,Planned,20
+24,2026-06-01,C,M4,Material shortage,Unplanned,24
+25,2026-06-01,C,M5,Changeover,Planned,14
+26,2026-06-01,C,M5,Mold / tool repair,Unplanned,36
+27,2026-06-01,C,M5,Material shortage,Unplanned,36
+28,2026-06-01,C,M6,Operator unavailable,Unplanned,55
+29,2026-06-02,A,M2,Changeover,Planned,15
+30,2026-06-02,A,M2,Changeover,Planned,29
+31,2026-06-02,A,M5,Material shortage,Unplanned,29
+32,2026-06-02,B,M1,Changeover,Planned,30
+33,2026-06-02,B,M1,Changeover,Planned,41
+34,2026-06-02,B,M1,Changeover,Planned,23
+35,2026-06-02,B,M1,Machine breakdown,Unplanned,56
+36,2026-06-02,B,M3,Changeover,Planned,53
+37,2026-06-02,B,M4,Material shortage,Unplanned,32
+38,2026-06-02,B,M5,Changeover,Planned,20
+39,2026-06-02,B,M6,Changeover,Planned,29
+40,2026-06-02,B,M6,Changeover,Planned,29
+41,2026-06-02,B,M6,Machine breakdown,Unplanned,40
+42,2026-06-02,C,M1,Material shortage,Unplanned,46
+43,2026-06-02,C,M2,Changeover,Planned,32
+44,2026-06-02,C,M3,Changeover,Planned,48
+45,2026-06-02,C,M4,Machine breakdown,Unplanned,65
+46,2026-06-02,C,M5,Machine breakdown,Unplanned,28
+47,2026-06-02,C,M5,Operator unavailable,Unplanned,38
+48,2026-06-03,A,M2,Changeover,Planned,64
+49,2026-06-03,A,M3,Changeover,Planned,58
+50,2026-06-03,A,M3,Changeover,Planned,15
+51,2026-06-03,A,M4,Mold / tool repair,Unplanned,57
+52,2026-06-03,A,M4,Material shortage,Unplanned,48
+53,2026-06-03,A,M5,Changeover,Planned,34
+54,2026-06-03,B,M1,Changeover,Planned,31
+55,2026-06-03,B,M3,Changeover,Planned,75
+56,2026-06-03,B,M3,Changeover,Planned,36
+57,2026-06-03,B,M4,Machine breakdown,Unplanned,82
+58,2026-06-03,B,M5,Changeover,Planned,27
+59,2026-06-03,B,M6,Quality hold,Unplanned,23
+60,2026-06-03,C,M3,Changeover,Planned,39
+61,2026-06-03,C,M3,Operator unavailable,Unplanned,26
+62,2026-06-03,C,M4,Changeover,Planned,49
+63,2026-06-03,C,M4,Machine breakdown,Unplanned,46
+64,2026-06-03,C,M5,Mold / tool repair,Unplanned,24
+65,2026-06-03,C,M5,Operator unavailable,Unplanned,14
+66,2026-06-04,A,M1,Changeover,Planned,38
+67,2026-06-04,A,M2,Changeover,Planned,38
+68,2026-06-04,A,M2,Operator unavailable,Unplanned,21
+69,2026-06-04,A,M3,Changeover,Planned,79
+70,2026-06-04,A,M5,Changeover,Planned,19
+71,2026-06-04,A,M6,Mold / tool repair,Unplanned,26
+72,2026-06-04,B,M2,Changeover,Planned,23
+73,2026-06-04,B,M3,Changeover,Planned,40
+74,2026-06-04,B,M4,Mold / tool repair,Unplanned,42
+75,2026-06-04,B,M4,Mold / tool repair,Unplanned,40
+76,2026-06-04,B,M4,Material shortage,Unplanned,13
+77,2026-06-04,B,M4,Machine breakdown,Unplanned,48
+78,2026-06-04,B,M4,Quality hold,Unplanned,54
+79,2026-06-04,B,M5,Changeover,Planned,20
+80,2026-06-04,B,M5,Mold / tool repair,Unplanned,24
+81,2026-06-04,B,M6,Changeover,Planned,42
+82,2026-06-04,C,M1,Operator unavailable,Unplanned,23
+83,2026-06-04,C,M2,Changeover,Planned,37
+84,2026-06-04,C,M2,Changeover,Planned,50
+85,2026-06-04,C,M2,Machine breakdown,Unplanned,27
+86,2026-06-04,C,M3,Operator unavailable,Unplanned,23
+87,2026-06-04,C,M5,Changeover,Planned,15
+88,2026-06-04,C,M5,Machine breakdown,Unplanned,36
+89,2026-06-05,A,M1,Changeover,Planned,41
+90,2026-06-05,A,M1,Machine breakdown,Unplanned,76
+91,2026-06-05,A,M2,Machine breakdown,Unplanned,19
+92,2026-06-05,A,M2,Operator unavailable,Unplanned,18
+93,2026-06-05,A,M3,Changeover,Planned,52
+94,2026-06-05,A,M3,Changeover,Planned,19
+95,2026-06-05,A,M4,Material shortage,Unplanned,18
+96,2026-06-05,A,M5,Mold / tool repair,Unplanned,69
+97,2026-06-05,A,M5,Machine breakdown,Unplanned,71
+98,2026-06-05,A,M6,Changeover,Planned,18
+99,2026-06-05,A,M6,Machine breakdown,Unplanned,108
+100,2026-06-05,B,M1,Mold / tool repair,Unplanned,71
+101,2026-06-05,B,M3,Changeover,Planned,43
+102,2026-06-05,B,M3,Machine breakdown,Unplanned,62
+103,2026-06-05,B,M4,Changeover,Planned,49
+104,2026-06-05,B,M5,Changeover,Planned,21
+105,2026-06-05,B,M5,Changeover,Planned,10
+106,2026-06-05,B,M5,Mold / tool repair,Unplanned,60
+107,2026-06-05,C,M1,Changeover,Planned,29
+108,2026-06-05,C,M1,Changeover,Planned,84
+109,2026-06-05,C,M2,Changeover,Planned,43
+110,2026-06-05,C,M2,Mold / tool repair,Unplanned,56
+111,2026-06-05,C,M3,Changeover,Planned,53
+112,2026-06-05,C,M3,Changeover,Planned,70
+113,2026-06-05,C,M3,Quality hold,Unplanned,11
+114,2026-06-05,C,M4,Changeover,Planned,18
+115,2026-06-05,C,M4,Changeover,Planned,9
+116,2026-06-05,C,M5,Mold / tool repair,Unplanned,35
+117,2026-06-05,C,M6,Changeover,Planned,30
+118,2026-06-06,A,M1,Changeover,Planned,53
+119,2026-06-06,A,M1,Changeover,Planned,20
+120,2026-06-06,A,M1,Material shortage,Unplanned,11
+121,2026-06-06,A,M1,Quality hold,Unplanned,29
+122,2026-06-06,A,M3,Changeover,Planned,74
+123,2026-06-06,A,M3,Material shortage,Unplanned,17
+124,2026-06-06,A,M4,Changeover,Planned,37
+125,2026-06-06,A,M4,Machine breakdown,Unplanned,80
+126,2026-06-06,A,M6,Material shortage,Unplanned,21
+127,2026-06-06,B,M1,Changeover,Planned,39
+128,2026-06-06,B,M1,Changeover,Planned,18
+129,2026-06-06,B,M1,Changeover,Planned,8
+130,2026-06-06,B,M2,Changeover,Planned,38
+131,2026-06-06,B,M3,Changeover,Planned,37
+132,2026-06-06,B,M3,Changeover,Planned,64
+133,2026-06-06,B,M3,Operator unavailable,Unplanned,27
+134,2026-06-06,B,M6,Changeover,Planned,38
+135,2026-06-06,B,M6,Quality hold,Unplanned,61
+136,2026-06-06,C,M1,Changeover,Planned,59
+137,2026-06-06,C,M1,Material shortage,Unplanned,19
+138,2026-06-06,C,M2,Changeover,Planned,33
+139,2026-06-06,C,M3,Changeover,Planned,70
+140,2026-06-06,C,M3,Material shortage,Unplanned,48
+141,2026-06-06,C,M4,Material shortage,Unplanned,8
+142,2026-06-06,C,M4,Machine breakdown,Unplanned,46
+143,2026-06-06,C,M4,Quality hold,Unplanned,41
+144,2026-06-06,C,M5,Mold / tool repair,Unplanned,23
+145,2026-06-06,C,M5,Operator unavailable,Unplanned,16
+146,2026-06-06,C,M6,Machine breakdown,Unplanned,53
+147,2026-06-08,A,M1,Changeover,Planned,28
+148,2026-06-08,A,M1,Operator unavailable,Unplanned,23
+149,2026-06-08,A,M2,Changeover,Planned,42
+150,2026-06-08,A,M2,Material shortage,Unplanned,48
+151,2026-06-08,A,M3,Changeover,Planned,50
+152,2026-06-08,A,M4,Changeover,Planned,50
+153,2026-06-08,A,M5,Changeover,Planned,24
+154,2026-06-08,A,M5,Changeover,Planned,25
+155,2026-06-08,A,M5,Material shortage,Unplanned,11
+156,2026-06-08,A,M5,Machine breakdown,Unplanned,25
+157,2026-06-08,A,M6,Changeover,Planned,50
+158,2026-06-08,A,M6,Changeover,Planned,29
+159,2026-06-08,A,M6,Operator unavailable,Unplanned,18
+160,2026-06-08,B,M1,Changeover,Planned,53
+161,2026-06-08,B,M1,Changeover,Planned,29
+162,2026-06-08,B,M2,Changeover,Planned,44
+163,2026-06-08,B,M2,Changeover,Planned,31
+164,2026-06-08,B,M2,Changeover,Planned,43
+165,2026-06-08,B,M3,Changeover,Planned,62
+166,2026-06-08,B,M5,Changeover,Planned,19
+167,2026-06-08,B,M6,Changeover,Planned,33
+168,2026-06-08,C,M1,Changeover,Planned,46
+169,2026-06-08,C,M2,Changeover,Planned,37
+170,2026-06-08,C,M3,Material shortage,Unplanned,24
+171,2026-06-08,C,M4,Changeover,Planned,27
+172,2026-06-08,C,M4,Changeover,Planned,22
+173,2026-06-09,A,M1,Changeover,Planned,74
+174,2026-06-09,A,M3,Changeover,Planned,39
+175,2026-06-09,A,M3,Changeover,Planned,28
+176,2026-06-09,A,M3,Material shortage,Unplanned,16
+177,2026-06-09,A,M4,Machine breakdown,Unplanned,70
+178,2026-06-09,A,M4,Operator unavailable,Unplanned,26
+179,2026-06-09,A,M5,Changeover,Planned,44
+180,2026-06-09,A,M5,Mold / tool repair,Unplanned,55
+181,2026-06-09,B,M1,Changeover,Planned,58
+182,2026-06-09,B,M2,Changeover,Planned,24
+183,2026-06-09,B,M2,Machine breakdown,Unplanned,46
+184,2026-06-09,B,M3,Changeover,Planned,26
+185,2026-06-09,B,M5,Changeover,Planned,27
+186,2026-06-09,C,M1,Changeover,Planned,21
+187,2026-06-09,C,M1,Material shortage,Unplanned,43
+188,2026-06-09,C,M3,Changeover,Planned,65
+189,2026-06-09,C,M3,Operator unavailable,Unplanned,25
+190,2026-06-09,C,M3,Operator unavailable,Unplanned,26
+191,2026-06-09,C,M4,Changeover,Planned,13
+192,2026-06-09,C,M6,Material shortage,Unplanned,6
+193,2026-06-10,A,M1,Changeover,Planned,17
+194,2026-06-10,A,M1,Changeover,Planned,74
+195,2026-06-10,A,M3,Changeover,Planned,47
+196,2026-06-10,A,M3,Changeover,Planned,37
+197,2026-06-10,A,M3,Mold / tool repair,Unplanned,35
+198,2026-06-10,A,M5,Mold / tool repair,Unplanned,56
+199,2026-06-10,A,M5,Material shortage,Unplanned,12
+200,2026-06-10,A,M6,Changeover,Planned,25
+201,2026-06-10,A,M6,Machine breakdown,Unplanned,72
+202,2026-06-10,B,M2,Changeover,Planned,27
+203,2026-06-10,B,M2,Machine breakdown,Unplanned,52
+204,2026-06-10,B,M3,Changeover,Planned,31
+205,2026-06-10,B,M4,Changeover,Planned,46
+206,2026-06-10,B,M5,Mold / tool repair,Unplanned,59
+207,2026-06-10,B,M6,Material shortage,Unplanned,23
+208,2026-06-10,C,M1,Operator unavailable,Unplanned,30
+209,2026-06-10,C,M1,Operator unavailable,Unplanned,61
+210,2026-06-10,C,M2,Changeover,Planned,33
+211,2026-06-10,C,M3,Machine breakdown,Unplanned,64
+212,2026-06-10,C,M4,Changeover,Planned,34
+213,2026-06-10,C,M4,Operator unavailable,Unplanned,28
+214,2026-06-10,C,M6,Mold / tool repair,Unplanned,37
+215,2026-06-10,C,M6,Mold / tool repair,Unplanned,58
+216,2026-06-11,A,M1,Changeover,Planned,41
+217,2026-06-11,A,M2,Quality hold,Unplanned,29
+218,2026-06-11,A,M3,Changeover,Planned,46
+219,2026-06-11,A,M3,Changeover,Planned,39
+220,2026-06-11,A,M4,Changeover,Planned,30
+221,2026-06-11,A,M6,Changeover,Planned,25
+222,2026-06-11,A,M6,Changeover,Planned,12
+223,2026-06-11,B,M2,Changeover,Planned,77
+224,2026-06-11,B,M4,Changeover,Planned,7
+225,2026-06-11,B,M4,Material shortage,Unplanned,17
+226,2026-06-11,B,M4,Material shortage,Unplanned,12
+227,2026-06-11,B,M5,Mold / tool repair,Unplanned,58
+228,2026-06-11,B,M6,Mold / tool repair,Unplanned,25
+229,2026-06-11,C,M1,Mold / tool repair,Unplanned,20
+230,2026-06-11,C,M1,Operator unavailable,Unplanned,35
+231,2026-06-11,C,M2,Changeover,Planned,37
+232,2026-06-11,C,M4,Mold / tool repair,Unplanned,57
+233,2026-06-11,C,M4,Material shortage,Unplanned,15
+234,2026-06-11,C,M6,Changeover,Planned,37
+235,2026-06-11,C,M6,Mold / tool repair,Unplanned,39
+236,2026-06-11,C,M6,Operator unavailable,Unplanned,54
+237,2026-06-12,A,M2,Changeover,Planned,15
+238,2026-06-12,A,M2,Machine breakdown,Unplanned,75
+239,2026-06-12,A,M3,Changeover,Planned,67
+240,2026-06-12,A,M3,Mold / tool repair,Unplanned,53
+241,2026-06-12,A,M6,Mold / tool repair,Unplanned,21
+242,2026-06-12,A,M6,Operator unavailable,Unplanned,23
+243,2026-06-12,B,M1,Mold / tool repair,Unplanned,45
+244,2026-06-12,B,M2,Machine breakdown,Unplanned,52
+245,2026-06-12,B,M3,Machine breakdown,Unplanned,107
+246,2026-06-12,B,M3,Operator unavailable,Unplanned,39
+247,2026-06-12,B,M4,Changeover,Planned,19
+248,2026-06-12,C,M1,Changeover,Planned,19
+249,2026-06-12,C,M3,Changeover,Planned,31
+250,2026-06-12,C,M4,Operator unavailable,Unplanned,61
+251,2026-06-12,C,M5,Material shortage,Unplanned,18
+252,2026-06-12,C,M6,Material shortage,Unplanned,14
+253,2026-06-13,A,M2,Changeover,Planned,49
+254,2026-06-13,A,M2,Operator unavailable,Unplanned,27
+255,2026-06-13,A,M3,Changeover,Planned,51
+256,2026-06-13,A,M3,Quality hold,Unplanned,71
+257,2026-06-13,A,M5,Changeover,Planned,25
+258,2026-06-13,B,M1,Changeover,Planned,45
+259,2026-06-13,B,M1,Changeover,Planned,36
+260,2026-06-13,B,M1,Mold / tool repair,Unplanned,63
+261,2026-06-13,B,M2,Changeover,Planned,50
+262,2026-06-13,B,M2,Changeover,Planned,33
+263,2026-06-13,B,M2,Mold / tool repair,Unplanned,39
+264,2026-06-13,B,M3,Changeover,Planned,24
+265,2026-06-13,B,M3,Changeover,Planned,24
+266,2026-06-13,B,M4,Changeover,Planned,24
+267,2026-06-13,B,M4,Changeover,Planned,32
+268,2026-06-13,B,M4,Mold / tool repair,Unplanned,20
+269,2026-06-13,B,M4,Mold / tool repair,Unplanned,41
+270,2026-06-13,B,M5,Quality hold,Unplanned,18
+271,2026-06-13,B,M6,Material shortage,Unplanned,21
+272,2026-06-13,C,M1,Changeover,Planned,58
+273,2026-06-13,C,M2,Changeover,Planned,37
+274,2026-06-13,C,M3,Changeover,Planned,60
+275,2026-06-13,C,M4,Changeover,Planned,40
+276,2026-06-13,C,M4,Changeover,Planned,42
+277,2026-06-13,C,M5,Changeover,Planned,16
+278,2026-06-15,A,M1,Changeover,Planned,19
+279,2026-06-15,A,M2,Material shortage,Unplanned,25
+280,2026-06-15,A,M2,Machine breakdown,Unplanned,61
+281,2026-06-15,A,M3,Changeover,Planned,27
+282,2026-06-15,A,M3,Mold / tool repair,Unplanned,120
+283,2026-06-15,A,M4,Changeover,Planned,28
+284,2026-06-15,A,M4,Mold / tool repair,Unplanned,18
+285,2026-06-15,A,M4,Material shortage,Unplanned,19
+286,2026-06-15,A,M4,Operator unavailable,Unplanned,26
+287,2026-06-15,A,M5,Changeover,Planned,28
+288,2026-06-15,A,M5,Changeover,Planned,38
+289,2026-06-15,A,M6,Changeover,Planned,26
+290,2026-06-15,B,M2,Changeover,Planned,53
+291,2026-06-15,B,M2,Material shortage,Unplanned,12
+292,2026-06-15,B,M2,Machine breakdown,Unplanned,37
+293,2026-06-15,B,M3,Changeover,Planned,39
+294,2026-06-15,B,M4,Changeover,Planned,48
+295,2026-06-15,B,M4,Material shortage,Unplanned,20
+296,2026-06-15,B,M6,Machine breakdown,Unplanned,12
+297,2026-06-15,C,M1,Changeover,Planned,34
+298,2026-06-15,C,M1,Material shortage,Unplanned,20
+299,2026-06-15,C,M1,Machine breakdown,Unplanned,80
+300,2026-06-15,C,M1,Operator unavailable,Unplanned,31
+301,2026-06-15,C,M2,Mold / tool repair,Unplanned,46
+302,2026-06-15,C,M3,Changeover,Planned,58
+303,2026-06-15,C,M3,Machine breakdown,Unplanned,17
+304,2026-06-15,C,M4,Changeover,Planned,26
+305,2026-06-15,C,M5,Changeover,Planned,29
+306,2026-06-15,C,M5,Mold / tool repair,Unplanned,22
+307,2026-06-15,C,M5,Material shortage,Unplanned,31
+308,2026-06-15,C,M5,Material shortage,Unplanned,30
+309,2026-06-15,C,M5,Quality hold,Unplanned,12
+310,2026-06-16,A,M3,Changeover,Planned,40
+311,2026-06-16,A,M3,Machine breakdown,Unplanned,28
+312,2026-06-16,A,M4,Changeover,Planned,19
+313,2026-06-16,A,M4,Material shortage,Unplanned,15
+314,2026-06-16,A,M6,Changeover,Planned,20
+315,2026-06-16,A,M6,Changeover,Planned,59
+316,2026-06-16,B,M5,Material shortage,Unplanned,36
+317,2026-06-16,C,M1,Changeover,Planned,48
+318,2026-06-16,C,M1,Changeover,Planned,22
+319,2026-06-16,C,M2,Changeover,Planned,46
+320,2026-06-16,C,M3,Changeover,Planned,22
+321,2026-06-16,C,M3,Changeover,Planned,71
+322,2026-06-16,C,M3,Operator unavailable,Unplanned,25
+323,2026-06-16,C,M4,Quality hold,Unplanned,21
+324,2026-06-16,C,M5,Material shortage,Unplanned,54
+325,2026-06-17,A,M2,Changeover,Planned,12
+326,2026-06-17,A,M2,Changeover,Planned,52
+327,2026-06-17,A,M2,Changeover,Planned,49
+328,2026-06-17,A,M2,Quality hold,Unplanned,49
+329,2026-06-17,A,M3,Changeover,Planned,50
+330,2026-06-17,A,M5,Quality hold,Unplanned,33
+331,2026-06-17,B,M1,Changeover,Planned,37
+332,2026-06-17,B,M2,Changeover,Planned,22
+333,2026-06-17,B,M3,Changeover,Planned,116
+334,2026-06-17,B,M3,Material shortage,Unplanned,27
+335,2026-06-17,B,M4,Changeover,Planned,22
+336,2026-06-17,B,M4,Mold / tool repair,Unplanned,51
+337,2026-06-17,B,M5,Changeover,Planned,31
+338,2026-06-17,B,M6,Material shortage,Unplanned,8
+339,2026-06-17,B,M6,Machine breakdown,Unplanned,32
+340,2026-06-17,C,M1,Changeover,Planned,38
+341,2026-06-17,C,M1,Operator unavailable,Unplanned,22
+342,2026-06-17,C,M3,Changeover,Planned,48
+343,2026-06-17,C,M3,Material shortage,Unplanned,31
+344,2026-06-17,C,M3,Quality hold,Unplanned,54
+345,2026-06-17,C,M4,Changeover,Planned,25
+346,2026-06-17,C,M4,Machine breakdown,Unplanned,44
+347,2026-06-17,C,M4,Operator unavailable,Unplanned,28
+348,2026-06-17,C,M6,Changeover,Planned,21
+349,2026-06-18,A,M1,Changeover,Planned,58
+350,2026-06-18,A,M3,Changeover,Planned,59
+351,2026-06-18,A,M4,Changeover,Planned,57
+352,2026-06-18,A,M4,Material shortage,Unplanned,35
+353,2026-06-18,B,M1,Changeover,Planned,36
+354,2026-06-18,B,M2,Changeover,Planned,82
+355,2026-06-18,B,M3,Changeover,Planned,28
+356,2026-06-18,B,M3,Changeover,Planned,31
+357,2026-06-18,B,M3,Changeover,Planned,54
+358,2026-06-18,B,M3,Machine breakdown,Unplanned,38
+359,2026-06-18,B,M4,Changeover,Planned,11
+360,2026-06-18,B,M5,Material shortage,Unplanned,26
+361,2026-06-18,B,M5,Machine breakdown,Unplanned,46
+362,2026-06-18,B,M6,Mold / tool repair,Unplanned,27
+363,2026-06-18,C,M1,Changeover,Planned,35
+364,2026-06-18,C,M1,Quality hold,Unplanned,50
+365,2026-06-18,C,M2,Changeover,Planned,37
+366,2026-06-18,C,M2,Material shortage,Unplanned,32
+367,2026-06-18,C,M2,Quality hold,Unplanned,36
+368,2026-06-18,C,M3,Changeover,Planned,39
+369,2026-06-18,C,M3,Mold / tool repair,Unplanned,27
+370,2026-06-18,C,M4,Changeover,Planned,19
+371,2026-06-18,C,M4,Operator unavailable,Unplanned,19
+372,2026-06-18,C,M6,Changeover,Planned,68
+373,2026-06-19,A,M1,Material shortage,Unplanned,30
+374,2026-06-19,A,M2,Changeover,Planned,14
+375,2026-06-19,A,M2,Changeover,Planned,24
+376,2026-06-19,A,M2,Changeover,Planned,14
+377,2026-06-19,A,M3,Changeover,Planned,51
+378,2026-06-19,A,M3,Changeover,Planned,49
+379,2026-06-19,B,M1,Changeover,Planned,67
+380,2026-06-19,B,M1,Machine breakdown,Unplanned,70
+381,2026-06-19,B,M3,Changeover,Planned,21
+382,2026-06-19,B,M5,Changeover,Planned,18
+383,2026-06-19,B,M5,Changeover,Planned,23
+384,2026-06-19,B,M5,Changeover,Planned,25
+385,2026-06-19,B,M6,Changeover,Planned,11
+386,2026-06-19,B,M6,Machine breakdown,Unplanned,53
+387,2026-06-19,C,M2,Mold / tool repair,Unplanned,62
+388,2026-06-19,C,M3,Changeover,Planned,60
+389,2026-06-19,C,M4,Changeover,Planned,10
+390,2026-06-20,A,M1,Changeover,Planned,39
+391,2026-06-20,A,M1,Changeover,Planned,20
+392,2026-06-20,A,M1,Machine breakdown,Unplanned,34
+393,2026-06-20,A,M1,Machine breakdown,Unplanned,37
+394,2026-06-20,A,M2,Changeover,Planned,17
+395,2026-06-20,A,M3,Changeover,Planned,18
+396,2026-06-20,B,M2,Changeover,Planned,40
+397,2026-06-20,B,M5,Changeover,Planned,47
+398,2026-06-20,C,M2,Changeover,Planned,51
+399,2026-06-20,C,M2,Operator unavailable,Unplanned,17
+400,2026-06-20,C,M4,Changeover,Planned,13
+401,2026-06-20,C,M5,Mold / tool repair,Unplanned,48
+402,2026-06-20,C,M5,Material shortage,Unplanned,44
+403,2026-06-20,C,M6,Changeover,Planned,39
+404,2026-06-20,C,M6,Machine breakdown,Unplanned,51
+405,2026-06-20,C,M6,Quality hold,Unplanned,28
+406,2026-06-22,A,M2,Mold / tool repair,Unplanned,57
+407,2026-06-22,A,M2,Material shortage,Unplanned,10
+408,2026-06-22,B,M1,Changeover,Planned,74
+409,2026-06-22,B,M1,Mold / tool repair,Unplanned,37
+410,2026-06-22,B,M3,Changeover,Planned,50
+411,2026-06-22,B,M4,Machine breakdown,Unplanned,34
+412,2026-06-22,B,M5,Mold / tool repair,Unplanned,61
+413,2026-06-22,B,M5,Mold / tool repair,Unplanned,44
+414,2026-06-22,B,M6,Mold / tool repair,Unplanned,87
+415,2026-06-22,C,M1,Changeover,Planned,33
+416,2026-06-22,C,M1,Changeover,Planned,39
+417,2026-06-22,C,M2,Changeover,Planned,25
+418,2026-06-22,C,M2,Quality hold,Unplanned,10
+419,2026-06-22,C,M2,Operator unavailable,Unplanned,26
+420,2026-06-22,C,M3,Changeover,Planned,125
+421,2026-06-22,C,M3,Changeover,Planned,48
+422,2026-06-22,C,M5,Operator unavailable,Unplanned,28
+423,2026-06-23,A,M2,Changeover,Planned,76
+424,2026-06-23,A,M2,Changeover,Planned,33
+425,2026-06-23,A,M4,Changeover,Planned,19
+426,2026-06-23,A,M4,Material shortage,Unplanned,20
+427,2026-06-23,A,M5,Changeover,Planned,58
+428,2026-06-23,A,M6,Operator unavailable,Unplanned,13
+429,2026-06-23,B,M1,Changeover,Planned,25
+430,2026-06-23,B,M1,Material shortage,Unplanned,20
+431,2026-06-23,B,M2,Changeover,Planned,131
+432,2026-06-23,B,M2,Changeover,Planned,48
+433,2026-06-23,B,M3,Changeover,Planned,56
+434,2026-06-23,B,M4,Changeover,Planned,56
+435,2026-06-23,B,M5,Material shortage,Unplanned,20
+436,2026-06-23,B,M6,Material shortage,Unplanned,28
+437,2026-06-23,C,M1,Mold / tool repair,Unplanned,111
+438,2026-06-23,C,M3,Machine breakdown,Unplanned,36
+439,2026-06-23,C,M4,Mold / tool repair,Unplanned,56
+440,2026-06-23,C,M4,Mold / tool repair,Unplanned,92
+441,2026-06-23,C,M4,Operator unavailable,Unplanned,31
+442,2026-06-23,C,M5,Mold / tool repair,Unplanned,14
+443,2026-06-23,C,M6,Changeover,Planned,19
+444,2026-06-23,C,M6,Changeover,Planned,35
+445,2026-06-24,A,M3,Changeover,Planned,21
+446,2026-06-24,A,M3,Machine breakdown,Unplanned,18
+447,2026-06-24,A,M4,Changeover,Planned,16
+448,2026-06-24,A,M5,Mold / tool repair,Unplanned,25
+449,2026-06-24,B,M1,Machine breakdown,Unplanned,58
+450,2026-06-24,B,M2,Changeover,Planned,32
+451,2026-06-24,B,M2,Quality hold,Unplanned,18
+452,2026-06-24,B,M2,Operator unavailable,Unplanned,30
+453,2026-06-24,B,M4,Changeover,Planned,30
+454,2026-06-24,B,M5,Changeover,Planned,44
+455,2026-06-24,C,M1,Mold / tool repair,Unplanned,92
+456,2026-06-24,C,M1,Machine breakdown,Unplanned,17
+457,2026-06-24,C,M2,Changeover,Planned,24
+458,2026-06-24,C,M4,Quality hold,Unplanned,30
+459,2026-06-24,C,M5,Changeover,Planned,28
+460,2026-06-24,C,M5,Material shortage,Unplanned,11
+461,2026-06-24,C,M5,Material shortage,Unplanned,29
+462,2026-06-24,C,M6,Quality hold,Unplanned,16
+463,2026-06-24,C,M6,Operator unavailable,Unplanned,64
+464,2026-06-24,C,M6,Operator unavailable,Unplanned,11
+465,2026-06-25,A,M1,Changeover,Planned,18
+466,2026-06-25,A,M1,Mold / tool repair,Unplanned,44
+467,2026-06-25,A,M2,Changeover,Planned,45
+468,2026-06-25,A,M3,Machine breakdown,Unplanned,49
+469,2026-06-25,A,M5,Mold / tool repair,Unplanned,40
+470,2026-06-25,A,M5,Mold / tool repair,Unplanned,20
+471,2026-06-25,A,M5,Machine breakdown,Unplanned,66
+472,2026-06-25,A,M5,Machine breakdown,Unplanned,83
+473,2026-06-25,A,M6,Changeover,Planned,21
+474,2026-06-25,B,M1,Changeover,Planned,20
+475,2026-06-25,B,M1,Changeover,Planned,61
+476,2026-06-25,B,M1,Changeover,Planned,64
+477,2026-06-25,B,M1,Mold / tool repair,Unplanned,54
+478,2026-06-25,B,M3,Changeover,Planned,55
+479,2026-06-25,B,M4,Changeover,Planned,13
+480,2026-06-25,B,M4,Machine breakdown,Unplanned,15
+481,2026-06-25,B,M5,Mold / tool repair,Unplanned,44
+482,2026-06-25,C,M1,Changeover,Planned,43
+483,2026-06-25,C,M3,Changeover,Planned,78
+484,2026-06-25,C,M3,Mold / tool repair,Unplanned,56
+485,2026-06-25,C,M4,Changeover,Planned,41
+486,2026-06-25,C,M4,Mold / tool repair,Unplanned,27
+487,2026-06-25,C,M4,Material shortage,Unplanned,20
+488,2026-06-25,C,M5,Mold / tool repair,Unplanned,60
+489,2026-06-25,C,M6,Quality hold,Unplanned,41
+490,2026-06-26,A,M1,Mold / tool repair,Unplanned,22
+491,2026-06-26,A,M2,Mold / tool repair,Unplanned,47
+492,2026-06-26,A,M5,Mold / tool repair,Unplanned,85
+493,2026-06-26,A,M5,Mold / tool repair,Unplanned,43
+494,2026-06-26,A,M5,Material shortage,Unplanned,31
+495,2026-06-26,A,M6,Material shortage,Unplanned,15
+496,2026-06-26,A,M6,Machine breakdown,Unplanned,32
+497,2026-06-26,B,M2,Changeover,Planned,70
+498,2026-06-26,B,M3,Changeover,Planned,37
+499,2026-06-26,B,M3,Machine breakdown,Unplanned,65
+500,2026-06-26,B,M4,Material shortage,Unplanned,20
+501,2026-06-26,B,M5,Machine breakdown,Unplanned,57
+502,2026-06-26,C,M1,Quality hold,Unplanned,13
+503,2026-06-26,C,M1,Operator unavailable,Unplanned,61
+504,2026-06-26,C,M2,Changeover,Planned,23
+505,2026-06-26,C,M2,Changeover,Planned,41
+506,2026-06-26,C,M3,Operator unavailable,Unplanned,23
+507,2026-06-26,C,M4,Changeover,Planned,19
+508,2026-06-26,C,M4,Changeover,Planned,12
+509,2026-06-26,C,M4,Machine breakdown,Unplanned,38
+510,2026-06-27,A,M1,Changeover,Planned,51
+511,2026-06-27,A,M2,Changeover,Planned,32
+512,2026-06-27,A,M3,Changeover,Planned,77
+513,2026-06-27,A,M5,Mold / tool repair,Unplanned,36
+514,2026-06-27,A,M5,Material shortage,Unplanned,22
+515,2026-06-27,A,M5,Material shortage,Unplanned,17
+516,2026-06-27,B,M1,Changeover,Planned,44
+517,2026-06-27,B,M1,Material shortage,Unplanned,39
+518,2026-06-27,B,M1,Machine breakdown,Unplanned,34
+519,2026-06-27,B,M2,Changeover,Planned,39
+520,2026-06-27,B,M2,Changeover,Planned,41
+521,2026-06-27,B,M3,Changeover,Planned,79
+522,2026-06-27,B,M4,Material shortage,Unplanned,16
+523,2026-06-27,B,M5,Changeover,Planned,38
+524,2026-06-27,B,M5,Mold / tool repair,Unplanned,38
+525,2026-06-27,B,M5,Mold / tool repair,Unplanned,26
+526,2026-06-27,B,M6,Changeover,Planned,17
+527,2026-06-27,B,M6,Changeover,Planned,36
+528,2026-06-27,B,M6,Changeover,Planned,10
+529,2026-06-27,B,M6,Machine breakdown,Unplanned,66
+530,2026-06-27,B,M6,Quality hold,Unplanned,40
+531,2026-06-27,C,M1,Changeover,Planned,61
+532,2026-06-27,C,M2,Changeover,Planned,82
+533,2026-06-27,C,M6,Mold / tool repair,Unplanned,58
+534,2026-06-29,A,M3,Quality hold,Unplanned,18
+535,2026-06-29,A,M4,Changeover,Planned,33
+536,2026-06-29,A,M6,Operator unavailable,Unplanned,37
+537,2026-06-29,B,M2,Changeover,Planned,14
+538,2026-06-29,B,M3,Changeover,Planned,66
+539,2026-06-29,B,M4,Changeover,Planned,28
+540,2026-06-29,B,M4,Material shortage,Unplanned,27
+541,2026-06-29,B,M4,Machine breakdown,Unplanned,17
+542,2026-06-29,B,M5,Mold / tool repair,Unplanned,22
+543,2026-06-29,B,M5,Material shortage,Unplanned,32
+544,2026-06-29,B,M6,Changeover,Planned,8
+545,2026-06-29,B,M6,Changeover,Planned,13
+546,2026-06-29,B,M6,Material shortage,Unplanned,41
+547,2026-06-29,C,M1,Changeover,Planned,45
+548,2026-06-29,C,M2,Changeover,Planned,85
+549,2026-06-29,C,M3,Machine breakdown,Unplanned,49
+550,2026-06-29,C,M3,Operator unavailable,Unplanned,56
+551,2026-06-29,C,M4,Machine breakdown,Unplanned,36
+552,2026-06-29,C,M4,Quality hold,Unplanned,16
+553,2026-06-29,C,M5,Changeover,Planned,15
+554,2026-06-29,C,M5,Changeover,Planned,15
+555,2026-06-29,C,M5,Mold / tool repair,Unplanned,20
+556,2026-06-29,C,M6,Mold / tool repair,Unplanned,30
+557,2026-06-30,A,M1,Changeover,Planned,112
+558,2026-06-30,A,M1,Mold / tool repair,Unplanned,26
+559,2026-06-30,A,M1,Material shortage,Unplanned,19
+560,2026-06-30,A,M1,Machine breakdown,Unplanned,31
+561,2026-06-30,A,M2,Changeover,Planned,30
+562,2026-06-30,A,M2,Material shortage,Unplanned,52
+563,2026-06-30,A,M3,Changeover,Planned,35
+564,2026-06-30,A,M4,Changeover,Planned,28
+565,2026-06-30,B,M2,Changeover,Planned,59
+566,2026-06-30,B,M4,Changeover,Planned,34
+567,2026-06-30,B,M5,Material shortage,Unplanned,14
+568,2026-06-30,B,M6,Changeover,Planned,82
+569,2026-06-30,B,M6,Quality hold,Unplanned,27
+570,2026-06-30,C,M1,Changeover,Planned,48
+571,2026-06-30,C,M1,Changeover,Planned,35
+572,2026-06-30,C,M1,Changeover,Planned,78
+573,2026-06-30,C,M2,Material shortage,Unplanned,46
+574,2026-06-30,C,M2,Machine breakdown,Unplanned,21
+575,2026-06-30,C,M3,Changeover,Planned,50
+576,2026-06-30,C,M3,Operator unavailable,Unplanned,25
+577,2026-06-30,C,M4,Changeover,Planned,8
+578,2026-06-30,C,M5,Mold / tool repair,Unplanned,48
+579,2026-06-30,C,M5,Mold / tool repair,Unplanned,20
+580,2026-06-30,C,M5,Operator unavailable,Unplanned,37
+581,2026-06-30,C,M6,Changeover,Planned,16
+582,2026-07-01,A,M1,Changeover,Planned,41
+583,2026-07-01,A,M2,Changeover,Planned,15
+584,2026-07-01,A,M2,Changeover,Planned,32
+585,2026-07-01,A,M2,Material shortage,Unplanned,45
+586,2026-07-01,A,M3,Changeover,Planned,15
+587,2026-07-01,A,M5,Changeover,Planned,56
+588,2026-07-01,A,M5,Material shortage,Unplanned,26
+589,2026-07-01,A,M6,Changeover,Planned,24
+590,2026-07-01,B,M1,Changeover,Planned,37
+591,2026-07-01,B,M1,Material shortage,Unplanned,23
+592,2026-07-01,B,M2,Changeover,Planned,30
+593,2026-07-01,B,M2,Material shortage,Unplanned,16
+594,2026-07-01,B,M3,Material shortage,Unplanned,6
+595,2026-07-01,B,M5,Mold / tool repair,Unplanned,45
+596,2026-07-01,B,M5,Material shortage,Unplanned,14
+597,2026-07-01,C,M2,Changeover,Planned,22
+598,2026-07-01,C,M2,Changeover,Planned,14
+599,2026-07-01,C,M3,Changeover,Planned,25
+600,2026-07-01,C,M3,Material shortage,Unplanned,17
+601,2026-07-01,C,M5,Quality hold,Unplanned,25
+602,2026-07-01,C,M6,Machine breakdown,Unplanned,33
+603,2026-07-02,A,M1,Changeover,Planned,65
+604,2026-07-02,A,M1,Material shortage,Unplanned,15
+605,2026-07-02,A,M2,Changeover,Planned,32
+606,2026-07-02,A,M2,Changeover,Planned,32
+607,2026-07-02,A,M4,Machine breakdown,Unplanned,63
+608,2026-07-02,A,M5,Mold / tool repair,Unplanned,60
+609,2026-07-02,A,M6,Machine breakdown,Unplanned,45
+610,2026-07-02,A,M6,Machine breakdown,Unplanned,30
+611,2026-07-02,B,M1,Changeover,Planned,32
+612,2026-07-02,B,M2,Changeover,Planned,22
+613,2026-07-02,B,M2,Changeover,Planned,57
+614,2026-07-02,B,M3,Changeover,Planned,50
+615,2026-07-02,B,M3,Changeover,Planned,64
+616,2026-07-02,B,M3,Material shortage,Unplanned,57
+617,2026-07-02,B,M5,Changeover,Planned,37
+618,2026-07-02,B,M6,Changeover,Planned,28
+619,2026-07-02,B,M6,Changeover,Planned,47
+620,2026-07-02,B,M6,Machine breakdown,Unplanned,91
+621,2026-07-02,B,M6,Machine breakdown,Unplanned,82
+622,2026-07-02,C,M1,Changeover,Planned,14
+623,2026-07-02,C,M2,Changeover,Planned,19
+624,2026-07-02,C,M2,Changeover,Planned,46
+625,2026-07-02,C,M2,Changeover,Planned,56
+626,2026-07-02,C,M2,Material shortage,Unplanned,17
+627,2026-07-02,C,M4,Operator unavailable,Unplanned,31
+628,2026-07-02,C,M5,Mold / tool repair,Unplanned,67
+629,2026-07-02,C,M5,Quality hold,Unplanned,38
+630,2026-07-03,A,M1,Changeover,Planned,37
+631,2026-07-03,A,M1,Changeover,Planned,52
+632,2026-07-03,A,M1,Changeover,Planned,50
+633,2026-07-03,A,M1,Material shortage,Unplanned,13
+634,2026-07-03,A,M2,Changeover,Planned,39
+635,2026-07-03,A,M3,Quality hold,Unplanned,23
+636,2026-07-03,A,M5,Mold / tool repair,Unplanned,17
+637,2026-07-03,B,M2,Changeover,Planned,63
+638,2026-07-03,B,M3,Changeover,Planned,11
+639,2026-07-03,B,M3,Changeover,Planned,55
+640,2026-07-03,B,M3,Changeover,Planned,26
+641,2026-07-03,B,M4,Changeover,Planned,36
+642,2026-07-03,B,M4,Changeover,Planned,30
+643,2026-07-03,B,M5,Changeover,Planned,24
+644,2026-07-03,B,M6,Changeover,Planned,23
+645,2026-07-03,C,M1,Changeover,Planned,51
+646,2026-07-03,C,M3,Changeover,Planned,24
+647,2026-07-03,C,M3,Material shortage,Unplanned,26
+648,2026-07-03,C,M5,Changeover,Planned,21
+649,2026-07-03,C,M5,Mold / tool repair,Unplanned,20
+650,2026-07-03,C,M6,Mold / tool repair,Unplanned,42
+651,2026-07-03,C,M6,Material shortage,Unplanned,20
+652,2026-07-03,C,M6,Quality hold,Unplanned,62
+653,2026-07-04,A,M2,Changeover,Planned,40
+654,2026-07-04,A,M2,Changeover,Planned,46
+655,2026-07-04,A,M2,Mold / tool repair,Unplanned,60
+656,2026-07-04,A,M2,Machine breakdown,Unplanned,53
+657,2026-07-04,A,M3,Changeover,Planned,34
+658,2026-07-04,A,M5,Mold / tool repair,Unplanned,68
+659,2026-07-04,A,M5,Mold / tool repair,Unplanned,30
+660,2026-07-04,B,M1,Changeover,Planned,31
+661,2026-07-04,B,M1,Mold / tool repair,Unplanned,24
+662,2026-07-04,B,M2,Mold / tool repair,Unplanned,51
+663,2026-07-04,B,M3,Changeover,Planned,13
+664,2026-07-04,B,M4,Material shortage,Unplanned,26
+665,2026-07-04,B,M5,Changeover,Planned,19
+666,2026-07-04,B,M5,Mold / tool repair,Unplanned,61
+667,2026-07-04,B,M5,Mold / tool repair,Unplanned,41
+668,2026-07-04,B,M6,Material shortage,Unplanned,19
+669,2026-07-04,C,M1,Mold / tool repair,Unplanned,29
+670,2026-07-04,C,M1,Quality hold,Unplanned,62
+671,2026-07-04,C,M2,Changeover,Planned,44
+672,2026-07-04,C,M2,Operator unavailable,Unplanned,21
+673,2026-07-04,C,M4,Changeover,Planned,25
+674,2026-07-04,C,M5,Operator unavailable,Unplanned,15
+675,2026-07-04,C,M6,Changeover,Planned,46
+676,2026-07-06,A,M2,Changeover,Planned,18
+677,2026-07-06,A,M3,Changeover,Planned,66
+678,2026-07-06,A,M4,Changeover,Planned,15
+679,2026-07-06,A,M4,Material shortage,Unplanned,13
+680,2026-07-06,A,M5,Machine breakdown,Unplanned,40
+681,2026-07-06,B,M2,Changeover,Planned,81
+682,2026-07-06,B,M2,Changeover,Planned,26
+683,2026-07-06,B,M2,Mold / tool repair,Unplanned,114
+684,2026-07-06,B,M3,Changeover,Planned,66
+685,2026-07-06,B,M4,Changeover,Planned,89
+686,2026-07-06,B,M5,Changeover,Planned,19
+687,2026-07-06,B,M5,Changeover,Planned,22
+688,2026-07-06,B,M5,Mold / tool repair,Unplanned,66
+689,2026-07-06,B,M5,Material shortage,Unplanned,17
+690,2026-07-06,C,M1,Changeover,Planned,58
+691,2026-07-06,C,M1,Changeover,Planned,69
+692,2026-07-06,C,M1,Machine breakdown,Unplanned,40
+693,2026-07-06,C,M2,Material shortage,Unplanned,43
+694,2026-07-06,C,M3,Changeover,Planned,18
+695,2026-07-06,C,M4,Changeover,Planned,19
+696,2026-07-06,C,M4,Mold / tool repair,Unplanned,34
+697,2026-07-06,C,M4,Mold / tool repair,Unplanned,53
+698,2026-07-06,C,M5,Mold / tool repair,Unplanned,37
+699,2026-07-06,C,M6,Material shortage,Unplanned,26
+700,2026-07-06,C,M6,Operator unavailable,Unplanned,24
+701,2026-07-07,A,M3,Machine breakdown,Unplanned,53
+702,2026-07-07,A,M5,Mold / tool repair,Unplanned,96
+703,2026-07-07,A,M5,Mold / tool repair,Unplanned,26
+704,2026-07-07,A,M5,Material shortage,Unplanned,26
+705,2026-07-07,A,M5,Operator unavailable,Unplanned,20
+706,2026-07-07,B,M1,Changeover,Planned,71
+707,2026-07-07,B,M1,Mold / tool repair,Unplanned,49
+708,2026-07-07,B,M3,Changeover,Planned,31
+709,2026-07-07,B,M3,Mold / tool repair,Unplanned,56
+710,2026-07-07,B,M3,Mold / tool repair,Unplanned,44
+711,2026-07-07,B,M4,Quality hold,Unplanned,27
+712,2026-07-07,C,M1,Changeover,Planned,45
+713,2026-07-07,C,M2,Changeover,Planned,65
+714,2026-07-07,C,M2,Changeover,Planned,72
+715,2026-07-07,C,M3,Changeover,Planned,48
+716,2026-07-07,C,M3,Machine breakdown,Unplanned,37
+717,2026-07-07,C,M3,Operator unavailable,Unplanned,26
+718,2026-07-07,C,M5,Changeover,Planned,9
+719,2026-07-07,C,M5,Mold / tool repair,Unplanned,99
+720,2026-07-07,C,M5,Mold / tool repair,Unplanned,23
+721,2026-07-07,C,M6,Changeover,Planned,46
+722,2026-07-07,C,M6,Changeover,Planned,19
+723,2026-07-07,C,M6,Mold / tool repair,Unplanned,58
+724,2026-07-08,A,M1,Changeover,Planned,52
+725,2026-07-08,A,M2,Changeover,Planned,41
+726,2026-07-08,A,M2,Mold / tool repair,Unplanned,52
+727,2026-07-08,A,M2,Material shortage,Unplanned,31
+728,2026-07-08,A,M4,Changeover,Planned,8
+729,2026-07-08,A,M5,Changeover,Planned,43
+730,2026-07-08,A,M5,Changeover,Planned,11
+731,2026-07-08,A,M6,Changeover,Planned,45
+732,2026-07-08,B,M1,Changeover,Planned,39
+733,2026-07-08,B,M1,Changeover,Planned,97
+734,2026-07-08,B,M2,Changeover,Planned,35
+735,2026-07-08,B,M3,Changeover,Planned,91
+736,2026-07-08,B,M3,Changeover,Planned,50
+737,2026-07-08,B,M3,Machine breakdown,Unplanned,23
+738,2026-07-08,B,M4,Material shortage,Unplanned,55
+739,2026-07-08,B,M5,Mold / tool repair,Unplanned,24
+740,2026-07-08,C,M1,Changeover,Planned,39
+741,2026-07-08,C,M1,Changeover,Planned,40
+742,2026-07-08,C,M1,Material shortage,Unplanned,6
+743,2026-07-08,C,M1,Operator unavailable,Unplanned,41
+744,2026-07-08,C,M2,Changeover,Planned,47
+745,2026-07-08,C,M4,Material shortage,Unplanned,9
+746,2026-07-08,C,M5,Mold / tool repair,Unplanned,69
+747,2026-07-08,C,M6,Changeover,Planned,34
+748,2026-07-09,A,M1,Changeover,Planned,77
+749,2026-07-09,A,M2,Changeover,Planned,28
+750,2026-07-09,A,M2,Changeover,Planned,6
+751,2026-07-09,A,M3,Changeover,Planned,33
+752,2026-07-09,A,M3,Changeover,Planned,45
+753,2026-07-09,A,M3,Mold / tool repair,Unplanned,49
+754,2026-07-09,A,M4,Material shortage,Unplanned,48
+755,2026-07-09,A,M5,Changeover,Planned,29
+756,2026-07-09,B,M1,Changeover,Planned,41
+757,2026-07-09,B,M1,Machine breakdown,Unplanned,35
+758,2026-07-09,B,M3,Changeover,Planned,43
+759,2026-07-09,B,M4,Changeover,Planned,44
+760,2026-07-09,B,M4,Material shortage,Unplanned,37
+761,2026-07-09,B,M5,Changeover,Planned,19
+762,2026-07-09,B,M5,Changeover,Planned,21
+763,2026-07-09,B,M5,Mold / tool repair,Unplanned,43
+764,2026-07-09,C,M1,Changeover,Planned,57
+765,2026-07-09,C,M1,Changeover,Planned,43
+766,2026-07-09,C,M1,Material shortage,Unplanned,38
+767,2026-07-09,C,M2,Changeover,Planned,18
+768,2026-07-09,C,M4,Changeover,Planned,44
+769,2026-07-09,C,M4,Changeover,Planned,24
+770,2026-07-09,C,M4,Machine breakdown,Unplanned,19
+771,2026-07-10,A,M2,Machine breakdown,Unplanned,64
+772,2026-07-10,A,M3,Changeover,Planned,35
+773,2026-07-10,A,M5,Changeover,Planned,29
+774,2026-07-10,A,M5,Changeover,Planned,16
+775,2026-07-10,A,M5,Machine breakdown,Unplanned,35
+776,2026-07-10,B,M1,Machine breakdown,Unplanned,51
+777,2026-07-10,B,M3,Changeover,Planned,41
+778,2026-07-10,B,M3,Quality hold,Unplanned,12
+779,2026-07-10,B,M4,Changeover,Planned,54
+780,2026-07-10,B,M5,Operator unavailable,Unplanned,23
+781,2026-07-10,B,M6,Changeover,Planned,17
+782,2026-07-10,C,M1,Material shortage,Unplanned,3
+783,2026-07-10,C,M2,Changeover,Planned,16
+784,2026-07-10,C,M2,Changeover,Planned,19
+785,2026-07-10,C,M2,Quality hold,Unplanned,24
+786,2026-07-10,C,M2,Operator unavailable,Unplanned,53
+787,2026-07-10,C,M2,Operator unavailable,Unplanned,37
+788,2026-07-10,C,M3,Mold / tool repair,Unplanned,43
+789,2026-07-10,C,M6,Changeover,Planned,47
+790,2026-07-10,C,M6,Changeover,Planned,51
+791,2026-07-11,A,M1,Changeover,Planned,74
+792,2026-07-11,A,M1,Changeover,Planned,70
+793,2026-07-11,A,M3,Changeover,Planned,62
+794,2026-07-11,A,M3,Changeover,Planned,31
+795,2026-07-11,A,M4,Changeover,Planned,15
+796,2026-07-11,A,M4,Machine breakdown,Unplanned,107
+797,2026-07-11,A,M5,Changeover,Planned,28
+798,2026-07-11,A,M5,Material shortage,Unplanned,53
+799,2026-07-11,B,M1,Changeover,Planned,14
+800,2026-07-11,B,M1,Changeover,Planned,59
+801,2026-07-11,B,M1,Machine breakdown,Unplanned,43
+802,2026-07-11,B,M1,Quality hold,Unplanned,24
+803,2026-07-11,B,M2,Machine breakdown,Unplanned,53
+804,2026-07-11,B,M4,Mold / tool repair,Unplanned,25
+805,2026-07-11,B,M6,Changeover,Planned,33
+806,2026-07-11,B,M6,Changeover,Planned,45
+807,2026-07-11,C,M2,Changeover,Planned,42
+808,2026-07-11,C,M2,Mold / tool repair,Unplanned,73
+809,2026-07-11,C,M5,Mold / tool repair,Unplanned,34
+810,2026-07-11,C,M5,Operator unavailable,Unplanned,22
+811,2026-07-11,C,M6,Changeover,Planned,24
+812,2026-07-11,C,M6,Mold / tool repair,Unplanned,95
+813,2026-07-11,C,M6,Operator unavailable,Unplanned,22
+814,2026-07-13,A,M1,Changeover,Planned,95
+815,2026-07-13,A,M1,Changeover,Planned,53
+816,2026-07-13,A,M1,Changeover,Planned,82
+817,2026-07-13,A,M1,Changeover,Planned,22
+818,2026-07-13,A,M2,Material shortage,Unplanned,30
+819,2026-07-13,A,M4,Changeover,Planned,17
+820,2026-07-13,A,M4,Machine breakdown,Unplanned,41
+821,2026-07-13,A,M5,Mold / tool repair,Unplanned,50
+822,2026-07-13,A,M5,Machine breakdown,Unplanned,60
+823,2026-07-13,A,M6,Changeover,Planned,14
+824,2026-07-13,A,M6,Operator unavailable,Unplanned,24
+825,2026-07-13,B,M1,Changeover,Planned,34
+826,2026-07-13,B,M2,Changeover,Planned,17
+827,2026-07-13,B,M5,Changeover,Planned,32
+828,2026-07-13,B,M6,Changeover,Planned,33
+829,2026-07-13,B,M6,Material shortage,Unplanned,16
+830,2026-07-13,C,M1,Changeover,Planned,75
+831,2026-07-13,C,M1,Mold / tool repair,Unplanned,20
+832,2026-07-13,C,M1,Quality hold,Unplanned,26
+833,2026-07-13,C,M2,Changeover,Planned,46
+834,2026-07-13,C,M2,Changeover,Planned,23
+835,2026-07-13,C,M3,Changeover,Planned,28
+836,2026-07-13,C,M3,Changeover,Planned,66
+837,2026-07-13,C,M3,Quality hold,Unplanned,27
+838,2026-07-13,C,M4,Changeover,Planned,21
+839,2026-07-13,C,M6,Operator unavailable,Unplanned,12
+840,2026-07-14,A,M2,Changeover,Planned,40
+841,2026-07-14,A,M2,Changeover,Planned,79
+842,2026-07-14,A,M3,Machine breakdown,Unplanned,49
+843,2026-07-14,A,M4,Changeover,Planned,10
+844,2026-07-14,A,M4,Changeover,Planned,57
+845,2026-07-14,A,M5,Machine breakdown,Unplanned,70
+846,2026-07-14,A,M6,Quality hold,Unplanned,35
+847,2026-07-14,B,M1,Operator unavailable,Unplanned,32
+848,2026-07-14,B,M3,Changeover,Planned,92
+849,2026-07-14,B,M4,Machine breakdown,Unplanned,66
+850,2026-07-14,B,M4,Quality hold,Unplanned,22
+851,2026-07-14,C,M1,Machine breakdown,Unplanned,57
+852,2026-07-14,C,M1,Operator unavailable,Unplanned,16
+853,2026-07-14,C,M2,Changeover,Planned,105
+854,2026-07-14,C,M2,Quality hold,Unplanned,18
+855,2026-07-14,C,M3,Changeover,Planned,42
+856,2026-07-14,C,M3,Machine breakdown,Unplanned,31
+857,2026-07-14,C,M3,Quality hold,Unplanned,30
+858,2026-07-14,C,M4,Changeover,Planned,38
+859,2026-07-14,C,M5,Material shortage,Unplanned,33
+860,2026-07-14,C,M6,Changeover,Planned,48
+861,2026-07-14,C,M6,Material shortage,Unplanned,24
+862,2026-07-15,A,M1,Changeover,Planned,50
+863,2026-07-15,A,M3,Quality hold,Unplanned,31
+864,2026-07-15,A,M4,Operator unavailable,Unplanned,16
+865,2026-07-15,A,M5,Changeover,Planned,8
+866,2026-07-15,A,M6,Operator unavailable,Unplanned,15
+867,2026-07-15,B,M1,Changeover,Planned,43
+868,2026-07-15,B,M1,Changeover,Planned,42
+869,2026-07-15,B,M1,Mold / tool repair,Unplanned,90
+870,2026-07-15,B,M1,Mold / tool repair,Unplanned,70
+871,2026-07-15,B,M2,Machine breakdown,Unplanned,56
+872,2026-07-15,B,M3,Changeover,Planned,25
+873,2026-07-15,B,M4,Operator unavailable,Unplanned,29
+874,2026-07-15,B,M6,Mold / tool repair,Unplanned,20
+875,2026-07-15,C,M1,Changeover,Planned,23
+876,2026-07-15,C,M2,Changeover,Planned,95
+877,2026-07-15,C,M2,Changeover,Planned,64
+878,2026-07-15,C,M3,Material shortage,Unplanned,8
+879,2026-07-15,C,M3,Quality hold,Unplanned,63
+880,2026-07-15,C,M5,Changeover,Planned,29
+881,2026-07-15,C,M6,Changeover,Planned,68
+882,2026-07-15,C,M6,Quality hold,Unplanned,13
+883,2026-07-16,A,M1,Changeover,Planned,77
+884,2026-07-16,A,M3,Changeover,Planned,28
+885,2026-07-16,A,M3,Changeover,Planned,40
+886,2026-07-16,A,M4,Changeover,Planned,28
+887,2026-07-16,A,M4,Changeover,Planned,21
+888,2026-07-16,A,M6,Changeover,Planned,49
+889,2026-07-16,A,M6,Mold / tool repair,Unplanned,42
+890,2026-07-16,B,M1,Changeover,Planned,31
+891,2026-07-16,B,M1,Material shortage,Unplanned,51
+892,2026-07-16,B,M2,Changeover,Planned,28
+893,2026-07-16,B,M3,Operator unavailable,Unplanned,34
+894,2026-07-16,B,M4,Operator unavailable,Unplanned,35
+895,2026-07-16,B,M5,Mold / tool repair,Unplanned,29
+896,2026-07-16,B,M6,Changeover,Planned,25
+897,2026-07-16,B,M6,Operator unavailable,Unplanned,26
+898,2026-07-16,C,M2,Changeover,Planned,90
+899,2026-07-16,C,M2,Changeover,Planned,29
+900,2026-07-16,C,M2,Changeover,Planned,26
+901,2026-07-16,C,M5,Changeover,Planned,31
+902,2026-07-16,C,M5,Mold / tool repair,Unplanned,38
+903,2026-07-16,C,M6,Quality hold,Unplanned,7
+904,2026-07-17,A,M4,Changeover,Planned,29
+905,2026-07-17,A,M4,Mold / tool repair,Unplanned,32
+906,2026-07-17,A,M5,Mold / tool repair,Unplanned,110
+907,2026-07-17,A,M5,Material shortage,Unplanned,29
+908,2026-07-17,A,M5,Material shortage,Unplanned,33
+909,2026-07-17,A,M6,Machine breakdown,Unplanned,71
+910,2026-07-17,B,M1,Changeover,Planned,47
+911,2026-07-17,B,M1,Changeover,Planned,37
+912,2026-07-17,B,M1,Changeover,Planned,20
+913,2026-07-17,B,M1,Machine breakdown,Unplanned,38
+914,2026-07-17,B,M2,Changeover,Planned,51
+915,2026-07-17,B,M3,Quality hold,Unplanned,36
+916,2026-07-17,B,M6,Changeover,Planned,53
+917,2026-07-17,B,M6,Changeover,Planned,25
+918,2026-07-17,B,M6,Changeover,Planned,15
+919,2026-07-17,C,M2,Changeover,Planned,58
+920,2026-07-17,C,M2,Changeover,Planned,30
+921,2026-07-17,C,M2,Changeover,Planned,46
+922,2026-07-17,C,M2,Changeover,Planned,76
+923,2026-07-17,C,M2,Changeover,Planned,28
+924,2026-07-17,C,M2,Changeover,Planned,29
+925,2026-07-17,C,M2,Machine breakdown,Unplanned,73
+926,2026-07-17,C,M3,Changeover,Planned,56
+927,2026-07-17,C,M3,Mold / tool repair,Unplanned,41
+928,2026-07-17,C,M5,Changeover,Planned,13
+929,2026-07-17,C,M5,Material shortage,Unplanned,19
+930,2026-07-17,C,M6,Mold / tool repair,Unplanned,42
+931,2026-07-17,C,M6,Operator unavailable,Unplanned,59
+932,2026-07-18,A,M1,Changeover,Planned,22
+933,2026-07-18,A,M2,Changeover,Planned,37
+934,2026-07-18,A,M2,Material shortage,Unplanned,33
+935,2026-07-18,A,M2,Quality hold,Unplanned,36
+936,2026-07-18,A,M2,Operator unavailable,Unplanned,18
+937,2026-07-18,A,M5,Changeover,Planned,2
+938,2026-07-18,A,M6,Changeover,Planned,53
+939,2026-07-18,B,M2,Changeover,Planned,75
+940,2026-07-18,B,M4,Changeover,Planned,34
+941,2026-07-18,B,M4,Quality hold,Unplanned,9
+942,2026-07-18,B,M4,Operator unavailable,Unplanned,13
+943,2026-07-18,B,M4,Operator unavailable,Unplanned,9
+944,2026-07-18,C,M1,Changeover,Planned,23
+945,2026-07-18,C,M2,Changeover,Planned,7
+946,2026-07-18,C,M2,Changeover,Planned,36
+947,2026-07-18,C,M2,Mold / tool repair,Unplanned,149
+948,2026-07-18,C,M2,Mold / tool repair,Unplanned,86
+949,2026-07-18,C,M2,Machine breakdown,Unplanned,53
+950,2026-07-18,C,M3,Changeover,Planned,51
+951,2026-07-18,C,M3,Changeover,Planned,35
+952,2026-07-20,A,M2,Machine breakdown,Unplanned,28
+953,2026-07-20,A,M3,Mold / tool repair,Unplanned,40
+954,2026-07-20,A,M4,Quality hold,Unplanned,58
+955,2026-07-20,A,M6,Mold / tool repair,Unplanned,30
+956,2026-07-20,B,M1,Machine breakdown,Unplanned,85
+957,2026-07-20,B,M3,Changeover,Planned,43
+958,2026-07-20,B,M3,Machine breakdown,Unplanned,80
+959,2026-07-20,B,M6,Changeover,Planned,9
+960,2026-07-20,B,M6,Machine breakdown,Unplanned,29
+961,2026-07-20,C,M1,Machine breakdown,Unplanned,19
+962,2026-07-20,C,M1,Quality hold,Unplanned,11
+963,2026-07-20,C,M2,Changeover,Planned,44
+964,2026-07-20,C,M4,Quality hold,Unplanned,34
+965,2026-07-20,C,M4,Operator unavailable,Unplanned,38
+966,2026-07-21,A,M2,Changeover,Planned,15
+967,2026-07-21,A,M2,Mold / tool repair,Unplanned,55
+968,2026-07-21,A,M3,Changeover,Planned,39
+969,2026-07-21,A,M3,Changeover,Planned,38
+970,2026-07-21,A,M3,Mold / tool repair,Unplanned,49
+971,2026-07-21,A,M4,Changeover,Planned,36
+972,2026-07-21,A,M4,Changeover,Planned,21
+973,2026-07-21,A,M5,Changeover,Planned,14
+974,2026-07-21,A,M5,Mold / tool repair,Unplanned,53
+975,2026-07-21,B,M1,Operator unavailable,Unplanned,35
+976,2026-07-21,B,M2,Changeover,Planned,43
+977,2026-07-21,B,M3,Changeover,Planned,56
+978,2026-07-21,B,M3,Mold / tool repair,Unplanned,40
+979,2026-07-21,C,M1,Changeover,Planned,17
+980,2026-07-21,C,M1,Changeover,Planned,77
+981,2026-07-21,C,M2,Changeover,Planned,19
+982,2026-07-21,C,M2,Changeover,Planned,50
+983,2026-07-21,C,M2,Changeover,Planned,62
+984,2026-07-21,C,M2,Changeover,Planned,28
+985,2026-07-21,C,M3,Changeover,Planned,38
+986,2026-07-21,C,M3,Changeover,Planned,45
+987,2026-07-21,C,M4,Machine breakdown,Unplanned,27
+988,2026-07-21,C,M4,Quality hold,Unplanned,31
+989,2026-07-21,C,M5,Mold / tool repair,Unplanned,90
+990,2026-07-21,C,M6,Changeover,Planned,23
+991,2026-07-21,C,M6,Changeover,Planned,32
+992,2026-07-22,A,M2,Changeover,Planned,25
+993,2026-07-22,A,M2,Changeover,Planned,30
+994,2026-07-22,A,M3,Material shortage,Unplanned,51
+995,2026-07-22,A,M4,Changeover,Planned,12
+996,2026-07-22,A,M4,Mold / tool repair,Unplanned,46
+997,2026-07-22,A,M5,Changeover,Planned,12
+998,2026-07-22,A,M5,Changeover,Planned,30
+999,2026-07-22,A,M6,Changeover,Planned,8
+1000,2026-07-22,A,M6,Changeover,Planned,70
+1001,2026-07-22,B,M1,Changeover,Planned,60
+1002,2026-07-22,B,M1,Changeover,Planned,80
+1003,2026-07-22,B,M1,Operator unavailable,Unplanned,9
+1004,2026-07-22,B,M3,Changeover,Planned,74
+1005,2026-07-22,B,M3,Changeover,Planned,43
+1006,2026-07-22,B,M3,Changeover,Planned,34
+1007,2026-07-22,B,M3,Changeover,Planned,47
+1008,2026-07-22,B,M3,Material shortage,Unplanned,42
+1009,2026-07-22,B,M4,Mold / tool repair,Unplanned,14
+1010,2026-07-22,B,M4,Machine breakdown,Unplanned,111
+1011,2026-07-22,B,M5,Mold / tool repair,Unplanned,70
+1012,2026-07-22,C,M1,Changeover,Planned,80
+1013,2026-07-22,C,M2,Mold / tool repair,Unplanned,34
+1014,2026-07-22,C,M2,Operator unavailable,Unplanned,61
+1015,2026-07-22,C,M3,Changeover,Planned,36
+1016,2026-07-22,C,M3,Quality hold,Unplanned,14
+1017,2026-07-22,C,M4,Changeover,Planned,38
+1018,2026-07-22,C,M5,Changeover,Planned,32
+1019,2026-07-22,C,M6,Changeover,Planned,5
+1020,2026-07-23,A,M1,Changeover,Planned,39
+1021,2026-07-23,A,M1,Changeover,Planned,68
+1022,2026-07-23,A,M2,Machine breakdown,Unplanned,54
+1023,2026-07-23,A,M3,Material shortage,Unplanned,35
+1024,2026-07-23,A,M5,Quality hold,Unplanned,38
+1025,2026-07-23,A,M6,Material shortage,Unplanned,21
+1026,2026-07-23,B,M1,Changeover,Planned,60
+1027,2026-07-23,B,M3,Changeover,Planned,21
+1028,2026-07-23,C,M1,Changeover,Planned,53
+1029,2026-07-23,C,M1,Changeover,Planned,73
+1030,2026-07-23,C,M1,Changeover,Planned,36
+1031,2026-07-23,C,M2,Material shortage,Unplanned,15
+1032,2026-07-23,C,M3,Changeover,Planned,49
+1033,2026-07-23,C,M3,Changeover,Planned,32
+1034,2026-07-23,C,M3,Changeover,Planned,100
+1035,2026-07-23,C,M3,Mold / tool repair,Unplanned,17
+1036,2026-07-23,C,M6,Changeover,Planned,28
+1037,2026-07-24,A,M2,Changeover,Planned,72
+1038,2026-07-24,A,M2,Changeover,Planned,22
+1039,2026-07-24,A,M2,Machine breakdown,Unplanned,81
+1040,2026-07-24,A,M3,Mold / tool repair,Unplanned,36
+1041,2026-07-24,A,M4,Changeover,Planned,82
+1042,2026-07-24,A,M4,Operator unavailable,Unplanned,20
+1043,2026-07-24,A,M5,Mold / tool repair,Unplanned,22
+1044,2026-07-24,A,M6,Changeover,Planned,27
+1045,2026-07-24,B,M1,Changeover,Planned,66
+1046,2026-07-24,B,M3,Changeover,Planned,53
+1047,2026-07-24,B,M5,Changeover,Planned,26
+1048,2026-07-24,B,M5,Changeover,Planned,38
+1049,2026-07-24,B,M5,Mold / tool repair,Unplanned,44
+1050,2026-07-24,B,M6,Changeover,Planned,32
+1051,2026-07-24,B,M6,Mold / tool repair,Unplanned,50
+1052,2026-07-24,C,M1,Changeover,Planned,45
+1053,2026-07-24,C,M2,Material shortage,Unplanned,27
+1054,2026-07-24,C,M4,Changeover,Planned,20
+1055,2026-07-24,C,M4,Changeover,Planned,16
+1056,2026-07-24,C,M4,Changeover,Planned,32
+1057,2026-07-24,C,M5,Changeover,Planned,25
+1058,2026-07-24,C,M5,Material shortage,Unplanned,21
+1059,2026-07-24,C,M5,Operator unavailable,Unplanned,5
+1060,2026-07-24,C,M6,Changeover,Planned,11
+1061,2026-07-24,C,M6,Changeover,Planned,14
+1062,2026-07-24,C,M6,Mold / tool repair,Unplanned,26
+1063,2026-07-24,C,M6,Machine breakdown,Unplanned,38
+1064,2026-07-25,A,M1,Changeover,Planned,40
+1065,2026-07-25,A,M1,Material shortage,Unplanned,25
+1066,2026-07-25,A,M2,Quality hold,Unplanned,36
+1067,2026-07-25,A,M3,Machine breakdown,Unplanned,51
+1068,2026-07-25,A,M5,Changeover,Planned,39
+1069,2026-07-25,A,M5,Mold / tool repair,Unplanned,32
+1070,2026-07-25,A,M6,Material shortage,Unplanned,23
+1071,2026-07-25,B,M1,Changeover,Planned,62
+1072,2026-07-25,B,M1,Changeover,Planned,53
+1073,2026-07-25,B,M1,Changeover,Planned,29
+1074,2026-07-25,B,M2,Quality hold,Unplanned,27
+1075,2026-07-25,B,M3,Changeover,Planned,78
+1076,2026-07-25,B,M3,Changeover,Planned,110
+1077,2026-07-25,B,M5,Quality hold,Unplanned,32
+1078,2026-07-25,B,M6,Changeover,Planned,65
+1079,2026-07-25,C,M1,Changeover,Planned,19
+1080,2026-07-25,C,M2,Changeover,Planned,33
+1081,2026-07-25,C,M3,Mold / tool repair,Unplanned,48
+1082,2026-07-25,C,M3,Operator unavailable,Unplanned,31
+1083,2026-07-25,C,M5,Operator unavailable,Unplanned,8
+1084,2026-07-25,C,M6,Machine breakdown,Unplanned,65
+1085,2026-07-27,A,M1,Changeover,Planned,43
+1086,2026-07-27,A,M1,Changeover,Planned,68
+1087,2026-07-27,A,M1,Changeover,Planned,32
+1088,2026-07-27,A,M2,Changeover,Planned,21
+1089,2026-07-27,A,M3,Changeover,Planned,43
+1090,2026-07-27,A,M3,Mold / tool repair,Unplanned,40
+1091,2026-07-27,A,M3,Operator unavailable,Unplanned,36
+1092,2026-07-27,A,M4,Changeover,Planned,22
+1093,2026-07-27,A,M5,Changeover,Planned,37
+1094,2026-07-27,A,M5,Material shortage,Unplanned,38
+1095,2026-07-27,B,M1,Machine breakdown,Unplanned,30
+1096,2026-07-27,B,M5,Changeover,Planned,17
+1097,2026-07-27,B,M5,Mold / tool repair,Unplanned,39
+1098,2026-07-27,B,M5,Operator unavailable,Unplanned,23
+1099,2026-07-27,B,M6,Mold / tool repair,Unplanned,35
+1100,2026-07-27,C,M2,Machine breakdown,Unplanned,124
+1101,2026-07-27,C,M3,Changeover,Planned,69
+1102,2026-07-27,C,M4,Machine breakdown,Unplanned,59
+1103,2026-07-27,C,M5,Mold / tool repair,Unplanned,25
+1104,2026-07-27,C,M5,Mold / tool repair,Unplanned,25
+1105,2026-07-27,C,M6,Mold / tool repair,Unplanned,63
+1106,2026-07-28,A,M1,Changeover,Planned,76
+1107,2026-07-28,A,M3,Changeover,Planned,85
+1108,2026-07-28,A,M3,Changeover,Planned,43
+1109,2026-07-28,A,M3,Changeover,Planned,76
+1110,2026-07-28,A,M3,Material shortage,Unplanned,47
+1111,2026-07-28,A,M4,Material shortage,Unplanned,15
+1112,2026-07-28,A,M5,Mold / tool repair,Unplanned,32
+1113,2026-07-28,A,M5,Mold / tool repair,Unplanned,37
+1114,2026-07-28,A,M6,Changeover,Planned,25
+1115,2026-07-28,A,M6,Material shortage,Unplanned,36
+1116,2026-07-28,B,M1,Machine breakdown,Unplanned,22
+1117,2026-07-28,B,M3,Changeover,Planned,39
+1118,2026-07-28,B,M3,Changeover,Planned,15
+1119,2026-07-28,B,M3,Changeover,Planned,66
+1120,2026-07-28,B,M5,Mold / tool repair,Unplanned,60
+1121,2026-07-28,B,M5,Mold / tool repair,Unplanned,65
+1122,2026-07-28,B,M5,Machine breakdown,Unplanned,37
+1123,2026-07-28,B,M6,Changeover,Planned,6
+1124,2026-07-28,B,M6,Mold / tool repair,Unplanned,22
+1125,2026-07-28,C,M2,Changeover,Planned,32
+1126,2026-07-28,C,M3,Changeover,Planned,90
+1127,2026-07-28,C,M3,Operator unavailable,Unplanned,39
+1128,2026-07-28,C,M4,Material shortage,Unplanned,40
+1129,2026-07-28,C,M5,Changeover,Planned,20
+1130,2026-07-28,C,M5,Operator unavailable,Unplanned,21
+1131,2026-07-28,C,M6,Changeover,Planned,42
+1132,2026-07-28,C,M6,Changeover,Planned,22
+1133,2026-07-28,C,M6,Material shortage,Unplanned,30
+1134,2026-07-29,A,M1,Operator unavailable,Unplanned,12
+1135,2026-07-29,A,M3,Changeover,Planned,46
+1136,2026-07-29,A,M3,Mold / tool repair,Unplanned,87
+1137,2026-07-29,A,M4,Changeover,Planned,18
+1138,2026-07-29,A,M4,Mold / tool repair,Unplanned,64
+1139,2026-07-29,A,M4,Material shortage,Unplanned,36
+1140,2026-07-29,A,M4,Material shortage,Unplanned,21
+1141,2026-07-29,A,M5,Machine breakdown,Unplanned,32
+1142,2026-07-29,B,M2,Changeover,Planned,30
+1143,2026-07-29,B,M2,Machine breakdown,Unplanned,41
+1144,2026-07-29,B,M3,Changeover,Planned,57
+1145,2026-07-29,B,M3,Mold / tool repair,Unplanned,28
+1146,2026-07-29,B,M5,Changeover,Planned,15
+1147,2026-07-29,B,M6,Changeover,Planned,21
+1148,2026-07-29,B,M6,Changeover,Planned,38
+1149,2026-07-29,B,M6,Mold / tool repair,Unplanned,16
+1150,2026-07-29,B,M6,Material shortage,Unplanned,2
+1151,2026-07-29,C,M3,Changeover,Planned,28
+1152,2026-07-29,C,M3,Machine breakdown,Unplanned,59
+1153,2026-07-29,C,M3,Quality hold,Unplanned,27
+1154,2026-07-29,C,M3,Quality hold,Unplanned,39
+1155,2026-07-29,C,M4,Changeover,Planned,29
+1156,2026-07-29,C,M5,Mold / tool repair,Unplanned,47
+1157,2026-07-29,C,M5,Material shortage,Unplanned,31
+1158,2026-07-29,C,M6,Changeover,Planned,30
+1159,2026-07-30,A,M2,Changeover,Planned,62
+1160,2026-07-30,A,M2,Changeover,Planned,54
+1161,2026-07-30,A,M2,Changeover,Planned,107
+1162,2026-07-30,A,M2,Changeover,Planned,28
+1163,2026-07-30,A,M5,Mold / tool repair,Unplanned,50
+1164,2026-07-30,A,M6,Changeover,Planned,15
+1165,2026-07-30,A,M6,Material shortage,Unplanned,18
+1166,2026-07-30,A,M6,Quality hold,Unplanned,44
+1167,2026-07-30,B,M1,Mold / tool repair,Unplanned,75
+1168,2026-07-30,B,M1,Mold / tool repair,Unplanned,27
+1169,2026-07-30,B,M5,Mold / tool repair,Unplanned,19
+1170,2026-07-30,B,M6,Machine breakdown,Unplanned,62
+1171,2026-07-30,C,M1,Changeover,Planned,51
+1172,2026-07-30,C,M1,Machine breakdown,Unplanned,74
+1173,2026-07-30,C,M2,Changeover,Planned,108
+1174,2026-07-30,C,M2,Changeover,Planned,53
+1175,2026-07-30,C,M2,Material shortage,Unplanned,42
+1176,2026-07-30,C,M2,Quality hold,Unplanned,13
+1177,2026-07-30,C,M2,Operator unavailable,Unplanned,39
+1178,2026-07-30,C,M3,Changeover,Planned,40
+1179,2026-07-30,C,M3,Changeover,Planned,20
+1180,2026-07-30,C,M3,Material shortage,Unplanned,16
+1181,2026-07-30,C,M4,Changeover,Planned,39
+1182,2026-07-30,C,M5,Changeover,Planned,20
+1183,2026-07-30,C,M5,Changeover,Planned,23
+1184,2026-07-30,C,M5,Mold / tool repair,Unplanned,66
+1185,2026-07-30,C,M5,Mold / tool repair,Unplanned,30
+1186,2026-07-30,C,M6,Changeover,Planned,29
+1187,2026-07-30,C,M6,Quality hold,Unplanned,17
+1188,2026-07-31,A,M3,Changeover,Planned,11
+1189,2026-07-31,A,M3,Changeover,Planned,28
+1190,2026-07-31,A,M4,Material shortage,Unplanned,19
+1191,2026-07-31,A,M5,Mold / tool repair,Unplanned,118
+1192,2026-07-31,B,M4,Material shortage,Unplanned,34
+1193,2026-07-31,B,M6,Changeover,Planned,10
+1194,2026-07-31,C,M2,Changeover,Planned,36
+1195,2026-07-31,C,M4,Machine breakdown,Unplanned,64
+1196,2026-07-31,C,M5,Changeover,Planned,43
+1197,2026-08-01,A,M2,Changeover,Planned,18
+1198,2026-08-01,A,M3,Changeover,Planned,29
+1199,2026-08-01,A,M3,Mold / tool repair,Unplanned,95
+1200,2026-08-01,A,M5,Changeover,Planned,34
+1201,2026-08-01,A,M6,Changeover,Planned,18
+1202,2026-08-01,B,M2,Changeover,Planned,73
+1203,2026-08-01,B,M2,Changeover,Planned,33
+1204,2026-08-01,B,M2,Changeover,Planned,25
+1205,2026-08-01,B,M2,Material shortage,Unplanned,65
+1206,2026-08-01,B,M3,Changeover,Planned,35
+1207,2026-08-01,B,M3,Material shortage,Unplanned,19
+1208,2026-08-01,B,M3,Operator unavailable,Unplanned,15
+1209,2026-08-01,B,M4,Machine breakdown,Unplanned,78
+1210,2026-08-01,C,M2,Changeover,Planned,61
+1211,2026-08-01,C,M2,Changeover,Planned,42
+1212,2026-08-01,C,M2,Quality hold,Unplanned,60
+1213,2026-08-01,C,M3,Changeover,Planned,24
+1214,2026-08-01,C,M3,Changeover,Planned,7
+1215,2026-08-01,C,M4,Material shortage,Unplanned,26
+1216,2026-08-01,C,M4,Quality hold,Unplanned,75
+1217,2026-08-01,C,M4,Operator unavailable,Unplanned,72
+1218,2026-08-01,C,M5,Mold / tool repair,Unplanned,106
+1219,2026-08-01,C,M6,Material shortage,Unplanned,18
+1220,2026-08-03,A,M1,Changeover,Planned,43
+1221,2026-08-03,A,M1,Mold / tool repair,Unplanned,41
+1222,2026-08-03,A,M1,Machine breakdown,Unplanned,50
+1223,2026-08-03,A,M2,Changeover,Planned,57
+1224,2026-08-03,A,M2,Quality hold,Unplanned,15
+1225,2026-08-03,A,M3,Changeover,Planned,54
+1226,2026-08-03,A,M5,Quality hold,Unplanned,40
+1227,2026-08-03,A,M5,Operator unavailable,Unplanned,31
+1228,2026-08-03,A,M6,Changeover,Planned,30
+1229,2026-08-03,A,M6,Mold / tool repair,Unplanned,121
+1230,2026-08-03,B,M4,Changeover,Planned,6
+1231,2026-08-03,B,M4,Mold / tool repair,Unplanned,66
+1232,2026-08-03,B,M5,Mold / tool repair,Unplanned,37
+1233,2026-08-03,B,M6,Changeover,Planned,18
+1234,2026-08-03,B,M6,Material shortage,Unplanned,52
+1235,2026-08-03,C,M1,Changeover,Planned,32
+1236,2026-08-03,C,M2,Changeover,Planned,49
+1237,2026-08-03,C,M2,Mold / tool repair,Unplanned,29
+1238,2026-08-03,C,M2,Operator unavailable,Unplanned,9
+1239,2026-08-03,C,M3,Changeover,Planned,61
+1240,2026-08-03,C,M5,Changeover,Planned,15
+1241,2026-08-03,C,M5,Machine breakdown,Unplanned,77
+1242,2026-08-03,C,M5,Quality hold,Unplanned,32
+1243,2026-08-03,C,M6,Machine breakdown,Unplanned,58
+1244,2026-08-04,A,M1,Changeover,Planned,62
+1245,2026-08-04,A,M1,Changeover,Planned,33
+1246,2026-08-04,A,M2,Machine breakdown,Unplanned,91
+1247,2026-08-04,A,M3,Changeover,Planned,55
+1248,2026-08-04,A,M3,Material shortage,Unplanned,26
+1249,2026-08-04,A,M5,Mold / tool repair,Unplanned,63
+1250,2026-08-04,A,M6,Changeover,Planned,32
+1251,2026-08-04,A,M6,Changeover,Planned,39
+1252,2026-08-04,A,M6,Changeover,Planned,26
+1253,2026-08-04,A,M6,Changeover,Planned,25
+1254,2026-08-04,A,M6,Machine breakdown,Unplanned,27
+1255,2026-08-04,B,M1,Changeover,Planned,85
+1256,2026-08-04,B,M1,Changeover,Planned,12
+1257,2026-08-04,B,M1,Changeover,Planned,54
+1258,2026-08-04,B,M2,Changeover,Planned,64
+1259,2026-08-04,B,M2,Material shortage,Unplanned,33
+1260,2026-08-04,B,M3,Material shortage,Unplanned,19
+1261,2026-08-04,B,M5,Mold / tool repair,Unplanned,71
+1262,2026-08-04,C,M2,Changeover,Planned,58
+1263,2026-08-04,C,M3,Quality hold,Unplanned,10
+1264,2026-08-04,C,M6,Changeover,Planned,44
+1265,2026-08-04,C,M6,Quality hold,Unplanned,43
+1266,2026-08-04,C,M6,Operator unavailable,Unplanned,7
+1267,2026-08-05,A,M1,Changeover,Planned,35
+1268,2026-08-05,A,M2,Changeover,Planned,79
+1269,2026-08-05,A,M3,Changeover,Planned,38
+1270,2026-08-05,A,M3,Changeover,Planned,28
+1271,2026-08-05,A,M3,Changeover,Planned,37
+1272,2026-08-05,A,M4,Mold / tool repair,Unplanned,38
+1273,2026-08-05,A,M4,Machine breakdown,Unplanned,39
+1274,2026-08-05,A,M5,Material shortage,Unplanned,19
+1275,2026-08-05,B,M1,Changeover,Planned,23
+1276,2026-08-05,B,M1,Changeover,Planned,35
+1277,2026-08-05,B,M1,Changeover,Planned,35
+1278,2026-08-05,B,M1,Material shortage,Unplanned,22
+1279,2026-08-05,B,M3,Changeover,Planned,37
+1280,2026-08-05,B,M3,Changeover,Planned,71
+1281,2026-08-05,B,M6,Machine breakdown,Unplanned,53
+1282,2026-08-05,C,M2,Changeover,Planned,54
+1283,2026-08-05,C,M2,Material shortage,Unplanned,32
+1284,2026-08-05,C,M2,Quality hold,Unplanned,15
+1285,2026-08-05,C,M4,Changeover,Planned,32
+1286,2026-08-05,C,M4,Mold / tool repair,Unplanned,96
+1287,2026-08-05,C,M5,Changeover,Planned,28
+1288,2026-08-05,C,M5,Mold / tool repair,Unplanned,85
+1289,2026-08-05,C,M6,Changeover,Planned,36
+1290,2026-08-05,C,M6,Quality hold,Unplanned,27
+1291,2026-08-06,A,M1,Material shortage,Unplanned,15
+1292,2026-08-06,A,M1,Quality hold,Unplanned,24
+1293,2026-08-06,A,M2,Changeover,Planned,12
+1294,2026-08-06,A,M3,Changeover,Planned,25
+1295,2026-08-06,A,M3,Mold / tool repair,Unplanned,73
+1296,2026-08-06,A,M3,Quality hold,Unplanned,51
+1297,2026-08-06,A,M4,Changeover,Planned,36
+1298,2026-08-06,B,M1,Changeover,Planned,26
+1299,2026-08-06,B,M1,Quality hold,Unplanned,27
+1300,2026-08-06,B,M2,Changeover,Planned,45
+1301,2026-08-06,B,M3,Changeover,Planned,72
+1302,2026-08-06,B,M3,Changeover,Planned,30
+1303,2026-08-06,B,M3,Changeover,Planned,86
+1304,2026-08-06,B,M5,Changeover,Planned,47
+1305,2026-08-06,B,M6,Material shortage,Unplanned,28
+1306,2026-08-06,C,M2,Quality hold,Unplanned,35
+1307,2026-08-06,C,M3,Changeover,Planned,53
+1308,2026-08-06,C,M4,Changeover,Planned,11
+1309,2026-08-06,C,M5,Operator unavailable,Unplanned,42
+1310,2026-08-06,C,M6,Material shortage,Unplanned,9
+1311,2026-08-06,C,M6,Operator unavailable,Unplanned,18
+1312,2026-08-07,A,M1,Changeover,Planned,36
+1313,2026-08-07,A,M3,Material shortage,Unplanned,9
+1314,2026-08-07,A,M3,Machine breakdown,Unplanned,67
+1315,2026-08-07,A,M6,Changeover,Planned,18
+1316,2026-08-07,A,M6,Material shortage,Unplanned,44
+1317,2026-08-07,B,M1,Changeover,Planned,20
+1318,2026-08-07,B,M2,Changeover,Planned,24
+1319,2026-08-07,B,M2,Changeover,Planned,21
+1320,2026-08-07,B,M2,Mold / tool repair,Unplanned,40
+1321,2026-08-07,B,M2,Machine breakdown,Unplanned,85
+1322,2026-08-07,B,M2,Machine breakdown,Unplanned,25
+1323,2026-08-07,B,M2,Quality hold,Unplanned,26
+1324,2026-08-07,B,M3,Changeover,Planned,87
+1325,2026-08-07,B,M3,Changeover,Planned,45
+1326,2026-08-07,B,M3,Machine breakdown,Unplanned,35
+1327,2026-08-07,B,M4,Changeover,Planned,13
+1328,2026-08-07,B,M4,Material shortage,Unplanned,49
+1329,2026-08-07,C,M1,Changeover,Planned,31
+1330,2026-08-07,C,M1,Machine breakdown,Unplanned,34
+1331,2026-08-07,C,M2,Quality hold,Unplanned,29
+1332,2026-08-07,C,M3,Changeover,Planned,42
+1333,2026-08-07,C,M3,Changeover,Planned,86
+1334,2026-08-07,C,M3,Material shortage,Unplanned,18
+1335,2026-08-07,C,M4,Operator unavailable,Unplanned,28
+1336,2026-08-07,C,M6,Mold / tool repair,Unplanned,62
+1337,2026-08-08,A,M2,Changeover,Planned,21
+1338,2026-08-08,A,M3,Changeover,Planned,38
+1339,2026-08-08,A,M4,Material shortage,Unplanned,14
+1340,2026-08-08,A,M5,Mold / tool repair,Unplanned,63
+1341,2026-08-08,A,M6,Mold / tool repair,Unplanned,39
+1342,2026-08-08,B,M5,Changeover,Planned,25
+1343,2026-08-08,B,M5,Machine breakdown,Unplanned,23
+1344,2026-08-08,C,M1,Changeover,Planned,53
+1345,2026-08-08,C,M1,Changeover,Planned,72
+1346,2026-08-08,C,M1,Changeover,Planned,29
+1347,2026-08-08,C,M1,Material shortage,Unplanned,29
+1348,2026-08-08,C,M2,Changeover,Planned,13
+1349,2026-08-08,C,M2,Changeover,Planned,51
+1350,2026-08-08,C,M2,Mold / tool repair,Unplanned,24
+1351,2026-08-08,C,M2,Material shortage,Unplanned,35
+1352,2026-08-08,C,M3,Changeover,Planned,32
+1353,2026-08-08,C,M3,Material shortage,Unplanned,12
+1354,2026-08-08,C,M3,Operator unavailable,Unplanned,24
+1355,2026-08-08,C,M4,Changeover,Planned,10
+1356,2026-08-08,C,M6,Changeover,Planned,20
+1357,2026-08-10,A,M3,Mold / tool repair,Unplanned,64
+1358,2026-08-10,B,M1,Material shortage,Unplanned,30
+1359,2026-08-10,B,M2,Changeover,Planned,31
+1360,2026-08-10,B,M3,Changeover,Planned,51
+1361,2026-08-10,B,M4,Changeover,Planned,24
+1362,2026-08-10,B,M4,Changeover,Planned,8
+1363,2026-08-10,B,M4,Changeover,Planned,42
+1364,2026-08-10,B,M4,Machine breakdown,Unplanned,59
+1365,2026-08-10,B,M5,Changeover,Planned,28
+1366,2026-08-10,B,M6,Material shortage,Unplanned,8
+1367,2026-08-10,B,M6,Quality hold,Unplanned,53
+1368,2026-08-10,C,M1,Changeover,Planned,36
+1369,2026-08-10,C,M1,Changeover,Planned,59
+1370,2026-08-10,C,M2,Changeover,Planned,58
+1371,2026-08-10,C,M3,Changeover,Planned,46
+1372,2026-08-10,C,M5,Machine breakdown,Unplanned,22
+1373,2026-08-10,C,M6,Material shortage,Unplanned,26
+1374,2026-08-10,C,M6,Machine breakdown,Unplanned,18
+1375,2026-08-11,A,M1,Changeover,Planned,25
+1376,2026-08-11,A,M2,Changeover,Planned,41
+1377,2026-08-11,A,M3,Changeover,Planned,45
+1378,2026-08-11,A,M3,Mold / tool repair,Unplanned,34
+1379,2026-08-11,A,M4,Changeover,Planned,56
+1380,2026-08-11,A,M4,Material shortage,Unplanned,12
+1381,2026-08-11,A,M6,Changeover,Planned,47
+1382,2026-08-11,A,M6,Changeover,Planned,47
+1383,2026-08-11,A,M6,Material shortage,Unplanned,18
+1384,2026-08-11,B,M1,Changeover,Planned,39
+1385,2026-08-11,B,M2,Changeover,Planned,107
+1386,2026-08-11,B,M2,Changeover,Planned,24
+1387,2026-08-11,B,M2,Changeover,Planned,46
+1388,2026-08-11,B,M3,Changeover,Planned,15
+1389,2026-08-11,B,M4,Changeover,Planned,36
+1390,2026-08-11,B,M4,Material shortage,Unplanned,52
+1391,2026-08-11,B,M5,Changeover,Planned,15
+1392,2026-08-11,B,M5,Changeover,Planned,44
+1393,2026-08-11,B,M5,Changeover,Planned,50
+1394,2026-08-11,B,M6,Changeover,Planned,11
+1395,2026-08-11,B,M6,Mold / tool repair,Unplanned,60
+1396,2026-08-11,C,M1,Material shortage,Unplanned,25
+1397,2026-08-11,C,M2,Operator unavailable,Unplanned,33
+1398,2026-08-11,C,M3,Changeover,Planned,27
+1399,2026-08-11,C,M4,Material shortage,Unplanned,30
+1400,2026-08-11,C,M5,Mold / tool repair,Unplanned,44
+1401,2026-08-11,C,M5,Material shortage,Unplanned,31
+1402,2026-08-12,A,M1,Machine breakdown,Unplanned,27
+1403,2026-08-12,A,M2,Quality hold,Unplanned,26
+1404,2026-08-12,A,M2,Quality hold,Unplanned,19
+1405,2026-08-12,A,M3,Changeover,Planned,23
+1406,2026-08-12,A,M3,Changeover,Planned,43
+1407,2026-08-12,A,M3,Changeover,Planned,32
+1408,2026-08-12,A,M3,Changeover,Planned,37
+1409,2026-08-12,A,M3,Changeover,Planned,23
+1410,2026-08-12,A,M4,Changeover,Planned,25
+1411,2026-08-12,A,M4,Changeover,Planned,17
+1412,2026-08-12,A,M4,Mold / tool repair,Unplanned,45
+1413,2026-08-12,A,M5,Mold / tool repair,Unplanned,33
+1414,2026-08-12,A,M6,Machine breakdown,Unplanned,51
+1415,2026-08-12,B,M1,Changeover,Planned,18
+1416,2026-08-12,B,M2,Changeover,Planned,36
+1417,2026-08-12,B,M2,Changeover,Planned,52
+1418,2026-08-12,B,M2,Changeover,Planned,81
+1419,2026-08-12,B,M2,Material shortage,Unplanned,46
+1420,2026-08-12,B,M3,Changeover,Planned,44
+1421,2026-08-12,B,M4,Changeover,Planned,30
+1422,2026-08-12,B,M4,Mold / tool repair,Unplanned,51
+1423,2026-08-12,B,M5,Changeover,Planned,41
+1424,2026-08-12,B,M5,Mold / tool repair,Unplanned,24
+1425,2026-08-12,B,M6,Changeover,Planned,13
+1426,2026-08-12,C,M1,Material shortage,Unplanned,40
+1427,2026-08-12,C,M1,Operator unavailable,Unplanned,17
+1428,2026-08-12,C,M2,Machine breakdown,Unplanned,49
+1429,2026-08-12,C,M2,Machine breakdown,Unplanned,61
+1430,2026-08-12,C,M2,Machine breakdown,Unplanned,46
+1431,2026-08-12,C,M3,Changeover,Planned,72
+1432,2026-08-12,C,M3,Quality hold,Unplanned,49
+1433,2026-08-12,C,M4,Changeover,Planned,27
+1434,2026-08-12,C,M5,Mold / tool repair,Unplanned,25
+1435,2026-08-12,C,M6,Changeover,Planned,29
+1436,2026-08-13,A,M1,Changeover,Planned,77
+1437,2026-08-13,A,M1,Mold / tool repair,Unplanned,30
+1438,2026-08-13,A,M1,Operator unavailable,Unplanned,19
+1439,2026-08-13,A,M2,Changeover,Planned,53
+1440,2026-08-13,A,M3,Changeover,Planned,37
+1441,2026-08-13,A,M3,Changeover,Planned,47
+1442,2026-08-13,A,M3,Changeover,Planned,48
+1443,2026-08-13,A,M4,Changeover,Planned,23
+1444,2026-08-13,A,M6,Mold / tool repair,Unplanned,42
+1445,2026-08-13,B,M2,Material shortage,Unplanned,20
+1446,2026-08-13,B,M3,Changeover,Planned,28
+1447,2026-08-13,B,M3,Material shortage,Unplanned,16
+1448,2026-08-13,B,M3,Material shortage,Unplanned,40
+1449,2026-08-13,B,M5,Changeover,Planned,36
+1450,2026-08-13,B,M6,Changeover,Planned,18
+1451,2026-08-13,C,M1,Changeover,Planned,19
+1452,2026-08-13,C,M1,Changeover,Planned,71
+1453,2026-08-13,C,M2,Changeover,Planned,81
+1454,2026-08-13,C,M2,Changeover,Planned,37
+1455,2026-08-13,C,M3,Changeover,Planned,73
+1456,2026-08-13,C,M3,Quality hold,Unplanned,13
+1457,2026-08-13,C,M4,Quality hold,Unplanned,46
+1458,2026-08-13,C,M5,Operator unavailable,Unplanned,8
+1459,2026-08-13,C,M6,Mold / tool repair,Unplanned,64
+1460,2026-08-13,C,M6,Material shortage,Unplanned,22
+1461,2026-08-13,C,M6,Material shortage,Unplanned,32
+1462,2026-08-14,A,M2,Changeover,Planned,43
+1463,2026-08-14,A,M2,Changeover,Planned,36
+1464,2026-08-14,A,M2,Changeover,Planned,48
+1465,2026-08-14,A,M3,Changeover,Planned,24
+1466,2026-08-14,A,M4,Changeover,Planned,15
+1467,2026-08-14,A,M5,Changeover,Planned,14
+1468,2026-08-14,A,M5,Material shortage,Unplanned,21
+1469,2026-08-14,A,M5,Machine breakdown,Unplanned,33
+1470,2026-08-14,A,M6,Machine breakdown,Unplanned,87
+1471,2026-08-14,B,M4,Mold / tool repair,Unplanned,45
+1472,2026-08-14,B,M4,Operator unavailable,Unplanned,7
+1473,2026-08-14,C,M1,Changeover,Planned,43
+1474,2026-08-14,C,M1,Material shortage,Unplanned,10
+1475,2026-08-14,C,M1,Quality hold,Unplanned,68
+1476,2026-08-14,C,M2,Material shortage,Unplanned,9
+1477,2026-08-14,C,M2,Operator unavailable,Unplanned,21
+1478,2026-08-14,C,M4,Changeover,Planned,42
+1479,2026-08-14,C,M4,Operator unavailable,Unplanned,8
+1480,2026-08-14,C,M5,Changeover,Planned,40
+1481,2026-08-15,A,M1,Changeover,Planned,69
+1482,2026-08-15,A,M1,Changeover,Planned,81
+1483,2026-08-15,A,M2,Changeover,Planned,44
+1484,2026-08-15,A,M2,Changeover,Planned,19
+1485,2026-08-15,A,M2,Changeover,Planned,21
+1486,2026-08-15,A,M2,Changeover,Planned,54
+1487,2026-08-15,A,M2,Changeover,Planned,28
+1488,2026-08-15,A,M3,Changeover,Planned,47
+1489,2026-08-15,A,M3,Changeover,Planned,16
+1490,2026-08-15,A,M3,Changeover,Planned,50
+1491,2026-08-15,A,M5,Changeover,Planned,26
+1492,2026-08-15,A,M5,Mold / tool repair,Unplanned,48
+1493,2026-08-15,A,M5,Operator unavailable,Unplanned,40
+1494,2026-08-15,A,M6,Changeover,Planned,32
+1495,2026-08-15,A,M6,Material shortage,Unplanned,19
+1496,2026-08-15,B,M1,Changeover,Planned,21
+1497,2026-08-15,B,M2,Operator unavailable,Unplanned,17
+1498,2026-08-15,B,M3,Changeover,Planned,22
+1499,2026-08-15,B,M3,Material shortage,Unplanned,15
+1500,2026-08-15,B,M5,Changeover,Planned,22
+1501,2026-08-15,B,M5,Changeover,Planned,15
+1502,2026-08-15,B,M5,Mold / tool repair,Unplanned,57
+1503,2026-08-15,C,M1,Changeover,Planned,47
+1504,2026-08-15,C,M2,Changeover,Planned,45
+1505,2026-08-15,C,M2,Machine breakdown,Unplanned,34
+1506,2026-08-15,C,M4,Changeover,Planned,63
+1507,2026-08-15,C,M4,Changeover,Planned,35
+1508,2026-08-15,C,M5,Changeover,Planned,74
+1509,2026-08-15,C,M5,Mold / tool repair,Unplanned,36
+1510,2026-08-17,A,M2,Changeover,Planned,43
+1511,2026-08-17,B,M1,Changeover,Planned,48
+1512,2026-08-17,B,M2,Changeover,Planned,60
+1513,2026-08-17,B,M2,Changeover,Planned,61
+1514,2026-08-17,B,M2,Quality hold,Unplanned,9
+1515,2026-08-17,B,M3,Changeover,Planned,31
+1516,2026-08-17,B,M3,Changeover,Planned,9
+1517,2026-08-17,B,M3,Quality hold,Unplanned,28
+1518,2026-08-17,B,M5,Changeover,Planned,35
+1519,2026-08-17,B,M6,Changeover,Planned,21
+1520,2026-08-17,B,M6,Mold / tool repair,Unplanned,46
+1521,2026-08-17,B,M6,Quality hold,Unplanned,52
+1522,2026-08-17,C,M2,Changeover,Planned,36
+1523,2026-08-17,C,M3,Changeover,Planned,38
+1524,2026-08-17,C,M3,Quality hold,Unplanned,15
+1525,2026-08-17,C,M3,Quality hold,Unplanned,27
+1526,2026-08-17,C,M3,Quality hold,Unplanned,28
+1527,2026-08-17,C,M5,Mold / tool repair,Unplanned,41
+1528,2026-08-17,C,M6,Material shortage,Unplanned,29
+1529,2026-08-18,A,M2,Changeover,Planned,19
+1530,2026-08-18,A,M2,Mold / tool repair,Unplanned,19
+1531,2026-08-18,A,M3,Changeover,Planned,69
+1532,2026-08-18,A,M3,Changeover,Planned,48
+1533,2026-08-18,A,M4,Changeover,Planned,37
+1534,2026-08-18,A,M5,Mold / tool repair,Unplanned,15
+1535,2026-08-18,A,M6,Changeover,Planned,52
+1536,2026-08-18,A,M6,Material shortage,Unplanned,15
+1537,2026-08-18,A,M6,Material shortage,Unplanned,13
+1538,2026-08-18,B,M1,Changeover,Planned,37
+1539,2026-08-18,B,M1,Mold / tool repair,Unplanned,56
+1540,2026-08-18,B,M2,Quality hold,Unplanned,12
+1541,2026-08-18,B,M4,Material shortage,Unplanned,6
+1542,2026-08-18,B,M5,Mold / tool repair,Unplanned,111
+1543,2026-08-18,B,M5,Mold / tool repair,Unplanned,67
+1544,2026-08-18,C,M1,Changeover,Planned,27
+1545,2026-08-18,C,M2,Changeover,Planned,63
+1546,2026-08-18,C,M2,Material shortage,Unplanned,15
+1547,2026-08-18,C,M2,Material shortage,Unplanned,35
+1548,2026-08-18,C,M4,Material shortage,Unplanned,23
+1549,2026-08-18,C,M5,Quality hold,Unplanned,18
+1550,2026-08-18,C,M6,Quality hold,Unplanned,23
+1551,2026-08-19,A,M1,Changeover,Planned,26
+1552,2026-08-19,A,M1,Changeover,Planned,35
+1553,2026-08-19,A,M1,Machine breakdown,Unplanned,45
+1554,2026-08-19,A,M2,Changeover,Planned,42
+1555,2026-08-19,A,M2,Machine breakdown,Unplanned,47
+1556,2026-08-19,A,M3,Changeover,Planned,39
+1557,2026-08-19,A,M3,Changeover,Planned,27
+1558,2026-08-19,A,M3,Changeover,Planned,16
+1559,2026-08-19,A,M6,Changeover,Planned,30
+1560,2026-08-19,B,M1,Changeover,Planned,43
+1561,2026-08-19,B,M2,Changeover,Planned,61
+1562,2026-08-19,B,M2,Mold / tool repair,Unplanned,36
+1563,2026-08-19,B,M3,Mold / tool repair,Unplanned,55
+1564,2026-08-19,B,M3,Material shortage,Unplanned,11
+1565,2026-08-19,B,M3,Material shortage,Unplanned,24
+1566,2026-08-19,B,M4,Machine breakdown,Unplanned,90
+1567,2026-08-19,B,M6,Changeover,Planned,14
+1568,2026-08-19,B,M6,Changeover,Planned,22
+1569,2026-08-19,C,M1,Operator unavailable,Unplanned,21
+1570,2026-08-19,C,M3,Changeover,Planned,44
+1571,2026-08-19,C,M4,Changeover,Planned,23
+1572,2026-08-19,C,M4,Operator unavailable,Unplanned,36
+1573,2026-08-19,C,M6,Mold / tool repair,Unplanned,168
+1574,2026-08-19,C,M6,Material shortage,Unplanned,24
+1575,2026-08-20,A,M1,Changeover,Planned,40
+1576,2026-08-20,A,M1,Mold / tool repair,Unplanned,40
+1577,2026-08-20,A,M1,Material shortage,Unplanned,18
+1578,2026-08-20,A,M3,Changeover,Planned,66
+1579,2026-08-20,A,M6,Changeover,Planned,34
+1580,2026-08-20,A,M6,Quality hold,Unplanned,22
+1581,2026-08-20,B,M1,Changeover,Planned,38
+1582,2026-08-20,B,M1,Changeover,Planned,66
+1583,2026-08-20,B,M1,Changeover,Planned,42
+1584,2026-08-20,B,M1,Quality hold,Unplanned,12
+1585,2026-08-20,B,M2,Material shortage,Unplanned,17
+1586,2026-08-20,B,M5,Changeover,Planned,35
+1587,2026-08-20,B,M6,Changeover,Planned,22
+1588,2026-08-20,B,M6,Changeover,Planned,21
+1589,2026-08-20,C,M1,Changeover,Planned,51
+1590,2026-08-20,C,M1,Changeover,Planned,85
+1591,2026-08-20,C,M1,Quality hold,Unplanned,12
+1592,2026-08-20,C,M2,Changeover,Planned,20
+1593,2026-08-20,C,M2,Changeover,Planned,40
+1594,2026-08-20,C,M2,Changeover,Planned,39
+1595,2026-08-20,C,M3,Material shortage,Unplanned,15
+1596,2026-08-20,C,M4,Changeover,Planned,38
+1597,2026-08-20,C,M4,Material shortage,Unplanned,11
+1598,2026-08-20,C,M6,Machine breakdown,Unplanned,79
+1599,2026-08-20,C,M6,Operator unavailable,Unplanned,23
+1600,2026-08-21,A,M2,Changeover,Planned,42
+1601,2026-08-21,A,M2,Changeover,Planned,39
+1602,2026-08-21,A,M3,Mold / tool repair,Unplanned,71
+1603,2026-08-21,A,M3,Machine breakdown,Unplanned,71
+1604,2026-08-21,A,M4,Operator unavailable,Unplanned,77
+1605,2026-08-21,A,M5,Mold / tool repair,Unplanned,80
+1606,2026-08-21,A,M5,Mold / tool repair,Unplanned,19
+1607,2026-08-21,A,M6,Machine breakdown,Unplanned,59
+1608,2026-08-21,B,M3,Changeover,Planned,31
+1609,2026-08-21,B,M3,Changeover,Planned,31
+1610,2026-08-21,B,M3,Changeover,Planned,28
+1611,2026-08-21,B,M5,Material shortage,Unplanned,49
+1612,2026-08-21,B,M6,Material shortage,Unplanned,22
+1613,2026-08-21,C,M1,Changeover,Planned,88
+1614,2026-08-21,C,M1,Machine breakdown,Unplanned,33
+1615,2026-08-21,C,M2,Changeover,Planned,59
+1616,2026-08-21,C,M3,Changeover,Planned,35
+1617,2026-08-21,C,M3,Changeover,Planned,14
+1618,2026-08-21,C,M3,Changeover,Planned,74
+1619,2026-08-21,C,M3,Changeover,Planned,58
+1620,2026-08-21,C,M3,Changeover,Planned,23
+1621,2026-08-21,C,M3,Machine breakdown,Unplanned,85
+1622,2026-08-21,C,M4,Changeover,Planned,8
+1623,2026-08-21,C,M4,Mold / tool repair,Unplanned,90
+1624,2026-08-21,C,M4,Machine breakdown,Unplanned,37
+1625,2026-08-21,C,M5,Mold / tool repair,Unplanned,72
+1626,2026-08-22,A,M1,Changeover,Planned,22
+1627,2026-08-22,A,M3,Changeover,Planned,48
+1628,2026-08-22,A,M4,Changeover,Planned,45
+1629,2026-08-22,A,M4,Changeover,Planned,13
+1630,2026-08-22,A,M5,Material shortage,Unplanned,23
+1631,2026-08-22,B,M2,Changeover,Planned,83
+1632,2026-08-22,B,M5,Material shortage,Unplanned,43
+1633,2026-08-22,B,M6,Changeover,Planned,7
+1634,2026-08-22,C,M1,Changeover,Planned,65
+1635,2026-08-22,C,M1,Changeover,Planned,32
+1636,2026-08-22,C,M1,Quality hold,Unplanned,45
+1637,2026-08-22,C,M2,Changeover,Planned,32
+1638,2026-08-22,C,M2,Changeover,Planned,70
+1639,2026-08-22,C,M2,Operator unavailable,Unplanned,31
+1640,2026-08-22,C,M3,Changeover,Planned,52
+1641,2026-08-22,C,M3,Changeover,Planned,62
+1642,2026-08-22,C,M3,Changeover,Planned,38
+1643,2026-08-24,A,M2,Changeover,Planned,60
+1644,2026-08-24,A,M3,Changeover,Planned,21
+1645,2026-08-24,A,M5,Mold / tool repair,Unplanned,56
+1646,2026-08-24,A,M6,Changeover,Planned,21
+1647,2026-08-24,B,M1,Changeover,Planned,44
+1648,2026-08-24,B,M1,Quality hold,Unplanned,26
+1649,2026-08-24,B,M2,Changeover,Planned,30
+1650,2026-08-24,B,M3,Material shortage,Unplanned,25
+1651,2026-08-24,B,M5,Changeover,Planned,74
+1652,2026-08-24,B,M5,Changeover,Planned,6
+1653,2026-08-24,C,M1,Operator unavailable,Unplanned,41
+1654,2026-08-24,C,M1,Operator unavailable,Unplanned,10
+1655,2026-08-24,C,M2,Machine breakdown,Unplanned,75
+1656,2026-08-24,C,M3,Changeover,Planned,33
+1657,2026-08-24,C,M5,Changeover,Planned,18
+1658,2026-08-25,A,M2,Changeover,Planned,22
+1659,2026-08-25,A,M2,Material shortage,Unplanned,38
+1660,2026-08-25,A,M2,Operator unavailable,Unplanned,28
+1661,2026-08-25,A,M3,Changeover,Planned,13
+1662,2026-08-25,A,M4,Changeover,Planned,35
+1663,2026-08-25,A,M5,Changeover,Planned,9
+1664,2026-08-25,A,M5,Mold / tool repair,Unplanned,53
+1665,2026-08-25,A,M5,Mold / tool repair,Unplanned,73
+1666,2026-08-25,A,M5,Material shortage,Unplanned,25
+1667,2026-08-25,A,M6,Operator unavailable,Unplanned,28
+1668,2026-08-25,A,M6,Operator unavailable,Unplanned,31
+1669,2026-08-25,B,M3,Quality hold,Unplanned,29
+1670,2026-08-25,B,M5,Operator unavailable,Unplanned,31
+1671,2026-08-25,B,M6,Machine breakdown,Unplanned,50
+1672,2026-08-25,C,M1,Changeover,Planned,47
+1673,2026-08-25,C,M2,Changeover,Planned,53
+1674,2026-08-25,C,M2,Changeover,Planned,44
+1675,2026-08-25,C,M2,Mold / tool repair,Unplanned,54
+1676,2026-08-25,C,M2,Material shortage,Unplanned,15
+1677,2026-08-25,C,M3,Changeover,Planned,46
+1678,2026-08-25,C,M3,Changeover,Planned,39
+1679,2026-08-25,C,M5,Changeover,Planned,61
+1680,2026-08-25,C,M5,Changeover,Planned,42
+1681,2026-08-25,C,M5,Machine breakdown,Unplanned,37
+1682,2026-08-26,A,M1,Changeover,Planned,55
+1683,2026-08-26,A,M2,Material shortage,Unplanned,20
+1684,2026-08-26,A,M3,Changeover,Planned,43
+1685,2026-08-26,A,M3,Changeover,Planned,24
+1686,2026-08-26,A,M3,Quality hold,Unplanned,19
+1687,2026-08-26,A,M4,Changeover,Planned,52
+1688,2026-08-26,A,M4,Material shortage,Unplanned,25
+1689,2026-08-26,A,M5,Quality hold,Unplanned,21
+1690,2026-08-26,A,M6,Changeover,Planned,29
+1691,2026-08-26,B,M1,Changeover,Planned,42
+1692,2026-08-26,B,M2,Mold / tool repair,Unplanned,64
+1693,2026-08-26,B,M3,Changeover,Planned,38
+1694,2026-08-26,B,M5,Mold / tool repair,Unplanned,22
+1695,2026-08-26,B,M6,Material shortage,Unplanned,13
+1696,2026-08-26,C,M1,Changeover,Planned,55
+1697,2026-08-26,C,M2,Changeover,Planned,42
+1698,2026-08-26,C,M2,Operator unavailable,Unplanned,16
+1699,2026-08-26,C,M3,Changeover,Planned,44
+1700,2026-08-26,C,M3,Machine breakdown,Unplanned,33
+1701,2026-08-26,C,M5,Machine breakdown,Unplanned,75
+1702,2026-08-26,C,M6,Mold / tool repair,Unplanned,30
+1703,2026-08-26,C,M6,Material shortage,Unplanned,39
+1704,2026-08-26,C,M6,Machine breakdown,Unplanned,18
+1705,2026-08-27,A,M1,Machine breakdown,Unplanned,35
+1706,2026-08-27,A,M1,Quality hold,Unplanned,35
+1707,2026-08-27,A,M2,Machine breakdown,Unplanned,26
+1708,2026-08-27,A,M3,Material shortage,Unplanned,20
+1709,2026-08-27,A,M5,Mold / tool repair,Unplanned,51
+1710,2026-08-27,A,M5,Mold / tool repair,Unplanned,59
+1711,2026-08-27,A,M6,Changeover,Planned,22
+1712,2026-08-27,A,M6,Changeover,Planned,29
+1713,2026-08-27,B,M2,Changeover,Planned,18
+1714,2026-08-27,B,M2,Changeover,Planned,23
+1715,2026-08-27,B,M2,Changeover,Planned,79
+1716,2026-08-27,B,M2,Changeover,Planned,32
+1717,2026-08-27,B,M2,Changeover,Planned,21
+1718,2026-08-27,B,M2,Machine breakdown,Unplanned,23
+1719,2026-08-27,B,M4,Material shortage,Unplanned,15
+1720,2026-08-27,B,M5,Mold / tool repair,Unplanned,40
+1721,2026-08-27,C,M1,Changeover,Planned,61
+1722,2026-08-27,C,M1,Material shortage,Unplanned,25
+1723,2026-08-27,C,M2,Changeover,Planned,66
+1724,2026-08-27,C,M2,Changeover,Planned,21
+1725,2026-08-27,C,M3,Changeover,Planned,51
+1726,2026-08-27,C,M3,Quality hold,Unplanned,38
+1727,2026-08-27,C,M5,Machine breakdown,Unplanned,14
+1728,2026-08-27,C,M5,Operator unavailable,Unplanned,6
+1729,2026-08-27,C,M6,Changeover,Planned,30
+1730,2026-08-27,C,M6,Material shortage,Unplanned,26
+1731,2026-08-27,C,M6,Machine breakdown,Unplanned,31
+1732,2026-08-28,A,M2,Changeover,Planned,24
+1733,2026-08-28,A,M5,Mold / tool repair,Unplanned,76
+1734,2026-08-28,A,M6,Changeover,Planned,31
+1735,2026-08-28,B,M1,Changeover,Planned,68
+1736,2026-08-28,B,M1,Changeover,Planned,60
+1737,2026-08-28,B,M2,Changeover,Planned,20
+1738,2026-08-28,B,M2,Machine breakdown,Unplanned,20
+1739,2026-08-28,B,M3,Changeover,Planned,37
+1740,2026-08-28,B,M3,Changeover,Planned,30
+1741,2026-08-28,B,M5,Mold / tool repair,Unplanned,71
+1742,2026-08-28,B,M6,Changeover,Planned,38
+1743,2026-08-28,C,M2,Changeover,Planned,33
+1744,2026-08-28,C,M4,Changeover,Planned,11
+1745,2026-08-28,C,M4,Machine breakdown,Unplanned,36
+1746,2026-08-28,C,M4,Quality hold,Unplanned,20
+1747,2026-08-28,C,M5,Material shortage,Unplanned,45
+1748,2026-08-28,C,M6,Changeover,Planned,24
+1749,2026-08-28,C,M6,Changeover,Planned,50
+1750,2026-08-29,A,M1,Changeover,Planned,89
+1751,2026-08-29,A,M2,Changeover,Planned,27
+1752,2026-08-29,A,M2,Quality hold,Unplanned,19
+1753,2026-08-29,A,M4,Machine breakdown,Unplanned,26
+1754,2026-08-29,A,M4,Quality hold,Unplanned,48
+1755,2026-08-29,A,M5,Changeover,Planned,47
+1756,2026-08-29,A,M5,Mold / tool repair,Unplanned,28
+1757,2026-08-29,B,M1,Mold / tool repair,Unplanned,110
+1758,2026-08-29,B,M2,Material shortage,Unplanned,32
+1759,2026-08-29,B,M3,Changeover,Planned,35
+1760,2026-08-29,B,M3,Changeover,Planned,24
+1761,2026-08-29,B,M4,Material shortage,Unplanned,29
+1762,2026-08-29,B,M5,Machine breakdown,Unplanned,9
+1763,2026-08-29,B,M5,Operator unavailable,Unplanned,4
+1764,2026-08-29,C,M1,Operator unavailable,Unplanned,33
+1765,2026-08-29,C,M2,Changeover,Planned,26
+1766,2026-08-29,C,M3,Changeover,Planned,49
+1767,2026-08-29,C,M4,Material shortage,Unplanned,17
+1768,2026-08-29,C,M5,Quality hold,Unplanned,19
+1769,2026-08-29,C,M5,Quality hold,Unplanned,33
+1770,2026-08-29,C,M6,Machine breakdown,Unplanned,35
+1771,2026-08-29,C,M6,Machine breakdown,Unplanned,73

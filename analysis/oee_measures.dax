@@ -1,0 +1,40 @@
+// OEE measures for the star schema in data/oee-powerbi/
+// Relationships (many-to-one, single direction, dimension filters fact):
+//   fact_production[date]    -> dim_date[date]       fact_downtime[date]    -> dim_date[date]
+//   fact_production[shift]   -> dim_shift[shift]     fact_downtime[shift]   -> dim_shift[shift]
+//   fact_production[machine] -> dim_machine[machine] fact_downtime[machine] -> dim_machine[machine]
+
+Planned Time (min) = SUM ( fact_production[planned_min] )
+Run Time (min) = SUM ( fact_production[run_min] )
+Downtime (min) = SUM ( fact_downtime[minutes] )
+Total Count = SUM ( fact_production[total_count] )
+Good Count = SUM ( fact_production[good_count] )
+Scrap Count = SUM ( fact_production[scrap_count] )
+Target Good = SUM ( fact_production[target_good] )
+
+// Time the parts would have taken at the ideal cycle time
+Ideal Run Time (min) =
+SUMX (
+    fact_production,
+    fact_production[total_count] * RELATED ( dim_machine[ideal_cycle_s] ) / 60
+)
+
+Availability = DIVIDE ( [Run Time (min)], [Planned Time (min)] )
+Performance = DIVIDE ( [Ideal Run Time (min)], [Run Time (min)] )
+Quality = DIVIDE ( [Good Count], [Total Count] )
+OEE = [Availability] * [Performance] * [Quality]
+
+// One operation per cell, so first-pass yield equals the OEE quality factor here
+First Pass Yield = DIVIDE ( [Good Count], [Total Count] )
+Scrap Rate = DIVIDE ( [Scrap Count], [Total Count] )
+Target Attainment = DIVIDE ( [Good Count], [Target Good] )
+
+OEE Target = 0.75
+OEE vs Target = [OEE] - [OEE Target]
+
+// Share of downtime for the reason in context (for the Pareto visual)
+Downtime Share =
+DIVIDE (
+    [Downtime (min)],
+    CALCULATE ( [Downtime (min)], REMOVEFILTERS ( fact_downtime[reason] ) )
+)

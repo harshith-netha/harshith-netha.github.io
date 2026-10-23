@@ -1,691 +1,587 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- EDIT HERE: Page title and meta description -->
-  <title>Engineering & Technical Project Portfolio</title>
-  <meta name="description" content="Technical portfolio showcasing engineering drawings, documents, presentations, and project videos.">
-
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Main Stylesheet -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11252e">
+  <title>Harshith Netha Gundeti — Industrial Engineer | Manufacturing Quality, Process Improvement &amp; Statistical Analytics</title>
+  <meta name="description" content="Industrial engineer in manufacturing quality, process improvement and statistical analytics. Case studies in SPC, Gage R&amp;R, DOE, OEE dashboards and line balancing.">
+  <meta property="og:title" content="Harshith Netha Gundeti — Industrial Engineer | Manufacturing Quality, Process Improvement &amp; Statistical Analytics">
+  <meta property="og:description" content="Better processes. Stronger outcomes. Process improvement, quality, and manufacturing analytics.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // The entrance is optional. This independent fail-safe also works if app.js fails.
+    (function () {
+      var root = document.documentElement;
+      var motion = matchMedia('(prefers-reduced-motion: reduce)');
+      var seen = false;
+      try { seen = sessionStorage.getItem('hg-intro-seen') === '1'; } catch (_) {}
+      var navigation = performance.getEntriesByType('navigation')[0];
+      var show = !seen && !motion.matches && !location.hash && navigation?.type !== 'back_forward';
+      var finished = false;
+      var deadline;
+      window.finishPortfolioIntro = function (skip) {
+        if (finished) return;
+        finished = true;
+        clearTimeout(deadline);
+        var loader = document.querySelector('.loader');
+        var focusInside = loader?.contains(document.activeElement);
+        root.classList.remove('booting');
+        root.classList.add('booted');
+        if (show && !skip && !motion.matches) {
+          root.classList.add('entering');
+          setTimeout(function () { root.classList.remove('entering'); }, 1200);
+        }
+        if (loader) loader.inert = true;
+        if (focusInside) document.getElementById('main')?.focus({ preventScroll: true });
+        document.removeEventListener('focusin', onFocus, true);
+        motion.removeEventListener('change', onPreference);
+        window.dispatchEvent(new Event('portfolio-ready'));
+      };
+      function onFocus(event) {
+        // A keyboard user can bypass the intro simply by navigating to the page.
+        if (!event.target.closest('.loader')) window.finishPortfolioIntro(true);
+      }
+      function onPreference() { if (motion.matches) window.finishPortfolioIntro(true); }
+      if (show) {
+        root.classList.add('booting');
+        try { sessionStorage.setItem('hg-intro-seen', '1'); } catch (_) {}
+        document.addEventListener('focusin', onFocus, true);
+        motion.addEventListener('change', onPreference);
+      // The owner asked for a five-second intro. The fade takes 400ms of that.
+      // Skip, a keyboard visit, reduced motion, or a deep link still bypasses it.
+      deadline = setTimeout(function () { window.finishPortfolioIntro(false); }, 4600);
+      } else {
+        root.classList.add('booted');
+      }
+      window.addEventListener('pageshow', function (event) {
+        if (event.persisted) window.finishPortfolioIntro(true);
+      });
+    })();
+  </script>
+  <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ==================== HEADER / NAVIGATION ==================== -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-accent">Andrew</span> Oen
-      </a>
-
-      <!-- Desktop Navigation Links -->
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#" class="nav-link active" data-tab="home">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-tab="about">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-tab="academics">Academics</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-tab="experience">Experience</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-tab="projects">Projects</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="#" class="btn btn-outline nav-cta" id="nav-contact-trigger">Get In Touch</a>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
+  <div class="loader" role="region" aria-label="Five-second page introduction">
+    <div class="loader-card">
+      <div class="loader-identity"><span class="loader-brand" aria-hidden="true">HG<span>.</span></span><span>Harshith Netha Gundeti<small>Industrial Engineer</small></span></div>
+      <svg class="loader-process" viewBox="0 0 360 116" aria-hidden="true">
+        <path class="loader-track" d="M16 66H344M16 77H344"/>
+        <g class="loader-rollers"><circle cx="30" cy="71.5" r="4"/><circle cx="60" cy="71.5" r="4"/><circle cx="90" cy="71.5" r="4"/><circle cx="120" cy="71.5" r="4"/><circle cx="150" cy="71.5" r="4"/><circle cx="180" cy="71.5" r="4"/><circle cx="210" cy="71.5" r="4"/><circle cx="240" cy="71.5" r="4"/><circle cx="270" cy="71.5" r="4"/><circle cx="300" cy="71.5" r="4"/><circle cx="330" cy="71.5" r="4"/></g>
+        <path class="loader-gantry" d="M237 66V22H283V66"/><path class="loader-scan" d="M244 33H276"/>
+        <g class="loader-component"><rect x="0" y="44" width="23" height="20" rx="3"/><path d="M5 50H18M5 55H13"/></g>
+        <circle class="loader-inspection" cx="290" cy="22" r="3"/>
+        <g class="loader-stages"><text x="16" y="106">Handle</text><text x="154" y="106">Convey</text><text x="298" y="106">Inspect</text></g>
+      </svg>
+      <p class="loader-label">Preparing your view…</p>
     </div>
+    <button class="skip-intro" type="button" onclick="window.finishPortfolioIntro(true)">Skip intro <span aria-hidden="true">→</span></button>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Harshith Gundeti, back to top">
+        <span class="brand-mark" aria-hidden="true">HG<span>.</span></span>
+        <span class="brand-wordmark" aria-hidden="true">Harshith Gundeti<span>Industrial Engineer</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav id="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#expertise">Expertise</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+      <button id="global-motion" class="global-motion" type="button" aria-label="Pause motion" title="Pause motion" hidden>
+        <svg class="icon-pause" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></svg>
+        <svg class="icon-play" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5v14l11-7Z"/></svg>
+        <span>Pause motion</span>
+      </button>
+    </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
 
-  <main>
-    <!-- ==================== HOME TAB ==================== -->
-    <section id="tab-home" class="tab-content active section blueprint-grid" style="padding-top: 130px;">
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="engineering-backdrop" data-backdrop="hero" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="small-line" aria-hidden="true"></span>Industrial engineer · Quality &amp; process improvement</p>
+          <h1 id="hero-title">Better processes.<br><span class="hero-accent">Stronger outcomes.</span></h1>
+          <p class="hero-intro">I’m <strong>Harshith Netha Gundeti</strong>. I use data, quality engineering, and hands-on problem solving to make manufacturing work better.</p>
+          <p class="hero-description">Less variation. More reliable production. Improvements that hold up on the shop floor.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="button button-outline" href="resume.pdf" download="Harshith_Gundeti_Resume.pdf">Download resume
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a>
+          </div>
+          <p class="hero-meta">
+            <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Springfield, Massachusetts</span>
+            <span>M.S. Industrial Engineering</span>
+          </p>
+        </div>
+
+        <figure class="production-scene" aria-labelledby="scene-title">
+          <div class="scene-topline" aria-hidden="true">
+            <span><i class="status-dot"></i>Illustrative model</span>
+            <span class="scene-flow">Handle <b>→</b> Convey <b>→</b> Inspect <b>→</b> Pack</span>
+          </div>
+          <div class="scene-viewport" id="scene-viewport">
+            <img class="scene-fallback" src="assets/production-line.svg" alt="Isometric illustration of a production cell: a copper robot arm moves parts from a pallet onto a conveyor, through a quality-inspection gantry, and into an output tote." width="800" height="560" fetchpriority="high">
+            <div class="scene-label" data-anchor="handling" aria-hidden="true"><i></i>Material handling</div>
+            <div class="scene-label label-quality" data-anchor="inspection" aria-hidden="true"><i></i>Quality inspection</div>
+            <div class="scene-label" data-anchor="output" aria-hidden="true"><i></i>Finished output</div>
+          </div>
+          <figcaption class="scene-bottom">
+            <div>
+              <strong id="scene-title">A better flow, by design.</strong>
+              <span>Production cell · Interactive illustration</span>
+            </div>
+            <div class="scene-controls" hidden>
+              <button id="rotate-scene" type="button" aria-label="Rotate view" title="Rotate view">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M5.4 7a8 8 0 0 1 13.2-1L20 8M4 16l1.4 2A8 8 0 0 0 18.6 17"/></svg>
+              </button>
+              <button id="motion-toggle" type="button" aria-label="Pause motion" title="Pause motion">
+                <svg class="icon-pause" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></svg>
+                <svg class="icon-play" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5v14l11-7Z"/></svg>
+              </button>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container proof-strip">
+        <div class="proof-item">
+          <span class="proof-number">8<span>%</span></span>
+          <p><strong>Reduction in product rejection</strong><span>Steller Plastics · Process &amp; Quality Intern</span></p>
+        </div>
+        <div class="proof-item">
+          <span class="proof-icon" aria-hidden="true">σ</span>
+          <p><strong>Six Sigma Green Belt</strong><span>DMAIC, SPC, Cp/Cpk and DOE in practice</span></p>
+        </div>
+        <div class="proof-item">
+          <svg class="proof-icon line-icon" aria-hidden="true" viewBox="0 0 32 32"><path d="m3 11 13-7 13 7-13 7-13-7Zm5 3v10q8 6 16 0V14m5-3v13"/></svg>
+          <p><strong>Two engineering perspectives</strong><span>B.Tech Mechanical · M.S. Industrial</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div>
+          <p class="eyebrow"><span class="section-index" aria-hidden="true">01</span> About me</p>
+          <h2 id="about-title">An eye for detail.<br>A view of the whole system.</h2>
+        </div>
+        <div class="about-copy">
+          <p class="large-copy">I turn process questions into practical improvements.</p>
+          <p>With a foundation in mechanical engineering and a master’s in industrial engineering, I connect how a product is made with how the process can perform better.</p>
+          <p>At Steller Plastics, I worked with production and quality teams to identify critical process parameters and implement corrective actions, helping reduce product rejection by 8%. My approach is straightforward: understand the work, test the cause, and make the improvement repeatable.</p>
+          <a class="text-link" href="#experience">Read about my experience <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
       <div class="container">
-        
-        <div class="home-layout">
-          <!-- Intro / Welcome Column -->
+        <div class="section-heading">
           <div>
+            <p class="eyebrow"><span class="section-index" aria-hidden="true">02</span> Experience</p>
+            <h2 id="experience-title">Engineering where<br>the work happens.</h2>
+          </div>
+          <p>From quality checks to working prototypes, practical experience at the point where decisions become results.</p>
+        </div>
 
-            
-            <h1 class="hero-title" style="margin-top:10px;">
-              Welcome to my <span class="gradient-text">Engineering Portfolio</span>
-            </h1>
-            
-            <h2 class="hero-subtitle" style="margin: 15px 0 25px 0;">
-              <span class="role-static">Showcasing </span>
-              <span class="role-dynamic" id="role-text">CAD Part Drawings</span><span class="cursor">|</span>
-            </h2>
-            
-            <p class="hero-description" style="max-width: 100%; font-size:1.05rem; line-height:1.7; color: var(--text-secondary);">
-              Hello! I am a Junior studying Mechanical Engineering at Auburn University. I have recently completed an internship at LSI Industries this past summer and am currently on the hunt for my next opportunity to learn in the real world of engineering. This portfolio compiles the technical drawings, presentations, demonstrations, coureswork, and more that I have completed during my engineering journey.
-            </p>
-            <p class="hero-description" style="max-width: 100%; font-size:1.05rem; line-height:1.7; margin-top: 15px; color: var(--text-secondary);">
-              Please explore the tabs above to inspect my academic coursework, industrial experience, and cataloged technical files. If you are interested in reaching out, please contact me below!
-            </p>
+        <article class="experience-row">
+          <div class="experience-date">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span>Sep 2022 – Jul 2023</span>
+            <small>Chennai, India</small>
+          </div>
+          <div class="experience-main">
+            <div class="role-heading">
+              <div>
+                <h3>Process &amp; Quality Intern</h3>
+                <p class="company">Steller Plastics Pvt. Ltd.</p>
+              </div>
+              <span class="role-tag">Manufacturing &amp; quality</span>
+            </div>
+            <p class="role-summary">Worked across quality and production to reduce rejection and strengthen process consistency.</p>
+            <ul class="achievement-list">
+              <li>Partnered with process and quality engineers to identify critical process parameters and implement corrective actions, <strong>reducing production rejection by 8%.</strong></li>
+              <li>Served as the daily point of contact between quality and production, resolving issues through CAPA.</li>
+              <li>Applied lean principles (Kaizen, 5S) to streamline shop-floor workflows and reduce waste.</li>
+              <li>Maintained SPC control charts and Cp/Cpk studies in Minitab to monitor performance and catch variation early.</li>
+              <li>Wrote and maintained SOPs and technical documentation to standardize work across shifts.</li>
+            </ul>
+            <ul class="tags" aria-label="Skills used">
+              <li>SPC &amp; Cp/Cpk</li><li>Root cause analysis</li><li>CAPA</li><li>Lean manufacturing</li><li>Minitab</li>
+            </ul>
+          </div>
+        </article>
 
-            <!-- Get In Touch Section (Embedded inside Home) -->
-            <div id="contact-section" style="margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px;">
-              <h3 style="font-size:1.8rem; margin-bottom: 25px; font-weight:800; color:var(--text-primary);">
-                Get in <span class="gradient-text">Touch</span>
-              </h3>
-              
-              <div style="display: grid; grid-template-columns: 1fr; gap: 30px;">
-                <div class="contact-card-info">
-                  <div class="contact-item">
-                    <i class="fa-regular fa-envelope"></i>
-                    <div>
-                      <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">EMAIL ADDRESS</div>
-                      <a href="mailto:ato0015@auburn.edu" class="contact-value" style="font-weight:600; color:var(--accent-cyan);">ato0015@auburn.edu</a>
-                    </div>
-                  </div>
-                  
-                  <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                      <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">LOCATION / STATE</div>
-                      <span class="contact-value" style="font-weight:600;">Dayton, Ohio</span>
-                    </div>
-                  </div>
+        <article class="experience-row">
+          <div class="experience-date">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span>May 2019 – Jul 2019</span>
+            <small>Hyderabad, India</small>
+          </div>
+          <div class="experience-main">
+            <div class="role-heading">
+              <div>
+                <h3>Student Intern – Product Design</h3>
+                <p class="company">BOLT IoT Pvt. Ltd.</p>
+              </div>
+              <span class="role-tag">Design &amp; prototyping</span>
+            </div>
+            <p class="role-summary">Taking mechanical components from engineering drawings to working prototypes.</p>
+            <ul class="achievement-list">
+              <li>Designed mechanical components for IoT devices in SolidWorks and AutoCAD, producing drawings for prototypes.</li>
+              <li>Built and tested prototypes, analyzing performance and proposing design changes.</li>
+              <li>Coordinated with external vendors, comparing cost, quality, and lead time.</li>
+            </ul>
+            <ul class="tags" aria-label="Skills used">
+              <li>SolidWorks</li><li>AutoCAD</li><li>Prototyping</li><li>Vendor coordination</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
 
-                  <div class="contact-item">
-                    <i class="fa-solid fa-comments"></i>
-                    <div>
-                      <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">RELATED LINKS</div>
-                      <div style="display:flex; gap:15px; margin-top:5px; font-family: var(--font-mono); font-size:0.9rem;">
-                        <a href="https://www.linkedin.com/in/andrew-oen" target="_blank" rel="noopener" style="color:var(--accent-cyan); font-weight:600;">[ LinkedIn ]</a>
-                        <a href="./assets/resume.pdf" target="_blank" style="color:var(--accent-cyan); font-weight:600;">[ Resume (PDF) ]</a>
-                      </div>
-                    </div>
-                  </div>
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="section-index" aria-hidden="true">03</span> Selected work</p>
+            <h2 id="projects-title">Clear problems.<br>Measurable progress.</h2>
+          </div>
+          <p>Two detailed case studies using published, simulated plant data, alongside two academic projects. Explore the problem, the analysis, and the decision behind each.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-visual spc-visual">
+              <div class="visual-header"><span>Weekly reject rate</span><span class="mini-tag">DMAIC · SPC</span></div>
+              <img class="visual-img" src="projects/charts/cs1-weekly.svg" width="720" height="300" loading="lazy" alt="Line chart of weekly reject rate: weeks 1 to 8 average 3.63%; after the changes, weeks 11 to 14 average 2.22%.">
+              <div class="visual-foot"><span><i aria-hidden="true"></i>3.63% → 2.22% rejects · Ppk 0.86 → 1.31</span><span>Simulated dataset</span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Case study 01 · Quality engineering</p>
+              <h3>Finding the root cause of molding defects</h3>
+              <p>A simulated DMAIC study tracing recurring defects to a worn check ring. The modeled changes reduce rejects by 39%, with SPC and a control plan to sustain the result.</p>
+              <ul class="tags" aria-label="Methods">
+                <li>Gage R&amp;R</li><li>X̄-R chart</li><li>Cpk / Ppk</li><li>Regression</li><li>PFMEA</li><li>8D</li><li>Python</li>
+              </ul>
+              <p class="project-link"><a class="text-link" href="projects/defect-reduction.html">Read the full case study <span aria-hidden="true">→</span></a></p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual oee-visual">
+              <div class="visual-header"><span>Plant 1 · 13 weeks</span><span class="mini-tag">Power BI · DAX</span></div>
+              <div class="kpi-mini" role="img" aria-label="Dashboard summary: plant OEE 76.0% against a 75% target; availability 89.1%, performance 87.4%, quality 97.5%. Changeover is 54% of downtime.">
+                <div class="kpi-main"><span>OEE</span><strong>76.0%</strong><small>Target 75%</small></div>
+                <div><span>Availability</span><strong>89.1%</strong></div>
+                <div><span>Performance</span><strong>87.4%</strong></div>
+                <div><span>Quality</span><strong>97.5%</strong></div>
+                <div class="kpi-bar"><span>Changeover share of downtime</span><b style="--w: 54%"></b><strong>54%</strong></div>
+              </div>
+              <div class="visual-foot"><span><i aria-hidden="true"></i>Drill down: plant › line › machine</span><span>Simulated dataset</span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Case study 02 · Manufacturing analytics</p>
+              <h3>Turning production data into better decisions</h3>
+              <p>An interactive OEE dashboard that makes production losses visible. Explore line, machine, and shift performance using a shared data model, DAX measures, and a SQL cross-check.</p>
+              <ul class="tags" aria-label="Methods">
+                <li>Power BI</li><li>DAX</li><li>Star schema</li><li>SQL</li><li>OEE</li><li>Downtime Pareto</li>
+              </ul>
+              <p class="project-link"><a class="text-link" href="projects/oee-dashboard.html">Explore the dashboard <span aria-hidden="true">→</span></a></p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual line-visual">
+              <div class="visual-header"><span>Assembly line balance</span><span class="mini-tag">Time study</span></div>
+              <div class="station-chart" role="img" aria-label="Schematic chart of station times on a four-station line. Station 2 rises above the target cycle line and is marked as the bottleneck. Bar heights are illustrative, not project measurements.">
+                <div class="target-line" aria-hidden="true"><span>Target cycle</span></div>
+                <div class="station" style="--h: 48%"><div class="station-bar"></div><span>Station 1</span></div>
+                <div class="station bottleneck" style="--h: 88%"><div class="station-bar"><b>Bottleneck</b></div><span>Station 2</span></div>
+                <div class="station" style="--h: 57%"><div class="station-bar"></div><span>Station 3</span></div>
+                <div class="station" style="--h: 42%"><div class="station-bar"></div><span>Station 4</span></div>
+              </div>
+              <div class="visual-foot"><span><i aria-hidden="true"></i>Find the constraint. Balance the flow.</span><span>Illustrative, not measured</span></div>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Case study 03 · Production engineering · Course project</p>
+              <h3>Line balancing &amp; time study</h3>
+              <p>Understanding the assembly sequence, finding the bottleneck, and identifying where work could be distributed more evenly.</p>
+              <ul class="tags" aria-label="Methods">
+                <li>Time studies</li><li>Line balancing</li><li>Bottleneck analysis</li>
+              </ul>
+              <details class="project-details">
+                <summary>Problem, method &amp; takeaway <span aria-hidden="true"></span></summary>
+                <div>
+                  <h4>Business problem</h4>
+                  <p>Understand how work moves through a Lego-car assembly line and where station workloads become uneven.</p>
+                  <h4>Data &amp; method</h4>
+                  <p>Collected time-study data at each station, then established the correct build sequence (the precedence of tasks) across stations.</p>
+                  <h4>Analysis</h4>
+                  <p>Compared station times to find the bottleneck station that paces the line, and calculated the slack time at every other station.</p>
+                  <h4>Engineering takeaway</h4>
+                  <p>Station-level measurement makes the constraint visible and gives a factual basis for redistributing work.</p>
                 </div>
-              </div>
+              </details>
             </div>
+          </article>
 
-          </div>
-
-          <!-- Profile Picture & Quick Stats Sidebar -->
-            <div class="profile-card glass-card">
-              <img src="./assets/images/profile.jpg" alt="Andrew Oen Portrait" style="width:100%; height:100%; object-fit:cover;">
-              <div class="profile-caption">
-                <strong>Primary Portrait</strong> - Andrew Oen
+          <article class="project-card">
+            <div class="project-visual doe-visual">
+              <div class="visual-header"><span>Battery production study</span><span class="mini-tag">Full factorial DOE</span></div>
+              <div class="doe-diagram" role="img" aria-label="Design cube for a three-factor full factorial experiment. Its axes are temperature, charge time, and material type, and each corner is one factor combination. The response studied is charge retention.">
+                <svg viewBox="0 0 380 250" aria-hidden="true">
+                  <g class="cube-back"><path d="M164 36H288V152H164ZM164 152 110 206"/></g>
+                  <g class="cube-front"><path d="M110 90H234V206H110ZM110 90 164 36M234 90 288 36M234 206 288 152"/></g>
+                  <g class="cube-nodes">
+                    <circle cx="164" cy="36" r="6.5"/><circle cx="288" cy="36" r="6.5"/><circle cx="164" cy="152" r="6.5"/><circle cx="288" cy="152" r="6.5"/>
+                    <circle cx="110" cy="90" r="6.5"/><circle cx="234" cy="90" r="6.5"/><circle cx="110" cy="206" r="6.5"/><circle cx="234" cy="206" r="6.5"/>
+                  </g>
+                  <g class="cube-axes"><path d="M110 224H234M302 50V146M94 74 144 24"/></g>
+                  <g class="cube-labels">
+                    <text x="172" y="246" text-anchor="middle">Temperature</text>
+                    <text x="312" y="94">Charge</text>
+                    <text x="312" y="113">time</text>
+                    <text x="86" y="40" text-anchor="end">Material</text>
+                    <text x="86" y="59" text-anchor="end">type</text>
+                  </g>
+                </svg>
               </div>
+              <div class="visual-foot"><span><i aria-hidden="true"></i>Test the factors. Understand the response.</span><span>Illustrative design space</span></div>
             </div>
-
-          </div>
+            <div class="project-body">
+              <p class="project-type">Case study 04 · Process analytics · Academic project</p>
+              <h3>Battery production optimization</h3>
+              <p>Using a designed experiment to understand which production parameters have the greatest influence on charge retention.</p>
+              <ul class="tags" aria-label="Methods">
+                <li>Minitab</li><li>Full factorial DOE</li><li>ANOVA</li>
+              </ul>
+              <details class="project-details">
+                <summary>Problem, method &amp; takeaway <span aria-hidden="true"></span></summary>
+                <div>
+                  <h4>Business problem</h4>
+                  <p>Investigate how temperature, charge time, and material type influence battery charge retention.</p>
+                  <h4>Data &amp; method</h4>
+                  <p>Collected experimental data across a full factorial design of the three factors in Minitab, with charge retention as the response.</p>
+                  <h4>Analysis</h4>
+                  <p>Used ANOVA to separate real factor effects from run-to-run variation and identify which parameters most improved charge retention.</p>
+                  <h4>Engineering takeaway</h4>
+                  <p>Structured experimentation separates meaningful process effects from variation, so decisions rest on evidence rather than trial and error.</p>
+                </div>
+              </details>
+            </div>
+          </article>
         </div>
-
       </div>
     </section>
 
-    <!-- ==================== ABOUT TAB ==================== -->
-    <section id="tab-about" class="tab-content section blueprint-grid" style="padding-top: 130px;">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-          <p class="section-subtitle">My engineering background, technical interests, and leadership roles.</p>
+    <section class="method-section" id="approach" aria-labelledby="method-title">
+      <div class="container method-layout">
+        <div class="method-intro">
+          <p class="eyebrow"><span class="section-index" aria-hidden="true">04</span> My approach</p>
+          <h2 id="method-title">Understand it.<br>Improve it.<br>Make it last.</h2>
+          <p>I use DMAIC to move from a clear problem to a lasting improvement. Explore each phase to see how I put the method into practice.</p>
+          <p class="method-cert"><span aria-hidden="true">σ</span>Six Sigma Green Belt</p>
         </div>
-
-        <div style="display:grid; grid-template-columns: 1.3fr 0.7fr; gap: 40px; align-items: flex-start;">
-          <!-- Paragraph Bio -->
-          <div class="glass-card" style="padding: 35px; line-height: 1.7; font-size: 1.05rem;">
-            <h3 style="color:var(--accent-cyan); font-weight:700; margin-bottom: 15px;">Driven by Structural Principles & Design</h3>
-            <p>
-              I was born and raised in Dayton, Ohio by my loving family. Growing up, I played just about every sport there was in my small town and always enjoyed things like legos and small arts and craft projects. I continued my passion for sports and projects through high school as I played football, baseball, basketball, and track while working on personal projects such as paintings, tables, and corn hole sets. Growing up, I always knew I wanted to become an engineer as I looked up to my grandfather who constantly fixed things for people. Then, in high school I took an "Intro To Engineering" class where we created robots that had to complete specific tasks. This class confirmed my decision to study mechanical engineering in college. With my grades and test scores, I was lucky to receive a scholarship to attend Auburn University which I quickly accepted.
-            </p>
-            <p style="margin-top: 15px;">
-              At Auburn University, I have explored a variety of disciplines within mechanical engineering while working to identify the areas that most interest me. In addition to excelling academically (see the "Academics" tab), I am an active member of ASME, the American Society of Mechanical Engineers at Auburn University, where I participate in networking events, design nights, professional development opportunities, and more. I was also selected for Auburn's chapter of Pi Tau Sigma, the international mechanical engineering honor society recognizing the top 25% of mechanical engineering students. Through Pi Tau Sigma and its collaboration with ASME, I have expanded my professional network and gained access to valuable resources that have supported my growth as an engineer. During the summer of 2026, I had the opportunity to intern with LSI Industries (see the "Experience" and "Projects" tabs), where I gained hands-on experience in design and manufacturing. This experience allowed me to apply concepts learned in the classroom to real-world engineering challenges while further developing my technical and professional skills.
-            </p>
-            <p style="margin-top: 15px;">
-              Looking ahead, I am eager to take on new engineering opportunities that challenge me to grow and expand my perspective of the industry. Whether through internships, research, or design projects, I am committed to continuously learning and applying my skills to real-world problems. My goal is to build a career where I can contribute to innovative engineering solutions while continuing to develop as both an engineer and a person.
-            </p>
+        <div class="method-workspace">
+          <div class="method-tabs" role="tablist" aria-label="DMAIC phases">
+            <button type="button" role="tab" id="tab-define" aria-selected="true" aria-controls="panel-define">D<span>Define</span></button>
+            <button type="button" role="tab" id="tab-measure" aria-selected="false" aria-controls="panel-measure" tabindex="-1">M<span>Measure</span></button>
+            <button type="button" role="tab" id="tab-analyze" aria-selected="false" aria-controls="panel-analyze" tabindex="-1">A<span>Analyze</span></button>
+            <button type="button" role="tab" id="tab-improve" aria-selected="false" aria-controls="panel-improve" tabindex="-1">I<span>Improve</span></button>
+            <button type="button" role="tab" id="tab-control" aria-selected="false" aria-controls="panel-control" tabindex="-1">C<span>Control</span></button>
           </div>
 
-          <!-- Skills Sidebar Summary -->
-          <div class="glass-card" style="padding: 30px;">
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.05); padding-bottom:8px;">Core Tools</h3>
-            <div style="display:flex; flex-wrap:wrap; gap:8px;">
-              <span class="skill-tag" style="background:rgba(255,255,255,0.02); border:1px solid var(--border-color); padding:6px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);"><i class="fa-solid fa-cube"></i> SolidWorks</span>
-              <span class="skill-tag" style="background:rgba(255,255,255,0.02); border:1px solid var(--border-color); padding:6px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);"><i class="fa-solid fa-chart-line"></i> MATLAB</span>
-              <span class="skill-tag" style="background:rgba(255,255,255,0.02); border:1px solid var(--border-color); padding:6px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);"><i class="fa-solid fa-compass-drafting"></i> Autodesk Inventor</span>
-              <span class="skill-tag" style="background:rgba(255,255,255,0.02); border:1px solid var(--border-color); padding:6px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);"><i class="fa-solid fa-database"></i> Autodesk Vault (PDM)</span>
-              <span class="skill-tag" style="background:rgba(255,255,255,0.02); border:1px solid var(--border-color); padding:6px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);"><i class="fa-solid fa-brain"></i> Artificial Intelligence Management</span>
-              <span class="skill-tag" style="background:rgba(255,255,255,0.02); border:1px solid var(--border-color); padding:6px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);"><i class="fa-solid fa-print"></i> 3-D Printing</span>
-            </div>
+          <div class="method-panel" id="panel-define" role="tabpanel" aria-labelledby="tab-define" tabindex="0">
+            <p class="phase-number">Phase 1 of 5 · Define</p>
+            <h3>Start with the right problem.</h3>
+            <p>Understand the process, listen to the people closest to it, and agree on what a better outcome looks like and how far the project reaches.</p>
+            <p class="phase-practice"><strong>In practice</strong>Served as the daily point of contact between quality and production at Steller Plastics, resolving issues through CAPA.</p>
+            <ul class="tags" aria-label="Tools"><li>Problem definition</li><li>Project scope &amp; WBS</li><li>Process understanding</li></ul>
           </div>
-        </div>
-
-        <!-- About Photos Gallery Grid -->
-        <div class="about-photos-grid">
-          <div class="about-photo-item glass-card">
-            <img src="./assets/images/about-pi-tau-sigma.jpg" alt="Pi Tau Sigma Initiation Auburn Chi Chapter" loading="lazy">
-            <div class="about-photo-caption">
-              <strong>Pi Tau Sigma Initiation</strong>
-              <span>Auburn Chi Chapter • Spring 2026</span>
-            </div>
+          <div class="method-panel" id="panel-measure" role="tabpanel" aria-labelledby="tab-measure" tabindex="0" hidden>
+            <p class="phase-number">Phase 2 of 5 · Measure</p>
+            <h3>Measure before changing anything.</h3>
+            <p>Collect reliable data on how the process performs today, including cycle times, defects, and capability, so every later decision has a baseline.</p>
+            <p class="phase-practice"><strong>In practice</strong>Collected time-study data on a Lego-car assembly line, and maintained Cp/Cpk studies in Minitab at Steller Plastics. In <a href="projects/defect-reduction.html#analysis">case study 01</a>, validated the gauge with a Gage R&amp;R before trusting the data.</p>
+            <ul class="tags" aria-label="Tools"><li>Time studies</li><li>Data collection</li><li>Cp/Cpk</li></ul>
           </div>
-          <div class="about-photo-item glass-card">
-            <img src="./assets/images/about-engineering-lab.jpg" alt="Auburn Mechanical Engineering Lab Mentorship" loading="lazy">
-            <div class="about-photo-caption">
-              <strong>Engineering Lab & Mentorship</strong>
-              <span>Auburn Department of Mechanical Engineering</span>
-            </div>
+          <div class="method-panel" id="panel-analyze" role="tabpanel" aria-labelledby="tab-analyze" tabindex="0" hidden>
+            <p class="phase-number">Phase 3 of 5 · Analyze</p>
+            <h3>Find the cause, not the symptom.</h3>
+            <p>Use root cause analysis and statistics to separate real effects from noise and to locate the constraint that actually limits performance.</p>
+            <p class="phase-practice"><strong>In practice</strong>Used ANOVA on a full factorial DOE to find which parameters most improved battery charge retention, and identified the bottleneck station on an assembly line.</p>
+            <ul class="tags" aria-label="Tools"><li>Root cause analysis</li><li>ANOVA</li><li>Bottleneck analysis</li></ul>
           </div>
-          <div class="about-photo-item glass-card">
-            <img src="./assets/images/about-game-friends.jpg" alt="Campus Life and Athletics" loading="lazy">
-            <div class="about-photo-caption">
-              <strong>Campus Life & Athletics</strong>
-              <span>Matchday with Friends</span>
-            </div>
+          <div class="method-panel" id="panel-improve" role="tabpanel" aria-labelledby="tab-improve" tabindex="0" hidden>
+            <p class="phase-number">Phase 4 of 5 · Improve</p>
+            <h3>Change what matters, then verify it.</h3>
+            <p>Make focused, practical changes to the parameters and workflows that drive the result, and confirm the effect with data.</p>
+            <p class="phase-practice"><strong>In practice</strong>Partnered with process and quality engineers on critical process parameters and corrective actions, reducing rejection by 8%, and applied Kaizen and 5S on the shop floor.</p>
+            <ul class="tags" aria-label="Tools"><li>Critical process parameters</li><li>Kaizen &amp; 5S</li><li>Design of experiments</li></ul>
+          </div>
+          <div class="method-panel" id="panel-control" role="tabpanel" aria-labelledby="tab-control" tabindex="0" hidden>
+            <p class="phase-number">Phase 5 of 5 · Control</p>
+            <h3>Make the gains stick.</h3>
+            <p>Monitor the process, standardize the new way of working, and react early when variation returns.</p>
+            <p class="phase-practice"><strong>In practice</strong>Maintained SPC control charts to catch variation early, and wrote SOPs and technical documentation to standardize work across shifts. <a href="projects/defect-reduction.html#control">Case study 01</a> carries this through to a control plan, a PFMEA update and an 8D close-out.</p>
+            <ul class="tags" aria-label="Tools"><li>SPC control charts</li><li>SOPs</li><li>CAPA</li></ul>
           </div>
         </div>
-
-        <!-- ==================== LEADERSHIP SECTION ==================== -->
-        <div style="border-top:1px solid rgba(255,255,255,0.05); padding-top:50px;">
-          <h3 style="font-size:2rem; font-weight:800; text-align:center; margin-bottom:10px;">Leadership & <span class="gradient-text">Roles</span></h3>
-          <p style="text-align:center; color:var(--text-secondary); max-width:550px; margin:0 auto 40px auto; font-size:0.95rem;">Key coordination and project leadership tasks completed during my studies.</p>
-          
-          <div class="leadership-grid">
-            <!-- Leadership Card 1: Tippecanoe Men's Luncheon -->
-            <div class="leadership-card glass-card">
-              <div class="leadership-role">Tippecanoe Men’s Luncheon Advisor</div>
-              <div class="leadership-org">Community Leadership • Tipp City, OH</div>
-              <div class="leadership-date">November 2023 - May 2024</div>
-              <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.5;">
-                Advised, assisted, and organized a group to plan and execute a dedicated luncheon for all male graduating seniors and their fathers, coordinating event programming, logistics, and community outreach.
-              </p>
-            </div>
-            <!-- Leadership Card 2: Design Review & Concept Walk-Through -->
-            <div class="leadership-card glass-card" style="border-left-color:var(--accent-emerald);">
-              <div class="leadership-role">Design Review & Concept Walk-Through Lead</div>
-              <div class="leadership-org">Engineering Design Teams • LSI Industries</div>
-              <div class="leadership-date">May 2026 - August 2026</div>
-              <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.5;">
-                Led design reviews and concept walk-throughs for my projects, clearly communicating the engineering methodology, decisions, and code. Equipped team members with the documentation needed to troubleshoot, modify, and maintain the designs moving forward (Documents in "Projects" tab).
-              </p>
-            </div>
-            <!-- Leadership Card 3: Project Team Lead -->
-            <div class="leadership-card glass-card" style="border-left-color:#a855f7;">
-              <div class="leadership-role">Project Team Lead</div>
-              <div class="leadership-org">Intro to Mechanical Engineering • Auburn University</div>
-              <div class="leadership-date">August 2024 - December 2024</div>
-              <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.5;">
-                Served as group leader directing a team using SolidWorks to design and structurally optimize a load-bearing bracket, achieving 1st place by supporting the highest weight capacity (78 lbs).
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- ==================== ACADEMICS TAB ==================== -->
-    <section id="tab-academics" class="tab-content section blueprint-grid" style="padding-top: 130px;">
+    <section class="section expertise-section" id="expertise" aria-labelledby="expertise-title">
       <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-tag">Education</span>
-          <h2 class="section-title">Academic <span class="gradient-text">Profile</span></h2>
-          <p class="section-subtitle">University degree summary, grades, and outcomes from core engineering courses.</p>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="section-index" aria-hidden="true">05</span> Expertise</p>
+            <h2 id="expertise-title">Technical depth.<br>Practical application.</h2>
+          </div>
+          <p>Quality methods, analytical tools, and engineering fundamentals, applied where they make a difference.</p>
         </div>
-
-        <!-- Academic GPA & Stats Card -->
-        <div class="academic-header-card glass-card">
-          <h3 style="font-size:1.5rem; font-weight:700; margin-bottom:5px;">Bachelor of Mechanical Engineering</h3>
-          <div style="font-family:var(--font-mono); font-size:0.9rem; color:var(--text-muted);">Auburn University (Auburn, AL) • Samuel Ginn College of Engineering</div>
-          
-          <div class="stats-summary-row" style="grid-template-columns: repeat(3, 1fr);">
-            <div class="academic-stat">
-              <span class="academic-stat-val">4.0 / 4.0</span>
-              <span class="academic-stat-label">Cumulative GPA</span>
-            </div>
-            <div class="academic-stat">
-              <span class="academic-stat-val">May 2028</span>
-              <span class="academic-stat-label">Graduation Date</span>
-            </div>
-            <div class="academic-stat">
-              <span class="academic-stat-val">ME Honor Society (Top 25%)</span>
-              <span class="academic-stat-label">Academic Honors</span>
-            </div>
-          </div>
+        <div class="expertise-grid">
+          <article class="expertise-item">
+            <svg aria-hidden="true" viewBox="0 0 32 32"><path d="m16 3 11 5v8c0 7-11 13-11 13S5 23 5 16V8L16 3Zm-6 13 4 4 8-8"/></svg>
+            <h3>Process &amp; quality</h3>
+            <p>Make quality part of the process.</p>
+            <ul>
+              <li>Root cause analysis &amp; CAPA</li>
+              <li>Six Sigma (DMAIC)</li>
+              <li>Lean manufacturing, Kaizen, 5S</li>
+              <li>SPC, Cp/Cpk, line balancing</li>
+              <li>MSA (Gage R&amp;R), PFMEA, control plans, 8D</li>
+            </ul>
+          </article>
+          <article class="expertise-item">
+            <svg aria-hidden="true" viewBox="0 0 32 32"><path d="M4 4v24h25M9 22v-8m7 8V8m7 14V4"/></svg>
+            <h3>Data &amp; analysis</h3>
+            <p>Turn variation into understanding.</p>
+            <ul>
+              <li>Minitab, DOE, ANOVA</li>
+              <li>Power BI data modeling, DAX, OEE analytics</li>
+              <li>Python (pandas, statsmodels) &amp; SQL</li>
+              <li>Excel: XLOOKUP, pivot tables, SUMIFS</li>
+            </ul>
+          </article>
+          <article class="expertise-item">
+            <svg aria-hidden="true" viewBox="0 0 32 32"><path d="M4 8h24M9 4v8m14-8v8M4 8v20h24V8M9 17h5m4 0h5M9 23h5"/></svg>
+            <h3>Projects &amp; operations</h3>
+            <p>Connect the plan to the work.</p>
+            <ul>
+              <li>Project management (WBS, EVM)</li>
+              <li>Time studies</li>
+              <li>Supply chain management</li>
+            </ul>
+          </article>
+          <article class="expertise-item">
+            <svg aria-hidden="true" viewBox="0 0 32 32"><path d="m16 3 12 7v13l-12 7-12-7V10l12-7Zm0 14L4 10m12 7 12-7M16 17v13M10 6l12 7v7"/></svg>
+            <h3>Engineering &amp; design</h3>
+            <p>Bring concepts into the real world.</p>
+            <ul>
+              <li>CAD: SolidWorks, AutoCAD</li>
+              <li>Engineering drawings</li>
+              <li>Prototyping</li>
+            </ul>
+          </article>
         </div>
-
-        <h3 style="font-size:1.8rem; font-weight:800; text-align:center; margin-bottom:10px;">Relevant Completed <span class="gradient-text">Courses</span></h3>
-        <p style="text-align:center; color:var(--text-secondary); max-width:550px; margin:0 auto 30px auto; font-size:0.95rem;">Completed coursework and grades representing foundational mechanical engineering competencies.</p>
-
-        <!-- Relevant Courses Grid -->
-        <div class="courses-grid">
-          
-          <!-- Course Card 1 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 2130</span>
-                <h4 class="course-name">Mechanical Engineering Statics</h4>
-              </div>
-              <span class="grade-badge">Grade: A</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Study of force systems, equilibrium of particles and rigid bodies, structural analysis of trusses, friction, centroids, and moments of inertia.
-              </p>
-            </div>
-          </div>
-
-          <!-- Course Card 2 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 2140</span>
-                <h4 class="course-name">Kinematics and Dynamics</h4>
-              </div>
-              <span class="grade-badge">Grade: A</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Kinematics and kinetics of particles and rigid bodies. Kinematic analysis of linkages, gears, cams, planar motion, work-energy, and momentum methods.
-              </p>
-            </div>
-          </div>
-
-          <!-- Course Card 3 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 2010</span>
-                <h4 class="course-name">Thermodynamics I</h4>
-              </div>
-              <span class="grade-badge">Grade: A</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Properties of pure substances, first and second laws of thermodynamics, entropy, power cycles, and refrigeration cycles.
-              </p>
-            </div>
-          </div>
-
-          <!-- Course Card 4 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 2020</span>
-                <h4 class="course-name">Manufacturing Technology Lab</h4>
-              </div>
-              <span class="grade-badge">Grade: A</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Introduction to manufacturing processes and laboratory safety. Focuses on manual machining, metrology, CNC programming, and fabrication by providing a semester-long project which requires weekly use of manual mills and lathes (See "Projects").
-              </p>
-            </div>
-          </div>
-
-          <!-- Course Card 5 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 2220</span>
-                <h4 class="course-name">Computer Aided Engineering</h4>
-              </div>
-              <span class="grade-badge">Grade: A</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Study of 3D parametric modeling, assembly design constraints, and stress analysis of mechanical components using CAD/CAE tools, specifically SolidWorks and MatLab. Class also included a lab where a PVC pipe fusion clamp machine was designed as a team (See "Projects").
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <h3 style="font-size:1.8rem; font-weight:800; text-align:center; margin-top:60px; margin-bottom:10px;">Relevant Current <span class="gradient-text">Courses</span></h3>
-        <p style="text-align:center; color:var(--text-secondary); max-width:550px; margin:0 auto 30px auto; font-size:0.95rem;">Mechanical engineering courses currently in progress.</p>
-        
-        <div class="courses-grid" style="margin-bottom: 40px;">
-          <!-- Current Course Card 1 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 3200</span>
-                <h4 class="course-name">Concepts of Mechanical Design</h4>
-              </div>
-              <span class="grade-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--accent-primary); border-color: rgba(37, 99, 235, 0.15);">In Progress</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Study of safety factors, stress concentration, static and fatigue failure analysis, and design constraints of shafts, bearings, and fasteners.
-              </p>
-            </div>
-          </div>
-          
-          <!-- Current Course Card 2 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 3030</span>
-                <h4 class="course-name">Fluid Mechanics</h4>
-              </div>
-              <span class="grade-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--accent-primary); border-color: rgba(37, 99, 235, 0.15);">In Progress</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Study of fluid statics, fluid kinematics, conservation of mass, momentum and energy, internal viscous flow, pipe flow, and boundary layer theory.
-              </p>
-            </div>
-          </div>
-          
-          <!-- Current Course Card 3 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 3020</span>
-                <h4 class="course-name">Thermodynamics II</h4>
-              </div>
-              <span class="grade-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--accent-primary); border-color: rgba(37, 99, 235, 0.15);">In Progress</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Advanced vapor and gas power cycles (Rankine, Otto, Diesel, Brayton), refrigeration, gas mixtures, psychrometrics, and combustion reactions.
-              </p>
-            </div>
-          </div>
-          
-          <!-- Current Course Card 4 -->
-          <div class="course-card glass-card">
-            <div class="course-card-header">
-              <div class="course-info">
-                <span class="course-code">MECH 3120</span>
-                <h4 class="course-name">Mechanics of Materials</h4>
-              </div>
-              <span class="grade-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--accent-primary); border-color: rgba(37, 99, 235, 0.15);">In Progress</span>
-            </div>
-            <div class="course-card-body" style="margin-bottom: 0;">
-              <p class="course-summary">
-                Analyses of stress and strain, deformation under axial loading, torsion of shafts, bending deflection of beams, shear stresses, and pressure vessels.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- ==================== EXPERIENCE TAB ==================== -->
-    <section id="tab-experience" class="tab-content section blueprint-grid" style="padding-top: 130px;">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-tag">Work History</span>
-          <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
-          <p class="section-subtitle">Positions I have held, detailing my tasks, engineering solutions, and achievements.</p>
+    <section class="section education-section" id="education" aria-labelledby="education-title">
+      <div class="container education-layout">
+        <div>
+          <p class="eyebrow"><span class="section-index" aria-hidden="true">06</span> Education &amp; training</p>
+          <h2 id="education-title">A strong foundation.<br>A learning mindset.</h2>
+          <p class="education-intro">Mechanical fundamentals, industrial systems thinking, and a commitment to getting better.</p>
         </div>
-
-        <div class="experience-timeline">
-          <!-- Job 1: LSI Industries -->
-          <div class="work-card glass-card">
+        <div class="education-records">
+          <article>
+            <span class="degree-icon" aria-hidden="true">MS</span>
             <div>
-              <div class="work-header">
-                <h3 class="work-title">Engineering Intern</h3>
-                <h4 class="work-company">LSI Industries • Cincinnati, OH</h4>
-                <div class="work-date">May 2026 - August 2026</div>
-              </div>
-              <div class="work-desc">
-                <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.6;">
-                  Completed an intensive multi-disciplinary engineering internship at LSI Industries headquarters, driving product design, automation, R&amp;D testing, and production operations:
-                </p>
-                <ul>
-                  <li><strong>Mechanical Design:</strong> Redesigned die-cast aluminum end caps for the LAW2 line with integrated mechanical stops and redesigned screw holes to eliminate a second manufactured cover (-$1.34/unit), engineered CNC fixture subplates, and modeled sheet metal light shields in Autodesk Inventor.</li>
-                  <li><strong>Design Automation (iLogic):</strong> Developed an automated commercial lighting pole generator using 8,000+ lines of custom iLogic code and AI tools, integrating with Autodesk Vault PDM and JD Edwards ERP (600% efficiency boost).</li>
-                  <li><strong>R&amp;D &amp; Rapid Prototyping:</strong> Managed 11 design iterations of the LAW2 end cap, executing 3D-print fit-up validation and physical mount testing to verify real-world assembly tolerances.</li>
-                  <li><strong>Manufacturing &amp; Quality:</strong> Gained direct shop-floor visibility across pole and packaging plants, applying NADCA die-casting standards, draft angles, and standard production drawing notes.</li>
-                  <li><strong>Electrical Integration:</strong> Hands-on assembly and wiring of Velocity product family power/control modules, studying electrical schematics to build systems integration fluency.</li>
-                  <li><strong>Operations &amp; ECNs:</strong> Conducted Engineering Change Notice (ECN) reviews, shadowed project managers on production scheduling, and participated in daily agile standups.</li>
-                </ul>
-              </div>
+              <p class="education-date">Aug 2023 – May 2025</p>
+              <h3>M.S., Industrial Engineering</h3>
+              <p class="school">Western New England University</p>
+              <p class="education-location">Springfield, Massachusetts</p>
+              <p class="coursework"><strong>Coursework</strong>Work Analysis &amp; Design, Statistical Process Control, Production &amp; Inventory Modeling</p>
             </div>
-            <!-- Job 1 Photo -->
-            <div class="work-single-photo">
-              <a href="./assets/images/lsi-experience.jpg" target="_blank" rel="noopener" class="work-photo-frame glass-card" title="Andrew Oen at LSI Industries Headquarters (Click to view full photo)">
-                <img src="./assets/images/lsi-experience.jpg" alt="Andrew Oen at LSI Industries Headquarters" class="work-photo-img">
-                <div class="work-photo-badge">
-                  <i class="fa-solid fa-building"></i> LSI Industries • Cincinnati, OH
-                </div>
-              </a>
-            </div>
-
-            <!-- Multi-Disciplinary Engineering Breakdown -->
-            <div class="work-card-full">
-              <div class="lsi-breakdown-actions">
-                <button class="lsi-breakdown-toggle-btn" id="lsi-breakdown-toggle" type="button">
-                  <i class="fa-solid fa-list-check"></i>
-                  <span class="btn-text">View Full Technical Breakdown (6 Disciplines)</span>
-                  <i class="fa-solid fa-chevron-down toggle-arrow"></i>
-                </button>
-                <a href="./assets/engineering-files/documents/internship-at-lsi-industries-summary.pdf" target="_blank" rel="noopener" class="lsi-pdf-btn" title="Download official internship summary PDF">
-                  <i class="fa-solid fa-file-pdf"></i> Download PDF Summary
-                </a>
-              </div>
-
-              <!-- Collapsible 6-Discipline Grid -->
-              <div class="lsi-disciplines-drawer" id="lsi-disciplines-drawer">
-                <div class="lsi-disciplines-grid">
-                  
-                  <!-- 1. Mechanical Engineering -->
-                  <div class="discipline-card glass-card">
-                    <div class="discipline-header">
-                      <i class="fa-solid fa-gears"></i>
-                      <h4 class="discipline-title">1. Mechanical Engineering</h4>
-                    </div>
-                    <p class="discipline-intro">Applied core mechanical design principles using Autodesk Inventor to design components, create manufacturing drawings, and refine assemblies.</p>
-                    <ul class="discipline-bullets">
-                      <li><strong>LAW2 End Cap Redesign:</strong> Redesigned die cast aluminum end caps to incorporate a physical stop preventing gasket over-compression, and redesigned screw holes to eliminate a second manufactured cover (-$1.34/unit cost reduction) (See in "Projects" tab).</li>
-                      <li><strong>CNC Subplate Design:</strong> Redesigned a heavy-duty subplate for CNC machining fixtures, focusing on developing precise drawings, identifying datums, and ensuring accurate positioning.</li>
-                      <li><strong>Sheet Metal Design:</strong> Modeled a 4-sided light shield in Inventor. Used sheet metal manufacturing standards to calculate bend allowances and generate flat-pattern drawings with fold-lines (See in "Projects" tab).</li>
-                    </ul>
-                  </div>
-
-                  <!-- 2. Electrical Engineering -->
-                  <div class="discipline-card glass-card">
-                    <div class="discipline-header">
-                      <i class="fa-solid fa-bolt"></i>
-                      <h4 class="discipline-title">2. Electrical Engineering</h4>
-                    </div>
-                    <p class="discipline-intro">Gained practical, hands-on exposure to electrical sub-assemblies and wiring schematics.</p>
-                    <ul class="discipline-bullets">
-                      <li><strong>Velocity Family Modules:</strong> Hands-on assembly of several power and control modules from the Velocity product family.</li>
-                      <li><strong>Systems Integration:</strong> Studied electrical schematics to understand how individual electronic components interface and function together to achieve optimal performance.</li>
-                      <li><strong>Skills Developed:</strong> Overcame previous hesitation toward electrical engineering by building confidence in hardware assembly, wiring, and circuit pathing.</li>
-                    </ul>
-                  </div>
-
-                  <!-- 3. R&D & Product Development -->
-                  <div class="discipline-card glass-card">
-                    <div class="discipline-header">
-                      <i class="fa-solid fa-flask"></i>
-                      <h4 class="discipline-title">3. R&amp;D &amp; Product Development</h4>
-                    </div>
-                    <p class="discipline-intro">Supported the product development lifecycle through iterative design, physical testing, and prototype validation.</p>
-                    <ul class="discipline-bullets">
-                      <li><strong>Iterative Optimization:</strong> Managed 11 design iterations of the LAW2 end cap, systematically adjusting CAD models based on feedback regarding manufacturing constraints, casting parameters, and part costs.</li>
-                      <li><strong>Rapid Prototyping:</strong> Utilized 3D-printing to prototype and test iterations of the end cap, validating physical tolerances and fit-up before final production tooling was cut.</li>
-                      <li><strong>Physical Verification (Mount Test):</strong> Assisted with physical mount testing, identifying discrepancies between CAD models and actual physical assemblies to emphasize mock-up testing importance.</li>
-                    </ul>
-                  </div>
-
-                  <!-- 4. Manufacturing Engineering -->
-                  <div class="discipline-card glass-card">
-                    <div class="discipline-header">
-                      <i class="fa-solid fa-industry"></i>
-                      <h4 class="discipline-title">4. Manufacturing Engineering</h4>
-                    </div>
-                    <p class="discipline-intro">Worked directly with manufacturing processes and constraints to optimize designs for production (Design for Manufacturability).</p>
-                    <ul class="discipline-bullets">
-                      <li><strong>Shop Floor Operations:</strong> Spent time in the pole plant and packaging plant picking parts and painting fixtures, gaining direct visibility into the downstream manufacturing flow.</li>
-                      <li><strong>Casting Constraints:</strong> Learned draft angle standards (2.5°–3.8°), casting tolerances, and thermal shrinkage allowances during the design of cast components.</li>
-                      <li><strong>Drawing Standards:</strong> Created production drawings using industry-standard ASME symbols, clear views, and standard sheet metal notes.</li>
-                    </ul>
-                  </div>
-
-                  <!-- 5. Design Automation & Process Engineering -->
-                  <div class="discipline-card glass-card">
-                    <div class="discipline-header">
-                      <i class="fa-solid fa-code"></i>
-                      <h4 class="discipline-title">5. Design Automation &amp; Process Engineering</h4>
-                    </div>
-                    <p class="discipline-intro">Designed automation workflows and created systems to standardize repetitive engineering tasks.</p>
-                    <ul class="discipline-bullets">
-                      <li><strong>iLogic/Code Development (The Pole Generator):</strong> Developed a parameter-driven pole generation tool in Autodesk Inventor using 8,000+ lines of custom iLogic code in collaboration with AI tools (See in "Projects" tab).</li>
-                      <li><strong>Data Integrity (PDM/ERP Integration):</strong> Connected the automation system with Autodesk Vault for document control and JD Edwards for ERP/BOM synchronization.</li>
-                      <li><strong>Process Standardization (SOP):</strong> Authored and presented a Standard Operating Procedure explaining generator backend architecture and maintenance guidelines for clean ownership transition.</li>
-                    </ul>
-                  </div>
-
-                  <!-- 6. Operations & Administration -->
-                  <div class="discipline-card glass-card">
-                    <div class="discipline-header">
-                      <i class="fa-solid fa-clipboard-check"></i>
-                      <h4 class="discipline-title">6. Operations &amp; Administration</h4>
-                    </div>
-                    <p class="discipline-intro">Learned how engineering departments coordinate projects, manage changes, and interact with the broader business.</p>
-                    <ul class="discipline-bullets">
-                      <li><strong>Engineering Change Notices (ECN):</strong> Performed ECN reviews, learning how to document revisions properly and query change logs to trace why historic designs were altered.</li>
-                      <li><strong>Project Management Shadowing:</strong> Shadowed a project manager to learn about project scoping, team scheduling, and how PMs align production and engineering resources.</li>
-                      <li><strong>Agile Standups:</strong> Participated in morning team meetings to track project paths, discuss obstacles, and practice speaking and presenting to senior engineers.</li>
-                      <li><strong>Vendor Relations:</strong> Attended technical "Lunch-and-Learn" seminars with external suppliers, gaining insight into procurement and business dynamics.</li>
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Job 2: Brumbaugh Engineering & Surveying -->
-          <div class="work-card glass-card" style="border-left-color: var(--accent-emerald);">
+          </article>
+          <article>
+            <span class="degree-icon" aria-hidden="true">BT</span>
             <div>
-              <div class="work-header" style="border-left-color: var(--accent-emerald);">
-                <h3 class="work-title">Survey Engineer Intern</h3>
-                <h4 class="work-company" style="color: var(--accent-emerald);">Brumbaugh Engineering &amp; Surveying • West Milton, OH</h4>
-                <div class="work-date">May 2024 - August 2024</div>
-              </div>
-              <div class="work-desc">
-                <ul>
-                  <li>Collaborated with multiple crews/teams to survey and prepare various construction sites to ensure precision during excavation around the Midwest (Ohio, Kentucky, and Indiana).</li>
-                  <li>Shadowed senior engineers using AutoCAD to turn surveying data into 2D and 3D maps of job sites.</li>
-                </ul>
-              </div>
+              <p class="education-date">Aug 2017 – Jul 2021</p>
+              <h3>B.Tech, Mechanical Engineering</h3>
+              <p class="school">Vignana Bharathi Institute of Technology</p>
+              <p class="education-location">Hyderabad, India</p>
             </div>
-            <!-- Job 2 Company Logo -->
-            <div class="work-single-photo">
-              <a href="./assets/images/brumbaugh-logo.png" target="_blank" rel="noopener" class="work-company-logo-frame" title="Brumbaugh Engineering &amp; Surveying, LLC (Click to view full image)">
-                <div class="work-logo-wrapper">
-                  <img src="./assets/images/brumbaugh-logo.png" alt="Brumbaugh Engineering &amp; Surveying, LLC" class="work-company-logo-img">
-                </div>
-                <div class="work-logo-badge">
-                  <i class="fa-solid fa-mountain-sun" style="color: var(--accent-emerald);"></i> Brumbaugh Eng. &amp; Surveying • West Milton, OH
-                </div>
-              </a>
-            </div>
+          </article>
+          <div class="certifications">
+            <h3>Certifications &amp; training</h3>
+            <ul class="tags">
+              <li>Six Sigma Green Belt</li><li>OSHA General Industry Training</li><li>Project Management Foundations</li><li>Excel Essential Training</li>
+            </ul>
+            <p>Completed through LinkedIn Learning and other training platforms.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ==================== PROJECTS TAB ==================== -->
-    <section id="tab-projects" class="tab-content section blueprint-grid" style="padding-top: 130px;">
-      <div class="container">
-        
-        <div class="section-header text-center">
-          <span class="section-tag">Case Studies & Project Files</span>
-          <h2 class="section-title">Engineering <span class="gradient-text">Projects</span></h2>
-          <p class="section-subtitle">Detailed project case studies featuring design methodology, CAD models, calculation reports, and project files.</p>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="engineering-backdrop" data-backdrop="contact" aria-hidden="true"></div>
+      <div class="container contact-top">
+        <div>
+          <p class="eyebrow">Let’s connect</p>
+          <h2 id="contact-title">Let’s make<br>better happen<span>.</span></h2>
+          <p>Looking for an engineer who connects process, quality, and data? Let’s talk about your team and the challenges you’re working on.</p>
+          <a class="button button-copper" href="mailto:harshithnetha02@gmail.com">Email me <span aria-hidden="true">→</span></a>
         </div>
-
-
-        <!-- Project Sub-Tabs Navigation -->
-        <div class="project-subtabs-nav">
-          <button class="project-subtab-btn active" data-subtab="lsi">
-            <i class="fa-solid fa-briefcase"></i> LSI Industries
-          </button>
-          <button class="project-subtab-btn" data-subtab="auburn">
-            <i class="fa-solid fa-graduation-cap"></i> Auburn University
-          </button>
-        </div>
-
-        <!-- Sub-Tab Pane 1: LSI Industries -->
-        <div class="project-subtab-pane active" id="pane-lsi">
-          <div class="projects-horizontal-list" id="lsi-projects-grid"></div>
-        </div>
-
-        <!-- Sub-Tab Pane 2: Auburn University -->
-        <div class="project-subtab-pane" id="pane-auburn">
-          <div class="projects-horizontal-list" id="auburn-projects-grid"></div>
-        </div>
-
-
-
+        <ul class="contact-links">
+          <li><a href="mailto:harshithnetha02@gmail.com"><span>Email</span><strong>harshithnetha02@gmail.com</strong><b aria-hidden="true">→</b></a></li>
+          <li><a href="https://www.linkedin.com/in/harshith-g-b08a9a263" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Connect on LinkedIn</strong><b aria-hidden="true">↗</b><span class="sr-only">(opens in a new tab)</span></a></li>
+          <li><a href="tel:+14132880548"><span>Phone</span><strong>+1 (413) 288-0548</strong><b aria-hidden="true">→</b></a></li>
+          <li><a href="resume.pdf" download="Harshith_Gundeti_Resume.pdf"><span>Resume</span><strong>Download the PDF</strong><b aria-hidden="true">↓</b></a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#hero" class="nav-logo">
-          <span class="logo-accent">Andrew</span> Oen
-        </a>
-        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-secondary);">Created using my Prompt Engineering skills with AI</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#" class="footer-tab-link" data-tab="about">About</a>
-        <a href="#" class="footer-tab-link" data-tab="academics">Academics</a>
-        <a href="#" class="footer-tab-link" data-tab="experience">Experience</a>
-        <a href="#" class="footer-tab-link" data-tab="projects">Projects</a>
-      </div>
-
-      <div class="footer-copy">
-        <!-- EDIT HERE: Footer copyright -->
-        <p>&copy; <span id="current-year">2026</span> Andrew Oen. All rights reserved.</p>
-      </div>
-
-      <a href="#hero" class="back-to-top" title="Back to Top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="footer-brand">Harshith Gundeti<span>.</span></a>
+      <p>© <span id="year">2026</span> Harshith Netha Gundeti</p>
+      <a href="#top" class="footer-top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 
-  <!-- ==================== PROJECT DETAIL MODAL ==================== -->
-  <div class="modal-overlay" id="project-modal" aria-hidden="true">
-    <div class="modal-card glass-card">
-      <button class="modal-close" id="modal-close" aria-label="Close modal">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div class="modal-body" id="modal-body">
-        <!-- Dynamic content injected by app.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== TOAST NOTIFICATION ==================== -->
-  <div class="toast" id="toast">
-    <i class="fa-solid fa-circle-check toast-icon"></i>
-    <span class="toast-message" id="toast-message">Notification message</span>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="app.js"></script>
+  <noscript>
+    <style>
+      .menu-toggle, .method-tabs, .scene-label { display: none !important; }
+      .method-panel[hidden] { display: block !important; }
+      .method-panel + .method-panel { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #3b4e5b; }
+      @media (max-width: 860px) {
+        .site-header { position: static; height: auto; }
+        .nav-inner { flex-wrap: wrap; row-gap: 0; padding-block: 10px; }
+        #site-nav { display: flex !important; position: static; flex-direction: row; flex-wrap: wrap; gap: 0 18px; width: 100%; max-height: none; padding: 0; border: 0; box-shadow: none; background: none; }
+        #site-nav > a { min-height: 44px; border: 0; font-size: var(--fs-sm); }
+        #site-nav .nav-contact { margin-top: 0; border: 0; padding: 0; }
+      }
+    </style>
+  </noscript>
 </body>
 </html>
