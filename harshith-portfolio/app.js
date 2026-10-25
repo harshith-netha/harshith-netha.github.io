@@ -4,6 +4,21 @@
   const root = document.documentElement;
   root.classList.add('js');
 
+  // Filters keep every project in the HTML for no-JavaScript visitors.
+  const workToolbar = document.querySelector('.work-toolbar');
+  if (workToolbar) {
+    const filters = [...workToolbar.querySelectorAll('[data-work-filter]')];
+    const projects = [...document.querySelectorAll('[data-work-kind]')];
+    workToolbar.hidden = false;
+    filters.forEach(button => button.addEventListener('click', () => {
+      const kind = button.dataset.workFilter;
+      filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+      projects.forEach(project => { project.hidden = kind !== 'all' && project.dataset.workKind !== kind; });
+      const count = projects.filter(project => !project.hidden).length;
+      document.getElementById('work-count').textContent = `${count} projects`;
+    }));
+  }
+
   // The inline controller owns the entrance, keyboard bypass and independent deadline.
 
   // One preference controls every continuous animation, including a failed-WebGL page.
@@ -179,16 +194,6 @@
   });
   if (tabs.length) selectTab(tabs.find((t) => t.getAttribute('aria-selected') === 'true') || tabs[0], false);
 
-  // Project diagrams draw once when they enter the viewport.
-  const diagramObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-drawn');
-      diagramObserver.unobserve(entry.target);
-    }
-  }, { threshold: 0.35 });
-  document.querySelectorAll('.project-visual').forEach((el) => diagramObserver.observe(el));
-
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -223,7 +228,6 @@
     if (!event.persisted) {
       backgroundObserver.disconnect();
       sectionObserver.disconnect();
-      diagramObserver.disconnect();
       reduceMotion.removeEventListener('change', onMotionPreference);
       document.removeEventListener('visibilitychange', updateBackgrounds);
       sceneController?.dispose();

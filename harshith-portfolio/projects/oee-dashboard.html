@@ -9,11 +9,12 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=20261025-evidence3">
   <script src="oee-data.js" defer></script>
-  <script src="oee-dashboard.js" defer></script>
+  <script src="oee-dashboard.js?v=20261025-evidence3" defer></script>
+  <script src="case-study.js?v=20261025-evidence3" defer></script>
 </head>
-<body>
+<body class="case-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-inner">
@@ -27,13 +28,13 @@
         <a class="nav-contact" href="../index.html#contact">Contact</a>
       </nav>
     </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main" tabindex="-1">
     <section class="case-hero" aria-labelledby="case-title">
       <div class="container">
         <a class="back-link" href="../index.html#projects"><span aria-hidden="true">←</span> All case studies</a>
-        <p class="eyebrow"><span class="small-line" aria-hidden="true"></span>Case study 02 · Manufacturing analytics · Power BI</p>
         <h1 id="case-title">Production data.<br>Clearer decisions<span class="copper">.</span></h1>
         <p class="case-lead">An OEE dashboard built around the decisions a shift supervisor makes. Follow production losses from plant to line to machine, with consistent KPI definitions and a traceable data model.</p>
         <p class="sim-note"><span><strong>Simulated dataset, real model.</strong> Thirteen weeks of production and downtime for a simulated two-line molding plant, not employer data. The <a href="#dashboard-title">live preview</a> below runs the same measures as the published DAX, so it can be explored without a Power BI license.</span></p>
@@ -71,7 +72,7 @@
 
     <div class="container">
       <section class="case-section" id="problem" aria-labelledby="problem-title">
-        <header><span class="case-num">01</span><h2 id="problem-title">Business problem</h2></header>
+        <header><h2 id="problem-title">Business problem</h2></header>
         <div class="case-body">
           <p>Output was tracked on paper shift reports and copied into separate spreadsheets. Each line calculated “efficiency” differently, downtime reasons were free text, and the daily meeting spent its time arguing about the numbers instead of acting on them.</p>
           <p><strong>Goal:</strong> one trusted source for OEE and its losses, with definitions everyone agrees on. A supervisor should be able to answer three questions in under a minute: <em>Are we on target? Where are we losing time? Which machine or shift needs attention today?</em></p>
@@ -79,7 +80,7 @@
       </section>
 
       <section class="case-section" id="baseline" aria-labelledby="baseline-title">
-        <header><span class="case-num">02</span><h2 id="baseline-title">Baseline</h2></header>
+        <header><h2 id="baseline-title">Baseline</h2></header>
         <div class="case-body">
           <div class="table-wrap" tabindex="0">
             <table class="data-table">
@@ -97,7 +98,7 @@
       </section>
 
       <section class="case-section" id="data" aria-labelledby="data-title">
-        <header><span class="case-num">03</span><h2 id="data-title">Data model</h2></header>
+        <header><h2 id="data-title">Data model</h2></header>
         <div class="case-body">
           <p>A star schema rather than one flat sheet. Production and downtime have different grains: one row per machine-shift, and one row per stop. They live in separate fact tables, and the shared date, shift and machine dimensions filter both at once.</p>
           <div class="schema" role="list" aria-label="Tables in the model">
@@ -123,7 +124,7 @@
       </section>
 
       <section class="case-section" id="method" aria-labelledby="method-title">
-        <header><span class="case-num">04</span><h2 id="method-title">KPI definitions &amp; DAX</h2></header>
+        <header><h2 id="method-title">KPI definitions &amp; DAX</h2></header>
         <div class="case-body">
           <div class="table-wrap" tabindex="0">
             <table class="data-table">
@@ -158,7 +159,7 @@ DIVIDE ( [Downtime (min)],
       </section>
 
       <section class="case-section" id="analysis" aria-labelledby="dashboard-title">
-        <header><span class="case-num">05</span><h2 id="dashboard-title">The dashboard</h2></header>
+        <header><h2 id="dashboard-title">The dashboard</h2></header>
         <div class="case-body">
           <p>Filter by line, machine or shift, or click a machine bar to drill down. Every visual responds to the filters. The scrap heatmap always shows every shift, so differences between shifts stay visible.</p>
           <noscript><p class="callout">The interactive preview needs JavaScript. The findings are summarized in sections 02 and 06.</p></noscript>
@@ -173,9 +174,12 @@ DIVIDE ( [Downtime (min)],
               <label>Shift
                 <select id="f-shift"><option value="all">All shifts</option><option value="A">Shift A · 06–14</option><option value="B">Shift B · 14–22</option><option value="C">Shift C · 22–06</option></select>
               </label>
-              <button type="button" id="f-reset">Reset</button>
+              <button type="button" id="f-reset">Reset filters</button>
+              <button type="button" id="f-export">Export weekly CSV</button>
+              <button type="button" id="f-share">Copy filtered link</button>
             </div>
             <p class="dash-path" id="d-path" aria-live="polite"></p>
+            <p class="dash-status" id="d-status" role="status"></p>
             <div class="dash-tiles" id="d-tiles"></div>
             <div class="dash-grid">
               <div class="dash-card trend">
@@ -210,7 +214,7 @@ DIVIDE ( [Downtime (min)],
       </section>
 
       <section class="case-section" id="recommendation" aria-labelledby="recommendation-title">
-        <header><span class="case-num">06</span><h2 id="recommendation-title">Decisions it supports</h2></header>
+        <header><h2 id="recommendation-title">Decisions it supports</h2></header>
         <div class="case-body">
           <dl class="d-list">
             <div><dt>1</dt><dd><strong>Run a SMED project on Line 1 changeovers</strong>Changeover is 54% of all downtime. Line 1 made 616 changeovers averaging 45 minutes; Line 2 averages 29. Separating internal from external work and pre-staging molds and materials is the first step.</dd></div>
@@ -222,7 +226,7 @@ DIVIDE ( [Downtime (min)],
       </section>
 
       <section class="case-section" id="result" aria-labelledby="result-title">
-        <header><span class="case-num">07</span><h2 id="result-title">Estimated impact</h2></header>
+        <header><h2 id="result-title">Estimated impact</h2></header>
         <div class="case-body">
           <p>If Line 1 changeovers matched Line 2’s 29-minute average, the line would recover about <strong>9,700 minutes</strong> over the 13 weeks. That is <strong>+3.1 points of availability</strong>, lifting Line 1 OEE from 74.2% to about <strong>76.8%</strong> and putting it above target, with performance and quality held constant.</p>
           <p class="muted">This is an estimate from the model, not a measured result. Before claiming savings, a SMED pilot on one machine would be measured with this same dashboard.</p>
@@ -230,7 +234,7 @@ DIVIDE ( [Downtime (min)],
       </section>
 
       <section class="case-section" id="control" aria-labelledby="control-title">
-        <header><span class="case-num">08</span><h2 id="control-title">Keeping the numbers trustworthy</h2></header>
+        <header><h2 id="control-title">Keeping the numbers trustworthy</h2></header>
         <div class="case-body">
           <ul class="bullets">
             <li><strong>Validation on every load:</strong> good + scrap + rework must equal total, downtime can never exceed planned time, and every stop needs a reason code from a fixed list. The build script asserts the first two.</li>
@@ -242,7 +246,7 @@ DIVIDE ( [Downtime (min)],
       </section>
 
       <section class="case-section" id="tools" aria-labelledby="tools-title">
-        <header><span class="case-num">09</span><h2 id="tools-title">Tools used</h2></header>
+        <header><h2 id="tools-title">Tools used</h2></header>
         <div class="case-body">
           <ul class="tags" aria-label="Tools and methods">
             <li>Power BI data modeling</li><li>DAX</li><li>Star schema</li><li>SQL (SQLite)</li><li>Python · pandas</li><li>OEE &amp; loss analysis</li><li>Downtime Pareto</li><li>Data validation</li>
@@ -251,7 +255,7 @@ DIVIDE ( [Downtime (min)],
       </section>
 
       <section class="case-section" id="files" aria-labelledby="files-title">
-        <header><span class="case-num">10</span><h2 id="files-title">Files</h2></header>
+        <header><h2 id="files-title">Files</h2></header>
         <div class="case-body">
           <div class="file-list">
             <a href="../data/oee-powerbi/fact_production.csv" download><strong>fact_production.csv</strong><span>1,404 machine-shift rows</span><b aria-hidden="true">↓</b></a>

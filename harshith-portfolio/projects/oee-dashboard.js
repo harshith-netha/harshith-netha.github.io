@@ -14,6 +14,13 @@
   const downtime = toObjects(data.downtime);
   const weeks = [...new Set(production.map((r) => r.week))].sort();
   const state = { line: 'all', machine: 'all', shift: 'all' };
+  const params = new URLSearchParams(location.search);
+  if (['Line 1', 'Line 2'].includes(params.get('line'))) state.line = params.get('line');
+  if (Object.hasOwn(machines, params.get('machine'))) {
+    state.machine = params.get('machine');
+    state.line = machines[state.machine].line;
+  }
+  if (SHIFTS.includes(params.get('shift'))) state.shift = params.get('shift');
   const $ = (selector) => root.querySelector(selector);
   const pct = (v, digits = 1) => `${(100 * v).toFixed(digits)}%`;
   const num = new Intl.NumberFormat('en-US');
@@ -45,12 +52,53 @@
     tip.innerHTML = target.dataset.tip;
     tip.hidden = false;
     tip.style.left = `${Math.min(event.clientX + 14, innerWidth - tip.offsetWidth - 8)}px`;
-    tip.style.top = `${event.clientY - tip.offsetHeight - 12}px`;
+    tip.style.top = `${Math.max(8, event.clientY - tip.offsetHeight - 12)}px`;
   });
   root.addEventListener('pointerleave', () => { tip.hidden = true; });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') tip.hidden = true; });
+  window.addEventListener('scroll', () => { tip.hidden = true; }, { passive: true });
 
   // Filters: plant > line > machine drill-down, plus shift
   const lineSelect = $('#f-line'), machineSelect = $('#f-machine'), shiftSelect = $('#f-shift');
+  lineSelect.value = state.line;
+  shiftSelect.value = state.shift;
+  const filteredURL = () => {
+    const url = new URL(location.href);
+    for (const [key, value] of Object.entries(state)) {
+      if (value === 'all') url.searchParams.delete(key);
+      else url.searchParams.set(key, value);
+    }
+    url.hash = 'dashboard-title';
+    return url;
+  };
+  $('#f-share').addEventListener('click', async () => {
+    const url = filteredURL();
+    try {
+      await navigator.clipboard.writeText(url.href);
+      $('#d-status').textContent = 'Filtered dashboard link copied.';
+    } catch {
+      history.replaceState(null, '', url);
+      $('#d-status').textContent = 'The address bar now contains your filtered link. Copy it to share this view.';
+    }
+  });
+  $('#f-export').addEventListener('click', () => {
+    const rows = production.filter(r => matches(r));
+    const output = [['week', 'line', 'machine', 'shift', 'availability_pct', 'performance_pct', 'quality_pct', 'oee_pct', 'scrap_count', 'good_count']];
+    for (const week of weeks) {
+      const m = measures(rows.filter(r => r.week === week));
+      output.push([week, state.line, state.machine, state.shift, ...[m.a, m.p, m.q, m.oee].map(value => (value * 100).toFixed(4)), m.scrap, m.good]);
+    }
+    const csv = output.map(row => row.map(value => `"${String(value).replaceAll('"', '""')}"`).join(',')).join('\r\n');
+    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'simulated-oee-weekly.csv';
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    $('#d-status').textContent = 'Exported 13 weeks for the selected filters. Dataset is simulated.';
+  });
   function fillMachines() {
     const options = data.machines.filter((m) => state.line === 'all' || m.line === state.line);
     machineSelect.innerHTML = '<option value="all">All machines</option>' +
@@ -175,6 +223,8 @@
   }
 
   function render() {
+    tip.hidden = true;
+    $('#d-status').textContent = '';
     const rows = production.filter((r) => matches(r));
     const path = ['Plant 1', state.line === 'all' ? 'All lines' : state.line];
     if (state.machine !== 'all') path.push(state.machine);

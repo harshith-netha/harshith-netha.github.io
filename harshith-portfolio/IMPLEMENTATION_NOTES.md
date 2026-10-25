@@ -1,5 +1,20 @@
 # Implementation notes for review
 
+## October 25, 2026: evidence-first enhancement
+
+Confirmed audience: technical engineering reviewers. Preserved résumé facts, simulated-data disclosures, existing interactions, and the five-second skippable first-visit introduction. The user selected code-first implementation.
+
+- Moved selected work before biography and experience; added all-work, detailed-study, and academic-project filters with status announcements.
+- Retained the existing palette, bundled fonts, and production cell; refined opening proportions, project layouts, typography, expertise, contact, and mobile composition.
+- Added shared case-study navigation with sticky contents, current-section indication, focus transfer, and reading progress.
+- Added validated URL filter restoration, copy-link feedback with a clipboard fallback, and weekly CSV exports to the OEE dashboard.
+- Made academic diagrams immediately visible and case-study charts eager-loading; preserved motion controls and reduced-motion CSS.
+- Recorded product context and design tokens for future work.
+
+Verification: JavaScript syntax and Git whitespace checks pass. All 96 local links/assets resolve. Browser checks found no horizontal document overflow across all three pages at requested widths 320, 390, 768, 1024, and 1440; the homepage also fits the 702px app panel. No browser errors were observed. Project filters, DMAIC keyboard End navigation, mobile navigation focus, motion pause, deep-link intro bypass, dashboard filters/reset, copied-link restoration, and CSV download were exercised. The 13 exported Line 1 / Shift C weeks match raw CSV-derived A/P/Q/OEE, scrap, and good-count values.
+
+The Impeccable engine could not start because its binary was not installed and the cache directory was not writable. Skill guidance, browser inspection, and an independent finish reviewer were used directly. Reduced-motion and no-JavaScript fallback paths were preserved and inspected in source; this session did not run a complete accessibility audit or a cross-browser suite.
+
 ## October 2026 refinement
 
 - The first-visit intro now runs for **five seconds**, as explicitly requested. The conveyor component moves to the inspection gantry, the quality scanner cycles once, and a short hero/nav entrance plays when the loader clears. The timer is independent of Three.js and has a visible Skip intro control plus a head-script fail-safe. First entry per tab only; reduced-motion, direct section links, browser back/forward, keyboard navigation, repeat visit, and skip bypass the wait.

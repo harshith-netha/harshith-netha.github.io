@@ -4,6 +4,16 @@ A single-page portfolio for an industrial engineer. Plain HTML, CSS and JavaScri
 
 All professional facts come from `Harshith_Gundeti_Resume_Industrial Engineer.pdf`. The project diagrams are labelled as illustrative and include no invented project measurements. `resume.pdf` is the download copy of the supplied resume.
 
+## Engineering review workflow
+
+The homepage leads with the project evidence. Filter between all work, detailed simulated studies, and academic projects. The detailed studies expose source data and analysis; the academic diagrams remain illustrative.
+
+Both case studies have a sticky contents bar, current-section indication, keyboard focus transfer, and reading progress. Charts load immediately so evidence is also available for full-page review and printing.
+
+The OEE dashboard supports line, machine, and shift filters, machine drill-down, reset, **Export weekly CSV**, and **Copy filtered link**. Shared URLs restore validated filter values; an invalid value falls back to the unfiltered scope. CSV exports contain 13 weekly aggregates for the selected filters and explicitly identify the data as simulated. A localhost link works on the machine running the preview; deployed links use the deployed origin automatically.
+
+`PRODUCT.md` records the confirmed audience and product constraints. `DESIGN.md` records the implemented design system. `.impeccable/config.json` stores the confirmed code-first workflow.
+
 ## Visual design
 
 The portfolio and case studies share an ivory, deep navy, copper, and muted green palette. Sora headings and Manrope body text are bundled locally. A dark opening section highlights the engineering focus; numbered sections, concise project descriptions, and consistent cards guide visitors through the work.
@@ -27,7 +37,8 @@ Opening `index.html` straight from disk (`file://`) still works. Navigation, tab
 | --- | --- |
 | `index.html` | All content and markup |
 | `styles.css` | Design tokens, layout, responsive rules, motion (all gated by `prefers-reduced-motion`) |
-| `app.js` | Loader lifecycle, mobile menu, reading progress, current-section nav, DMAIC tabs, diagram reveals, hero scene bootstrap |
+| `app.js` | Project filters, mobile menu, reading progress, current-section nav, DMAIC tabs, hero scene bootstrap |
+| `projects/case-study.js` | Case-study reading progress, current-section navigation, keyboard focus |
 | `scene.js` | Three.js production cell (robot, conveyor, inspection gantry, tote): `buildModel()` + `createScene()` |
 | `assets/production-line.svg` | Static fallback for the scene, generated from `scene.js` |
 | `scripts/build-fallback.mjs` | Regenerates the SVG fallback: `node scripts/build-fallback.mjs` |

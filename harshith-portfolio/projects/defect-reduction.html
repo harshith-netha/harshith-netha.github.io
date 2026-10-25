@@ -9,9 +9,10 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=20261025-evidence3">
+  <script src="case-study.js?v=20261025-evidence3" defer></script>
 </head>
-<body>
+<body class="case-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-inner">
@@ -25,13 +26,13 @@
         <a class="nav-contact" href="../index.html#contact">Contact</a>
       </nav>
     </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main" tabindex="-1">
     <section class="case-hero" aria-labelledby="case-title">
       <div class="container">
         <a class="back-link" href="../index.html#projects"><span aria-hidden="true">←</span> All case studies</a>
-        <p class="eyebrow"><span class="small-line" aria-hidden="true"></span>Case study 01 · Quality engineering · DMAIC</p>
         <h1 id="case-title">Cutting rejects on an injection-molded part by 39%<span class="copper">.</span></h1>
         <p class="case-lead">Taking a molding defect problem from measurement to improvement and control: validate the gauge, find where the rejects come from, prove what drives the critical dimension, change the process, and make the gain stick.</p>
         <p class="sim-note"><span><strong>Simulated dataset, real method.</strong> The data is a published, reproducible simulation of a four-machine molding cell. It is not from an employer. Every number on this page is computed by the <a href="../analysis/build_case_studies.py">analysis script</a>, and you can download the raw data below.</span></p>
@@ -69,7 +70,7 @@
 
     <div class="container">
       <section class="case-section" id="problem" aria-labelledby="problem-title">
-        <header><span class="case-num">01</span><h2 id="problem-title">Business problem</h2></header>
+        <header><h2 id="problem-title">Business problem</h2></header>
         <div class="case-body">
           <p>A molder makes a polypropylene enclosure lid on four injection-molding machines (IMM-1 to IMM-4) across three shifts. The lid’s <strong>flange thickness, 2.50 ± 0.10 mm</strong>, is critical to quality: it sets the snap-fit force and the seal. Rejects were running well above the plant goal, and end-of-line inspection was catching the defects without preventing them.</p>
           <div class="table-wrap" tabindex="0">
@@ -89,7 +90,7 @@
       </section>
 
       <section class="case-section" id="baseline" aria-labelledby="baseline-title">
-        <header><span class="case-num">02</span><h2 id="baseline-title">Baseline</h2></header>
+        <header><h2 id="baseline-title">Baseline</h2></header>
         <div class="case-body">
           <p>Eight weeks of production before any change, measured the same way as the improvement period.</p>
           <div class="table-wrap" tabindex="0">
@@ -108,7 +109,7 @@
       </section>
 
       <section class="case-section" id="data" aria-labelledby="data-title">
-        <header><span class="case-num">03</span><h2 id="data-title">Data used</h2></header>
+        <header><h2 id="data-title">Data used</h2></header>
         <div class="case-body">
           <p>Three tables, each one record per natural unit of the process. A <strong>lot</strong> is one machine running one shift on one day.</p>
           <div class="table-wrap" tabindex="0">
@@ -126,7 +127,7 @@
       </section>
 
       <section class="case-section" id="method" aria-labelledby="method-title">
-        <header><span class="case-num">04</span><h2 id="method-title">Method</h2></header>
+        <header><h2 id="method-title">Method</h2></header>
         <div class="case-body">
           <dl class="d-list">
             <div><dt>D</dt><dd><strong>Define</strong>Charter, CTQ, scope and a cost of poor quality, so the goal is measurable.</dd></div>
@@ -139,7 +140,7 @@
       </section>
 
       <section class="case-section" id="analysis" aria-labelledby="analysis-title">
-        <header><span class="case-num">05</span><h2 id="analysis-title">Analysis</h2></header>
+        <header><h2 id="analysis-title">Analysis</h2></header>
         <div class="case-body">
           <h3>5.1 Can we trust the measurement?</h3>
           <p>Before reading anything into thickness data, I checked the micrometer with a crossed Gage R&amp;R study using the ANOVA method.</p>
@@ -160,21 +161,21 @@
 
           <h3>5.2 Which defects matter most?</h3>
           <figure class="chart">
-            <img src="charts/cs1-pareto.svg" width="720" height="360" loading="lazy" alt="Pareto chart of baseline rejects. Dimensional 8,157 (32%), short shot 5,587 (22%), sink marks 3,938 (16%), other 2,848 (11%), warpage 2,545 (10%), flash 2,058 (8%). The first three make up 70% of rejects.">
+            <img src="charts/cs1-pareto.svg" width="720" height="360" loading="eager" alt="Pareto chart of baseline rejects. Dimensional 8,157 (32%), short shot 5,587 (22%), sink marks 3,938 (16%), other 2,848 (11%), warpage 2,545 (10%), flash 2,058 (8%). The first three make up 70% of rejects.">
             <figcaption><strong>Baseline rejects by defect type, weeks 1–8.</strong> Dimensional, short-shot and sink-mark defects make up 70% of 25,133 rejects.</figcaption>
           </figure>
           <p>The top three defects share a mechanism: each is consistent with too little packing pressure during the hold phase. That gave the investigation a hypothesis to test, not just a ranking.</p>
 
           <h3>5.3 Where in the process?</h3>
           <figure class="chart">
-            <img src="charts/cs1-by-machine.svg" width="720" height="300" loading="lazy" alt="Bar chart of baseline reject rate by machine: IMM-1 2.4%, IMM-2 2.4%, IMM-3 7.3%, IMM-4 2.4%. IMM-3 is highlighted.">
+            <img src="charts/cs1-by-machine.svg" width="720" height="300" loading="eager" alt="Bar chart of baseline reject rate by machine: IMM-1 2.4%, IMM-2 2.4%, IMM-3 7.3%, IMM-4 2.4%. IMM-3 is highlighted.">
             <figcaption><strong>Reject rate by machine, weeks 1–8.</strong> IMM-3 produces one quarter of the parts but 50% of the rejects.</figcaption>
           </figure>
           <p>By shift, the differences are small: A 3.78%, B 3.25%, C 3.87%. One clue was worth keeping, though: on C shift the mold temperature averaged <strong>46.2 °C</strong>, against 45.2 °C on A and B.</p>
 
           <h3>5.4 Is the process stable?</h3>
           <figure class="chart">
-            <img src="charts/cs1-xbar-r.svg" width="720" height="480" loading="lazy" alt="X-bar and R chart for IMM-3, 30 subgroups of five. X-bar chart: center line 2.455 mm, UCL 2.482, LCL 2.429, with 17 of 30 subgroup means outside the limits. R chart: center 0.046 mm, UCL 0.096, all points inside.">
+            <img src="charts/cs1-xbar-r.svg" width="720" height="480" loading="eager" alt="X-bar and R chart for IMM-3, 30 subgroups of five. X-bar chart: center line 2.455 mm, UCL 2.482, LCL 2.429, with 17 of 30 subgroup means outside the limits. R chart: center 0.046 mm, UCL 0.096, all points inside.">
             <figcaption><strong>X̄-R chart, IMM-3, first 30 baseline subgroups (n = 5).</strong> The range chart is in control. The means chart is not: 17 of 30 points fall beyond the limits.</figcaption>
           </figure>
           <p>This pattern is diagnostic. Variation <em>within</em> a subgroup is stable, so the machine is not inherently imprecise. The <em>average</em> moves from shift to shift, which is a special cause acting between lots. The mean also sits at 2.455 mm, 45 µm below nominal.</p>
@@ -218,7 +219,7 @@
       </section>
 
       <section class="case-section" id="recommendation" aria-labelledby="recommendation-title">
-        <header><span class="case-num">06</span><h2 id="recommendation-title">Engineering recommendation</h2></header>
+        <header><h2 id="recommendation-title">Engineering recommendation</h2></header>
         <div class="case-body">
           <div class="table-wrap" tabindex="0">
             <table class="data-table">
@@ -237,15 +238,15 @@
       </section>
 
       <section class="case-section" id="result" aria-labelledby="result-title">
-        <header><span class="case-num">07</span><h2 id="result-title">Result &amp; impact</h2></header>
+        <header><h2 id="result-title">Result &amp; impact</h2></header>
         <div class="case-body">
           <p>The changes went in during weeks 9–10. Weeks 11–14 were then measured exactly like the baseline.</p>
           <figure class="chart">
-            <img src="charts/cs1-weekly.svg" width="720" height="300" loading="lazy" alt="Weekly reject rate. Weeks 1 to 8 average 3.63%. Changes implemented in weeks 9 and 10. Weeks 11 to 14 average 2.22%.">
+            <img src="charts/cs1-weekly.svg" width="720" height="300" loading="eager" alt="Weekly reject rate. Weeks 1 to 8 average 3.63%. Changes implemented in weeks 9 and 10. Weeks 11 to 14 average 2.22%.">
             <figcaption><strong>Weekly reject rate.</strong> Baseline mean 3.63%, after mean 2.22%.</figcaption>
           </figure>
           <figure class="chart">
-            <img src="charts/cs1-capability.svg" width="720" height="300" loading="lazy" alt="Two histograms of flange thickness with spec limits at 2.40 and 2.60 mm. Baseline is wide, skewed low, with a tail near the lower limit, Ppk 0.86. After is narrow and centered on 2.50 mm, Ppk 1.31.">
+            <img src="charts/cs1-capability.svg" width="720" height="300" loading="eager" alt="Two histograms of flange thickness with spec limits at 2.40 and 2.60 mm. Baseline is wide, skewed low, with a tail near the lower limit, Ppk 0.86. After is narrow and centered on 2.50 mm, Ppk 1.31.">
             <figcaption><strong>Flange-thickness distribution, all machines.</strong> Centered and narrower after the change.</figcaption>
           </figure>
           <div class="table-wrap" tabindex="0">
@@ -267,7 +268,7 @@
       </section>
 
       <section class="case-section" id="control" aria-labelledby="control-title">
-        <header><span class="case-num">08</span><h2 id="control-title">Control &amp; sustainability</h2></header>
+        <header><h2 id="control-title">Control &amp; sustainability</h2></header>
         <div class="case-body">
           <div class="table-wrap" tabindex="0">
             <table class="data-table">
@@ -311,7 +312,7 @@
       </section>
 
       <section class="case-section" id="tools" aria-labelledby="tools-title">
-        <header><span class="case-num">09</span><h2 id="tools-title">Tools used</h2></header>
+        <header><h2 id="tools-title">Tools used</h2></header>
         <div class="case-body">
           <ul class="tags" aria-label="Tools and methods">
             <li>Python · pandas</li><li>statsmodels (OLS)</li><li>matplotlib</li><li>Gage R&amp;R (ANOVA method)</li><li>X̄-R control charts</li><li>Cp / Cpk / Ppk</li><li>Pareto analysis</li><li>Multiple regression</li><li>5 Whys</li><li>PFMEA</li><li>Control plan</li><li>8D</li>
@@ -321,7 +322,7 @@
       </section>
 
       <section class="case-section" id="files" aria-labelledby="files-title">
-        <header><span class="case-num">10</span><h2 id="files-title">Files</h2></header>
+        <header><h2 id="files-title">Files</h2></header>
         <div class="case-body">
           <div class="file-list">
             <a href="../data/defect-reduction/molding_lots.csv" download><strong>molding_lots.csv</strong><span>864 lots: settings, output, rejects by type</span><b aria-hidden="true">↓</b></a>

@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T11:52:19.717121+00:00",
+  "title": "Design System: Harshith Gundeti Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0057 84.57)",
+          "oklch(26% 0.0057 84.57)",
+          "oklch(38% 0.0057 84.57)",
+          "oklch(49% 0.0057 84.57)",
+          "oklch(61% 0.0057 84.57)",
+          "oklch(72% 0.0057 84.57)",
+          "oklch(84% 0.0057 84.57)",
+          "oklch(95% 0.0057 84.57)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "tonalRamp": [
+          "oklch(15% 0.0067 115.71)",
+          "oklch(26% 0.0067 115.71)",
+          "oklch(38% 0.0067 115.71)",
+          "oklch(49% 0.0067 115.71)",
+          "oklch(61% 0.0067 115.71)",
+          "oklch(72% 0.0067 115.71)",
+          "oklch(84% 0.0067 115.71)",
+          "oklch(95% 0.0067 115.71)"
+        ]
+      },
+      "navy": {
+        "role": "primary",
+        "displayName": "Navy",
+        "tonalRamp": [
+          "oklch(15% 0.0334 228.90)",
+          "oklch(26% 0.0334 228.90)",
+          "oklch(38% 0.0334 228.90)",
+          "oklch(49% 0.0334 228.90)",
+          "oklch(61% 0.0334 228.90)",
+          "oklch(72% 0.0334 228.90)",
+          "oklch(84% 0.0334 228.90)",
+          "oklch(95% 0.0334 228.90)"
+        ]
+      },
+      "navy-deep": {
+        "role": "primary",
+        "displayName": "Navy Deep",
+        "tonalRamp": [
+          "oklch(15% 0.0310 228.92)",
+          "oklch(26% 0.0310 228.92)",
+          "oklch(38% 0.0310 228.92)",
+          "oklch(49% 0.0310 228.92)",
+          "oklch(61% 0.0310 228.92)",
+          "oklch(72% 0.0310 228.92)",
+          "oklch(84% 0.0310 228.92)",
+          "oklch(95% 0.0310 228.92)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0269 222.62)",
+          "oklch(26% 0.0269 222.62)",
+          "oklch(38% 0.0269 222.62)",
+          "oklch(49% 0.0269 222.62)",
+          "oklch(61% 0.0269 222.62)",
+          "oklch(72% 0.0269 222.62)",
+          "oklch(84% 0.0269 222.62)",
+          "oklch(95% 0.0269 222.62)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0171 218.22)",
+          "oklch(26% 0.0171 218.22)",
+          "oklch(38% 0.0171 218.22)",
+          "oklch(49% 0.0171 218.22)",
+          "oklch(61% 0.0171 218.22)",
+          "oklch(72% 0.0171 218.22)",
+          "oklch(84% 0.0171 218.22)",
+          "oklch(95% 0.0171 218.22)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0095 113.18)",
+          "oklch(26% 0.0095 113.18)",
+          "oklch(38% 0.0095 113.18)",
+          "oklch(49% 0.0095 113.18)",
+          "oklch(61% 0.0095 113.18)",
+          "oklch(72% 0.0095 113.18)",
+          "oklch(84% 0.0095 113.18)",
+          "oklch(95% 0.0095 113.18)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "tonalRamp": [
+          "oklch(15% 0.0097 171.74)",
+          "oklch(26% 0.0097 171.74)",
+          "oklch(38% 0.0097 171.74)",
+          "oklch(49% 0.0097 171.74)",
+          "oklch(61% 0.0097 171.74)",
+          "oklch(72% 0.0097 171.74)",
+          "oklch(84% 0.0097 171.74)",
+          "oklch(95% 0.0097 171.74)"
+        ]
+      },
+      "copper": {
+        "role": "secondary",
+        "displayName": "Copper",
+        "tonalRamp": [
+          "oklch(15% 0.1124 42.34)",
+          "oklch(26% 0.1124 42.34)",
+          "oklch(38% 0.1124 42.34)",
+          "oklch(49% 0.1124 42.34)",
+          "oklch(61% 0.1124 42.34)",
+          "oklch(72% 0.1124 42.34)",
+          "oklch(84% 0.1124 42.34)",
+          "oklch(95% 0.1124 42.34)"
+        ]
+      },
+      "copper-light": {
+        "role": "secondary",
+        "displayName": "Copper Light",
+        "tonalRamp": [
+          "oklch(15% 0.0835 56.09)",
+          "oklch(26% 0.0835 56.09)",
+          "oklch(38% 0.0835 56.09)",
+          "oklch(49% 0.0835 56.09)",
+          "oklch(61% 0.0835 56.09)",
+          "oklch(72% 0.0835 56.09)",
+          "oklch(84% 0.0835 56.09)",
+          "oklch(95% 0.0835 56.09)"
+        ]
+      },
+      "teal": {
+        "role": "tertiary",
+        "displayName": "Teal",
+        "tonalRamp": [
+          "oklch(15% 0.0659 173.88)",
+          "oklch(26% 0.0659 173.88)",
+          "oklch(38% 0.0659 173.88)",
+          "oklch(49% 0.0659 173.88)",
+          "oklch(61% 0.0659 173.88)",
+          "oklch(72% 0.0659 173.88)",
+          "oklch(84% 0.0659 173.88)",
+          "oklch(95% 0.0659 173.88)"
+        ]
+      },
+      "on-dark-muted": {
+        "role": "neutral",
+        "displayName": "On Dark Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0163 216.70)",
+          "oklch(26% 0.0163 216.70)",
+          "oklch(38% 0.0163 216.70)",
+          "oklch(49% 0.0163 216.70)",
+          "oklch(61% 0.0163 216.70)",
+          "oklch(72% 0.0163 216.70)",
+          "oklch(84% 0.0163 216.70)",
+          "oklch(95% 0.0163 216.70)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Line Dark",
+        "tonalRamp": [
+          "oklch(15% 0.0317 227.64)",
+          "oklch(26% 0.0317 227.64)",
+          "oklch(38% 0.0317 227.64)",
+          "oklch(49% 0.0317 227.64)",
+          "oklch(61% 0.0317 227.64)",
+          "oklch(72% 0.0317 227.64)",
+          "oklch(84% 0.0317 227.64)",
+          "oklch(95% 0.0317 227.64)"
+        ]
+      },
+      "technical-surface": {
+        "role": "neutral",
+        "displayName": "Technical Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0042 236.50)",
+          "oklch(26% 0.0042 236.50)",
+          "oklch(38% 0.0042 236.50)",
+          "oklch(49% 0.0042 236.50)",
+          "oklch(61% 0.0042 236.50)",
+          "oklch(72% 0.0042 236.50)",
+          "oklch(84% 0.0042 236.50)",
+          "oklch(95% 0.0042 236.50)"
+        ]
+      },
+      "dashboard-surface": {
+        "role": "neutral",
+        "displayName": "Dashboard Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0085 145.51)",
+          "oklch(26% 0.0085 145.51)",
+          "oklch(38% 0.0085 145.51)",
+          "oklch(49% 0.0085 145.51)",
+          "oklch(61% 0.0085 145.51)",
+          "oklch(72% 0.0085 145.51)",
+          "oklch(84% 0.0085 145.51)",
+          "oklch(95% 0.0085 145.51)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Homepage Display",
+        "purpose": "Opening headline; responsive sizes are documented in Layout."
+      },
+      "headline": {
+        "displayName": "Section Heading",
+        "purpose": "Shared major section hierarchy."
+      },
+      "title": {
+        "displayName": "Subheading",
+        "purpose": "Shared subheadings; project and case titles have documented variants."
+      },
+      "body": {
+        "displayName": "Reading Text",
+        "purpose": "Long-form reading; phone and project-summary overrides apply."
+      },
+      "label": {
+        "displayName": "Practical Label",
+        "purpose": "Captions and metadata, without a universal uppercase treatment."
+      }
+    },
+    "shadows": [
+      {
+        "name": "action-hover",
+        "value": "0 8px 20px #102a4324",
+        "purpose": "Existing primary-action hover."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 18px 30px #102a4314",
+        "purpose": "Expanded mobile menu separation."
+      },
+      {
+        "name": "dashboard-tooltip",
+        "value": "0 8px 20px #102a4333",
+        "purpose": "Transient chart readout."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.22, 1, .36, 1)",
+        "purpose": "Shared entrance and state easing."
+      },
+      {
+        "name": "control-state",
+        "value": ".2s",
+        "purpose": "Color and border changes."
+      },
+      {
+        "name": "panel-entrance",
+        "value": ".35s",
+        "purpose": "DMAIC panel entrance when motion is allowed."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "Animations and transitions are disabled under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet",
+        "value": "960px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "860px"
+      },
+      {
+        "name": "phone",
+        "value": "640px"
+      },
+      {
+        "name": "narrow-phone",
+        "value": "480px"
+      },
+      {
+        "name": "case-facts-stack",
+        "value": "420px"
+      },
+      {
+        "name": "compact-brand",
+        "value": "380px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Hero Primary Action",
+      "kind": "button",
+      "refersTo": "button-hero-primary",
+      "description": "Light copper action on the navy opening.",
+      "html": "<div class=\"ds-hero-demo\"><a class=\"ds-hero-primary\" href=\"#projects\">Explore my work</a></div>",
+      "css": ".ds-hero-demo{padding:20px;background:var(--navy-deep,#11252e)}.ds-hero-primary{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:12px 22px;border:1.5px solid transparent;border-radius:6px;font-size:.9375rem;font-weight:750;letter-spacing:-.01em;text-decoration:none;cursor:pointer;transition:background-color .2s,border-color .2s,box-shadow .2s;font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);background:var(--copper-light,#edb58e);color:var(--navy-deep,#11252e);border-color:var(--copper-light,#edb58e)}.ds-hero-primary:hover{background:#f6cbaa;border-color:#f6cbaa;box-shadow:0 8px 20px #102a4324}.ds-hero-primary:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;outline-color:var(--copper-light,#edb58e)}.ds-hero-primary:active{transform:none}@media(prefers-reduced-motion:reduce){.ds-hero-primary{transition:none}}"
+    },
+    {
+      "name": "Hero Outline Action",
+      "kind": "button",
+      "refersTo": "button-hero-outline",
+      "description": "A secondary r\u00e9sum\u00e9 action on a dark field.",
+      "html": "<div class=\"ds-outline-demo\"><a class=\"ds-hero-outline\" href=\"#resume\">Download resume</a></div>",
+      "css": ".ds-outline-demo{padding:20px;background:var(--navy-deep,#11252e)}.ds-hero-outline{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:12px 22px;border:1.5px solid transparent;border-radius:6px;font-size:.9375rem;font-weight:750;letter-spacing:-.01em;text-decoration:none;cursor:pointer;transition:background-color .2s,border-color .2s,box-shadow .2s;font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);background:transparent;color:var(--on-dark,#faf8f4);border-color:#6a7c83}.ds-hero-outline:hover{border-color:var(--on-dark,#faf8f4);background:#ffffff0a}.ds-hero-outline:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;outline-color:var(--copper-light,#edb58e)}.ds-hero-outline:active{transform:none}@media(prefers-reduced-motion:reduce){.ds-hero-outline{transition:none}}"
+    },
+    {
+      "name": "Contact Action",
+      "kind": "button",
+      "refersTo": "button-copper",
+      "description": "The light copper contact button.",
+      "html": "<a class=\"ds-contact\" href=\"#contact\">Email me</a>",
+      "css": ".ds-contact{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:12px 22px;border:1.5px solid transparent;border-radius:6px;font-size:.9375rem;font-weight:750;letter-spacing:-.01em;text-decoration:none;cursor:pointer;transition:background-color .2s,border-color .2s,box-shadow .2s;font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);background:var(--copper-light,#edb58e);color:var(--navy,#182e38)}.ds-contact:hover{background:#e6b18b}.ds-contact:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;}.ds-contact:active{transform:none}@media(prefers-reduced-motion:reduce){.ds-contact{transition:none}}"
+    },
+    {
+      "name": "Project Filter",
+      "kind": "chip",
+      "refersTo": "work-filter",
+      "description": "Selectable pills distinguish the project categories.",
+      "html": "<div class=\"ds-filters\"><button aria-pressed=\"true\">All work <span>4</span></button><button aria-pressed=\"false\">Case studies <span>2</span></button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:8px}.ds-filters button{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);min-height:44px;padding:9px 16px;border:1px solid var(--line-strong,#bec6c3);border-radius:24px;background:transparent;color:var(--ink,#30434a);font-size:.875rem;font-weight:650;cursor:pointer}.ds-filters span{margin-left:8px;font-variant-numeric:tabular-nums}.ds-filters button[aria-pressed=true]{color:var(--white,#fff);background:var(--navy,#182e38);border-color:var(--navy,#182e38)}.ds-filters button:hover{border-color:var(--navy,#182e38)}.ds-filters button:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;}"
+    },
+    {
+      "name": "Dashboard Select",
+      "kind": "input",
+      "refersTo": "dashboard-select",
+      "description": "Native labeled selection for a dashboard dimension.",
+      "html": "<label class=\"ds-select-label\">Line<select class=\"ds-select\"><option>All lines</option><option>Line 1</option><option>Line 2</option></select></label>",
+      "css": ".ds-select-label{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);display:grid;gap:4px;font-size:.8125rem;font-weight:750;color:var(--muted,#59666a)}.ds-select{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);min-width:150px;min-height:44px;padding:8px 12px;border:1px solid var(--line-strong,#bec6c3);border-radius:6px;background:var(--white,#fff);font-size:.9375rem;color:var(--navy,#182e38)}.ds-select:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Text links with current-location emphasis.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a href=\"#projects\" aria-current=\"location\">Projects</a><a href=\"#experience\">Experience</a></nav>",
+      "css": ".ds-nav{display:flex;gap:24px;background:var(--paper,#faf8f4);padding:12px}.ds-nav a{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);display:flex;align-items:center;position:relative;min-height:44px;font-size:.9375rem;font-weight:650;color:var(--ink,#30434a);text-decoration:none;transition:color .2s}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--copper,#9b4e2e)}.ds-nav a[aria-current]::after{content:\"\";position:absolute;left:0;right:0;bottom:6px;height:2px;background:var(--copper,#9b4e2e)}.ds-nav a:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+    },
+    {
+      "name": "Technical Chart Frame",
+      "kind": "card",
+      "refersTo": "chart",
+      "description": "A contained white frame for a real data graphic.",
+      "html": "<figure class=\"ds-chart\"><svg viewBox=\"0 0 280 80\" role=\"img\" aria-label=\"Illustrative style preview, not project data\"><path d=\"M10 60H270\" stroke=\"#dedfd8\"/><path d=\"M10 40H270\" stroke=\"#9b4e2e\" stroke-dasharray=\"5 4\"/><path d=\"M10 58 70 48 130 52 190 30 270 20\" fill=\"none\" stroke=\"#2b6556\" stroke-width=\"2\"/></svg><figcaption>Illustrative component preview \u00b7 target shown dashed</figcaption></figure>",
+      "css": ".ds-chart{margin:0;padding:clamp(14px,2vw,22px);background:var(--white,#fff);border:1px solid var(--line,#dedfd8);border-radius:14px}.ds-chart svg{display:block;width:100%;height:auto}.ds-chart figcaption{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);margin-top:12px;font-size:.8125rem;color:var(--muted,#59666a)}"
+    },
+    {
+      "name": "Primary Dashboard KPI",
+      "kind": "card",
+      "refersTo": "dashboard-kpi-primary",
+      "description": "A navy tile makes the leading metric prominent.",
+      "html": "<div class=\"ds-kpi\"><span>OEE</span><strong>76.0%</strong><small>Simulated dataset \u00b7 target 75%</small></div>",
+      "css": ".ds-kpi{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);padding:14px;background:var(--navy,#182e38);border:1px solid var(--navy,#182e38);border-radius:8px;font-variant-numeric:tabular-nums}.ds-kpi span{display:block;font-size:.8125rem;font-weight:700;color:var(--on-dark-muted,#bac8cc)}.ds-kpi strong{display:block;margin-top:4px;font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:var(--copper-light,#edb58e)}.ds-kpi small{display:block;font-size:.75rem;color:var(--on-dark-muted,#bac8cc)}"
+    },
+    {
+      "name": "DMAIC Tab",
+      "kind": "custom",
+      "refersTo": "method-tab",
+      "description": "Light copper and an underline mark the selected method.",
+      "html": "<div class=\"ds-method\" role=\"tablist\" aria-label=\"Method preview\"><button role=\"tab\" aria-selected=\"true\">D<span>Define</span></button><button role=\"tab\" aria-selected=\"false\">M<span>Measure</span></button></div>",
+      "css": ".ds-method{display:flex;background:var(--navy,#182e38);padding:12px;border-bottom:1px solid var(--line-dark,#3c525c)}.ds-method button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:88px;min-width:100px;padding:8px 4px 16px;border:0;border-radius:6px 6px 0 0;background:none;font-family:var(--font-display,Sora,Manrope,sans-serif);font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem);font-weight:500;line-height:1.1;color:#8fa8b8;cursor:pointer;transition:color .2s,background-color .2s}.ds-method button span{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);margin-top:8px;font-size:.8125rem;font-weight:650}.ds-method button:hover{color:var(--white,#fff);background:#ffffff08}.ds-method button[aria-selected=true]{color:var(--copper-light,#edb58e)}.ds-method button[aria-selected=true]::after{content:\"\";position:absolute;left:12%;right:12%;bottom:-1px;height:3px;background:var(--copper-light,#edb58e)}.ds-method button:focus-visible{outline:3px solid var(--copper-light,#edb58e);outline-offset:-3px}@media(prefers-reduced-motion:reduce){.ds-method button{transition:none}}"
+    },
+    {
+      "name": "Project Disclosure",
+      "kind": "custom",
+      "refersTo": "project-disclosure",
+      "description": "A native disclosure expands the project method.",
+      "html": "<details class=\"ds-details\"><summary>Problem, method &amp; takeaway<span aria-hidden=\"true\"></span></summary><div>Supporting method and evidence appear here.</div></details>",
+      "css": ".ds-details{font-family:var(--font,Manrope,'Segoe UI',Roboto,Arial,sans-serif);border-top:1px solid var(--line,#dedfd8)}.ds-details summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;cursor:pointer;list-style:none;font-size:.9375rem;font-weight:750;color:var(--navy,#182e38)}.ds-details summary::-webkit-details-marker{display:none}.ds-details summary:hover{color:var(--copper,#9b4e2e)}.ds-details summary:focus-visible{outline:3px solid var(--copper,#9b4e2e);outline-offset:4px;}.ds-details summary span{position:relative;width:28px;height:28px;border:1px solid var(--line-strong,#bec6c3);border-radius:50%;flex:none}.ds-details summary span::before,.ds-details summary span::after{content:\"\";position:absolute;left:50%;top:50%;width:12px;height:1.8px;margin:-.9px 0 0 -6px;background:var(--copper,#9b4e2e);transition:transform .3s var(--ease,cubic-bezier(.22,1,.36,1))}.ds-details summary span::after{transform:rotate(90deg)}.ds-details[open] summary span::after{transform:rotate(0)}.ds-details>div{padding:2px 0 24px;font-size:.9375rem;color:var(--muted,#59666a)}@media(prefers-reduced-motion:reduce){.ds-details summary span::after{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The engineering portfolio",
+    "overview": "This is the existing engineering portfolio world: navy and ivory fields, copper emphasis, muted green data, and a light production-cell stage. Sora supplies measured headings; Manrope carries the reading and controls. The visual character is precise, calm, and direct.\n\nThe implemented system uses open rows and dividers for narrative material, with contained surfaces for technical graphics and operational controls. Documents stay readable at length, while data retains labels, provenance, and a clear path to its supporting files. This record describes the final cascade in `styles.css` and the three implemented HTML pages; it does not promote earlier overridden declarations into new rules.",
+    "keyCharacteristics": [
+      "Navy and ivory tonal sections with restrained copper and teal accents.",
+      "Sora headings and Manrope text, with tabular numbers for comparisons.",
+      "Open evidence rows beside contained charts, data tables, and dashboard controls.",
+      "Visible keyboard focus, responsive reading layouts, and user-controlled motion."
+    ],
+    "rules": [
+      {
+        "name": "Contextual Copper",
+        "body": "Use dark copper on light surfaces and light copper on navy surfaces; keep the accent connected to actions, targets, or meaningful emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "Reading Before Ornament",
+        "body": "Headings establish hierarchy directly. Provenance follows the project heading, while metadata remains subordinate to the technical content.",
+        "section": "typography"
+      },
+      {
+        "name": "Flat Technical Surfaces",
+        "body": "Use color fields and thin borders for structural depth. The production stage and project rows have no resting shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep project provenance immediately after its heading and distinguish simulated data from professional achievements.",
+      "Do retain the real SVG data graphics and the production-cell fallback with their existing provenance.",
+      "Do use open rows for project and expertise narratives; reserve enclosed surfaces for charts, data, and controls.",
+      "Do pair chart color with labels, values, and target markers.",
+      "Do preserve visible focus, keyboard behavior, reduced motion, and the skippable first-visit introduction."
+    ],
+    "donts": [
+      "Don't restore decorative phase numbers or heading eyebrows as a reusable pattern.",
+      "Don't inherit obsolete shadows, numbered case-navigation markers, or boxed project-card rules from earlier CSS declarations.",
+      "Don't use font glyphs as standalone decorative icons; use the existing inline SVG language.",
+      "Don't present illustrative or simulated graphics as measured employment results."
+    ]
+  }
+}
